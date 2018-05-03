@@ -1,0 +1,37 @@
+{
+  "name": "mss-js",
+  "version": "1.0.0",
+  "description": "MSS API wrapper for JavaScript projects",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc --pretty",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon",
+    "dev-inspect": "node --inspect --inspect-brk -r ts-node/register index.ts",
+    "cxsd": "cxsd https://raw.githubusercontent.com/HGV/mss-js/master/src/mss.xsd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HGV/mss-js.git"
+  },
+  "keywords": [
+    "node-js",
+    "api-wrapper"
+  ],
+  "author": "David Mair Spiess",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HGV/mss-js/issues"
+  },
+  "homepage": "https://github.com/HGV/mss-js#readme",
+  "dependencies": {
+    "cxml": "^0.1.1",
+    "cxsd": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3",
+    "ts-node": "^6.0.2",
+    "typescript": "^2.8.3"
+  }
+}

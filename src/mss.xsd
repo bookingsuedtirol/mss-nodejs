@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="mss">
+  <xs:element name="root">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="header">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="error">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="code" type="xs:integer" />
+                    <xs:element name="message" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="result_id" type="xs:string" />
+              <xs:element name="source" type="xs:string" />
+              <xs:element name="paging">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="count" type="xs:integer" />
+                    <xs:element name="total" type="xs:integer" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="time" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="result">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="hotel">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="id" type="xs:integer" />
+                    <xs:element name="id_lts" type="xs:string" />
+                    <xs:element name="bookable" type="xs:integer" />
+                    <xs:element name="name" type="xs:string" />
+                    <xs:element name="type" type="xs:integer" />
+                    <xs:element name="stars" type="xs:integer" />
+                    <xs:element name="language" type="xs:string" />
+                    <xs:element name="price_engine" type="xs:integer" />
+                    <xs:element name="price_from" type="xs:integer" />
+                    <xs:element name="available_from" type="xs:date" />
+                    <xs:element name="pers_age_min" type="xs:integer" />
+                    <xs:element name="child_age_min" type="xs:integer" />
+                    <xs:element name="child_age_max" type="xs:integer" />
+                    <xs:element name="adult_age_min" type="xs:integer" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
