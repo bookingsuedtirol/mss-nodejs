@@ -1,0 +1,383 @@
+export interface Root {
+  version: "1.0";
+  header: Header;
+  request: Request;
+}
+
+export interface Header {
+  credentials: Credentials;
+  method:
+    | "getHotelList"
+    | "getSpecialList"
+    | "getRoomList"
+    | "getPriceList"
+    | "getRoomAvailability"
+    | "prepareBooking"
+    | "getBooking"
+    | "createInquiry"
+    | "getUserSources";
+  paging?: Paging;
+}
+
+export interface Credentials {
+  user: string;
+  password: string;
+  source: string;
+}
+
+export interface Paging {
+  start: number;
+  limit: number;
+}
+
+export interface Request {
+  search: Search;
+  options: Options;
+  order: Order;
+  data: Data;
+  logging?: Logging;
+}
+
+export interface Search {
+  lang: "de" | "it" | "en";
+  result_id?: string;
+  agent?: string;
+  id?: string[];
+  search_hotel?: SearchHotel;
+  search_location?: SearchLocation;
+  search_distance?: SearchDistance;
+  search_offer?: SearchOffer;
+  search_lts?: SearchLts;
+  search_special?: SearchSpecial;
+  search_availability?: SearchAvailability;
+  search_pricelist?: SearchPriceList;
+  in?: number[];
+  id_ofchannel?: string;
+  transaction_id?: string;
+  booking_id?: string;
+  guest_email?: string;
+}
+
+export interface Options {
+  hotel_details?: number;
+  offer_details?: number;
+  room_details?: number;
+  special_details?: number;
+  picture_date?: Date;
+  lts_bookable?: number;
+  get_availability?: number;
+  get_restrictions?: number;
+  get_roomdetails?: number;
+  base_price?: number;
+  pricelist_details?: number;
+}
+
+export interface Order {
+  field: string;
+  dir: string;
+}
+
+export interface Data {
+  guest: Guest;
+  company: Company;
+  payment: Payment;
+  note: string;
+  details: Details;
+  form: Form;
+  tracking: Tracking;
+}
+
+export interface Logging {
+  step: string;
+}
+
+export interface SearchHotel {
+  name?: string;
+  type?: HotelType;
+  stars?: Stars;
+  feature?: HotelFeature;
+  theme?: HotelTheme;
+}
+
+export enum HotelType {
+  Hotel = 1,
+  SkiSchool = 2,
+  Residence = 4,
+  Appartment = 16,
+  FarmVacation = 32,
+  MountainInn = 64,
+  CampingSite = 128,
+  HolidayHome = 256,
+  YouthHostel = 512,
+  Guesthouse = 1024,
+  Refuge = 2048,
+  Garni = 4096,
+  Inn = 8192
+}
+
+export enum HotelFeature {
+  Garage = 1,
+  Elevator = 2,
+  Restaurant = 4,
+  Gym = 8,
+  Wellness = 16,
+  Spa = 32,
+  Breakfast = 64,
+  Buffet = 128,
+  OutdoorPool = 256,
+  IndoorPool = 512,
+  Bar = 1024,
+  BarrierFree = 2048,
+  Wlan = 4096,
+  ShuttleService = 8192,
+  Childcare = 16384,
+  SmallPetsAllowed = 32768,
+  BeautyFarm = 65536,
+  CentralLocation = 262144,
+  CoveredParking = 524288,
+  OpenParking = 1048576,
+  Massages = 2097152,
+  Sauna = 4194304,
+  SteamBath = 8388608,
+  PublicBar = 16777216,
+  DogsAllowed = 33554432
+}
+
+export enum HotelTheme {
+  Family = 1,
+  Wellness = 2,
+  Hiking = 4,
+  Motorcycle = 8,
+  Bike = 16,
+  Golf = 32,
+  Riding = 64,
+  Romantic = 128,
+  Ski = 256,
+  Meeting = 512,
+  CrossCountrySkiing = 1024,
+  Culture = 2048,
+  Snowshoeing = 4096
+}
+
+export interface SearchLocation {
+  location: number[];
+  location_lts: string[];
+}
+
+export interface SearchDistance {
+  latitude: number;
+  longitude: number;
+  radius: number;
+}
+
+export interface SearchOffer {
+  arrival: Date;
+  departure: Date;
+  service: Board;
+  feature: RoomFeature;
+  channel_id: string[];
+  room: Room[];
+  typ: SearchOfferType;
+  rateplan: Rateplan;
+}
+
+export enum SearchOfferType {
+  DefaultPricelist = 10,
+  PeopleAge = 20,
+  PeopleNumber = 21,
+  Staying = 22,
+  BookingDate = 23,
+  Weekday = 24,
+  NoReference = 25,
+  SpecialPeopleAge = 50,
+  SpecialPeopleNumber = 51,
+  SpecialStaying = 52,
+  SpecialBookingDate = 53,
+  SpecialWeekday = 54,
+  SpecialNoReference = 55
+}
+
+export enum Board {
+  Without = 1,
+  Breakfast = 2,
+  HalfBoard = 3,
+  FullBoard = 4,
+  AllInclusive = 5
+}
+
+export enum RoomFeature {
+  Balcony = 1,
+  Terrace = 2,
+  MiniBar = 4,
+  Safe = 8,
+  TV = 16,
+  Satellite = 32,
+  Wlan = 64,
+  Internet = 128,
+  BarrierFree = 512
+}
+
+export interface SearchLts {
+  A0Ene: number;
+  A0MTV: number;
+  A0Rep: number;
+}
+
+export interface SearchSpecial {
+  offerId: number[];
+  date_from: Date;
+  date_to: Date;
+  theme: SpecialTheme;
+  validity: Validity;
+  typ: SearchSpecialType;
+  premium: SearchSpecialPremium;
+}
+
+export enum SearchSpecialType {
+  packages = 1,
+  specials = 2
+}
+
+export enum SearchSpecialPremium {
+  FamilyHotelsPremium = 2,
+  VinumHotelsPremium = 4,
+  SüdtirolBalancePremium = 8,
+  VitalpinaDurchatmen = 16,
+  VitalpinaWohlfühlen = 32,
+  VitalpinaErnährung = 64,
+  VitalpinaAktiv = 128,
+  VitalpinaPremium = 256,
+  BikehotelsMountainbike = 512,
+  BikehotelsBikeTouringEBike = 1024,
+  BikehotelsRoadbike = 2048,
+  BikehotelsPremium = 4096,
+  ArchitectureDays = 8192,
+  VinumHotels = 16384,
+  FamilyHotels = 32768,
+  FamilyHotelsNatureDetective = 65536,
+  FamilyHotelsNatureDetectiveWinter = 131072
+}
+
+export enum SpecialTheme {
+  Hiking = 1,
+  Cycling = 2,
+  Family = 4,
+  Wellness = 8,
+  Food = 16,
+  Golf = 32,
+  Culture = 64,
+  Motorsport = 128,
+  CarFree = 256,
+  SkiSnowboard = 512,
+  SummerActivities = 1024,
+  Events = 2048,
+  ChristmasMarkets = 4096,
+  ActiveWinter = 8192,
+  Vitalpina = 16384,
+  VitalpinaBreathe = 32768,
+  BikeHotelsEBike = 65536,
+  BikeHotelsFreeride = 131072,
+  BikeHotelsMountainbike = 524288,
+  BikeHotelsBikeTours = 1048576,
+  BikeHotelsRacingBike = 2097152,
+  FamilyHotels = 4194304,
+  FamilyHotelsNatureDetective = 8388608,
+  FamilyHotel = 33554432,
+  FamilyHotelsNatureDetectiveSummer = 67108864,
+  FamilyHotelsNatureDetectiveWinter = 134217728
+}
+
+export interface SearchAvailability {
+  date_from: Date;
+  date_to: Date;
+  offer_id: number[];
+  room_id: number[];
+}
+
+export interface SearchPriceList {
+  date_from: Date;
+  date_to: Date;
+  service: Board;
+  room_id: number[];
+  typ: SearchSpecialType;
+}
+
+export interface Guest {
+  gender: string;
+  prefix: string;
+  firstname: string;
+  lastname: string;
+  email: string;
+  phone: string;
+  address: Address;
+  newsletter: 0 | 1;
+}
+
+export interface Company {
+  name: string;
+  taxnumber: string;
+  address: Address;
+}
+
+export interface Payment {
+  method: PaymentMethod;
+  invoice: 0 | 1;
+}
+
+export enum PaymentMethod {
+  CreditCardDeposit = 1,
+  CreditCardAsSecurity = 2,
+  CreditCardPayment = 8,
+  BankTransferDeposit = 4,
+  BankTransferPayment = 16,
+  AccommodationPayment = 32
+}
+
+export interface Details {
+  extr_price: ExtraPrice[];
+}
+
+export interface ExtraPrice {
+  price_id: number;
+  price_amount: number;
+}
+
+export interface Form {
+  url_success: string;
+  url_failure: string;
+}
+
+export interface Tracking {
+  partner: string;
+  media: string;
+  campaign: string;
+  companyinfo: string;
+}
+
+export interface Stars {
+  min: number;
+  max: number;
+}
+
+export interface Address {
+  street: string;
+  zipcode: string;
+  city: string;
+  country: string;
+}
+
+export interface Room {}
+
+export interface Rateplan {
+  code: string;
+  source: string;
+}
+
+export interface Validity {
+  valid: 0 | 1;
+  offers: 0 | 1;
+  arrival: Date;
+  departure: Date;
+  service: Board;
+  room: Room[];
+}
