@@ -8,5 +8,5 @@ const parser = new Parser();
 const result = parser.parse(fs.createReadStream(path.resolve(__dirname, 'mss.xml')), mss.document);
 
 result.then((doc: mss.document) => {  
-  console.log(doc.root.header.result_id);
+  console.log(doc.root.result.hotel.map(hotel => hotel.name));
 });

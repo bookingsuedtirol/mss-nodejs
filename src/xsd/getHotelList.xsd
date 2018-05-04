@@ -1,33 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="mss">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="getHotelList">
   <xs:element name="root">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="header">
-          <xs:complexType>
-            <xs:sequence>
-              <xs:element name="error">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element name="code" type="xs:integer" />
-                    <xs:element name="message" type="xs:string" />
-                  </xs:sequence>
-                </xs:complexType>
-              </xs:element>
-              <xs:element name="result_id" type="xs:string" />
-              <xs:element name="source" type="xs:string" />
-              <xs:element name="paging">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element name="count" type="xs:integer" />
-                    <xs:element name="total" type="xs:integer" />
-                  </xs:sequence>
-                </xs:complexType>
-              </xs:element>
-              <xs:element name="time" type="xs:string" />
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
+        <xs:include schemaLocation="https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/_header.xsd" />
         <xs:element name="result">
           <xs:complexType>
             <xs:sequence>
@@ -52,7 +28,7 @@
                     <xs:element name="adults_max" type="xs:integer" />
                     <xs:element name="valid_start" type="xs:date" />
                     <xs:element name="valid_end" type="xs:date" />
-                    <xs:element name="hotels">
+                    <xs:element maxOccurs="unbounded" name="hotels">
                       <xs:complexType>
                         <xs:sequence>
                           <xs:element name="hotel">

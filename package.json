@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon",
     "dev-inspect": "node --inspect --inspect-brk -r ts-node/register index.ts",
-    "cxsd": "cxsd https://raw.githubusercontent.com/HGV/mss-js/master/src/mss.xsd"
+    "xsd": "./bin/xsd.sh"
   },
   "repository": {
     "type": "git",
