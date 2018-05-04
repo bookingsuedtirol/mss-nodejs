@@ -4,7 +4,8 @@ RUN apk --update add --no-cache \
   g++ \
   python \
   bash \
-  make
+  make \
+  git
 
 WORKDIR /app
 

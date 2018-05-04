@@ -7,7 +7,7 @@
     "start": "node dist/index.js",
     "build": "tsc --pretty",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon",
+    "dev": "nodemon --legacy-watch",
     "dev-inspect": "node --inspect --inspect-brk -r ts-node/register index.ts",
     "xsd": "./bin/xsd.sh"
   },
@@ -26,8 +26,10 @@
   },
   "homepage": "https://github.com/HGV/mss-js#readme",
   "dependencies": {
-    "cxml": "^0.1.1",
-    "cxsd": "^0.1.1"
+    "@types/node-fetch": "^1.6.9",
+    "cxml": "HGV/cxml#7fad521",
+    "cxsd": "^0.1.1",
+    "node-fetch": "^2.1.2"
   },
   "devDependencies": {
     "nodemon": "^1.17.3",
