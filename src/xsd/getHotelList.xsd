@@ -7,51 +7,6 @@
         <xs:element name="result">
           <xs:complexType>
             <xs:sequence>
-              <xs:element maxOccurs="unbounded" name="special">
-                <xs:complexType>
-                  <xs:sequence>
-                    <xs:element name="offer_id" type="xs:integer" />
-                    <xs:element name="status" type="xs:integer" />
-                    <xs:element name="valid" type="xs:integer" />
-                    <xs:element name="offer_typ" type="xs:integer" />
-                    <xs:element name="special_typ" type="xs:integer" />
-                    <xs:element name="special_premium" type="xs:integer" />
-                    <xs:element name="days_arrival" type="xs:integer" />
-                    <xs:element name="days_departure" type="xs:integer" />
-                    <xs:element name="days_dur_min" type="xs:integer" />
-                    <xs:element name="days_dur_max" type="xs:integer" />
-                    <xs:element name="days_arrival_min" type="xs:integer" />
-                    <xs:element name="days_arrival_max" type="xs:integer" />
-                    <xs:element name="children_min" type="xs:integer" />
-                    <xs:element name="children_max" type="xs:integer" />
-                    <xs:element name="adults_min" type="xs:integer" />
-                    <xs:element name="adults_max" type="xs:integer" />
-                    <xs:element name="valid_start" type="xs:date" />
-                    <xs:element name="valid_end" type="xs:date" />
-                    <xs:element maxOccurs="unbounded" name="hotels">
-                      <xs:complexType>
-                        <xs:sequence>
-                          <xs:element name="hotel">
-                            <xs:complexType>
-                              <xs:sequence>
-                                <xs:element name="id" type="xs:integer" />
-                                <xs:element name="channel">
-                                  <xs:complexType>
-                                    <xs:sequence>
-                                      <xs:element name="channel_id" type="xs:string" />
-                                      <xs:element name="from_price" type="xs:integer" />
-                                    </xs:sequence>
-                                  </xs:complexType>
-                                </xs:element>
-                              </xs:sequence>
-                            </xs:complexType>
-                          </xs:element>
-                        </xs:sequence>
-                      </xs:complexType>
-                    </xs:element>
-                  </xs:sequence>
-                </xs:complexType>
-              </xs:element>
               <xs:element maxOccurs="unbounded" name="hotel">
                 <xs:complexType>
                   <xs:sequence>
