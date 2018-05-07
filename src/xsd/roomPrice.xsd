@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="prices.xsd" />
+  <xs:include schemaLocation="price.xsd" />
+  <xs:complexType name="RoomPrice">
+    <xs:sequence>
+      <xs:element name="room_id" type="xs:integer" />
+      <xs:element name="room_seq" type="xs:integer" />
+      <xs:element name="offer_id" type="xs:integer" />
+      <xs:element name="price_details" type="Prices" />
+      <xs:element name="price_total" type="Price" />
+      <xs:element name="price_inclusive" type="Price" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

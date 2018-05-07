@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="season.xsd" />
+  <xs:complexType name="PriceList">
+    <xs:sequence>
+      <xs:element name="offer_id" type="xs:integer" />
+      <xs:element name="offer_typ" type="xs:integer" />
+      <xs:element name="offer_base_id" type="xs:integer" />
+      <xs:element name="special_typ" type="xs:integer" />
+      <xs:element name="prl_mode" type="xs:integer" />
+      <xs:element name="prl_unit" type="xs:integer" />
+      <xs:element name="days_arrival" type="xs:integer" />
+      <xs:element name="days_departure" type="xs:integer" />
+      <xs:element name="days_dur_min" type="xs:integer" />
+      <xs:element name="days_dur_max" type="xs:integer" />
+      <xs:element name="days_arrival_min" type="xs:integer" />
+      <xs:element name="days_arrival_max" type="xs:integer" />
+      <xs:element name="children_min" type="xs:integer" />
+      <xs:element name="children_max" type="xs:integer" />
+      <xs:element name="adults_min" type="xs:integer" />
+      <xs:element name="adults_max" type="xs:integer" />
+      <xs:element name="title" type="xs:string" />
+      <xs:element name="season" type="Season" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

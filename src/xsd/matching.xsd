@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Matching">
+    <xs:sequence>
+      <xs:element name="id_bok" type="xs:integer" />
+      <xs:element name="id_exp" type="xs:integer" />
+      <xs:element name="id_htl" type="xs:integer" />
+      <xs:element name="id_hrs" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

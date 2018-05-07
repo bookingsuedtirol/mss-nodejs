@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Restriction">
+    <xs:sequence>
+      <xs:element name="obj_id" type="xs:integer" />
+      <xs:element name="service" type="xs:integer" />
+      <xs:element name="arrival" type="xs:integer" />
+      <xs:element name="departure" type="xs:integer" />
+      <xs:element name="min" type="xs:integer" />
+      <xs:element name="min_arrival" type="xs:integer" />
+      <xs:element name="max" type="xs:integer" />
+      <xs:element name="max_arrival" type="xs:integer" />
+      <xs:element name="close" type="xs:integer" />
+      <xs:element name="children_min" type="xs:integer" />
+      <xs:element name="children_max" type="xs:integer" />
+      <xs:element name="holes" type="xs:integer" />
+      <xs:element name="days_arrival_min" type="xs:integer" />
+      <xs:element name="days_arrival_max" type="xs:integer" />
+      <xs:element name="pers_age_min" type="xs:integer" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

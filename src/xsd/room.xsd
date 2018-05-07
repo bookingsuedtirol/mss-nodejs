@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="featuresView.xsd" />
+  <xs:include schemaLocation="pictures.xsd" />
+  <xs:include schemaLocation="price.xsd" />
+  <xs:include schemaLocation="properties.xsd" />
+  <xs:include schemaLocation="occupancy.xsd" />
+  <xs:include schemaLocation="roomNumbers.xsd" />
+  <xs:include schemaLocation="roomDetails.xsd" />
+  <xs:include schemaLocation="days.xsd" />
+  <xs:include schemaLocation="priceList.xsd" />
+  <xs:complexType name="Room">
+    <xs:sequence>
+      <xs:element name="room_id" type="xs:integer" />
+      <xs:element name="room_lts_id" type="xs:integer" />
+      <xs:element name="service" type="xs:integer" />
+      <xs:element name="room_type" type="xs:integer" />
+      <xs:element name="room_code" type="xs:string" />
+      <xs:element name="room_title" type="xs:string" />
+      <xs:element name="room_description" type="xs:string" />
+      <xs:element name="title" type="xs:string" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="room_persons" type="xs:string" />
+      <xs:element name="room_free" type="xs:integer" />
+      <xs:element name="features" type="xs:integer" />
+      <xs:element name="features_view" type="FeaturesView" />
+      <xs:element name="room_total" type="xs:double" />
+      <xs:element name="pictures" type="Pictures" />
+      <xs:element maxOccurs="unbounded" name="room_price" type="Price" />
+      <xs:element name="properties" type="Properties" />
+      <xs:element name="occupancy" type="Occupancy" />
+      <xs:element maxOccurs="unbounded" name="room_numbers" type="RoomNumbers" />
+      <xs:element name="room_details" type="RoomDetails" />
+      <xs:element name="days" type="Days" />
+      <xs:element name="price_from" type="xs:integer" />
+      <xs:element maxOccurs="unbounded" name="pricelist" type="PriceList" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
