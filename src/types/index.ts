@@ -1,4 +1,6 @@
-export interface Root {
+export type DeepPartial<T> = { [P in keyof T]?: DeepPartial<T[P]> };
+
+export interface MssRequest {
   version: "1.0";
   header: Header;
   request: Request;
@@ -32,9 +34,9 @@ export interface Paging {
 
 export interface Request {
   search: Search;
-  options: Options;
-  order: Order;
-  data: Data;
+  options?: Options;
+  order?: Order;
+  data?: Data;
   logging?: Logging;
 }
 
@@ -59,17 +61,82 @@ export interface Search {
 }
 
 export interface Options {
-  hotel_details?: number;
-  offer_details?: number;
-  room_details?: number;
-  special_details?: number;
+  hotel_details?: HotelDetails;
+  offer_details?: OfferDetails;
+  room_details?: RoomDetails;
+  special_details?: SpecialDetails;
+  pricelist_details?: PriceListDetails;
   picture_date?: Date;
   lts_bookable?: number;
-  get_availability?: number;
-  get_restrictions?: number;
-  get_roomdetails?: number;
+  get_availability?: 0 | 1;
+  get_restrictions?: 0 | 1;
+  get_roomdetails?: 0 | 1;
   base_price?: number;
-  pricelist_details?: number;
+}
+
+export enum HotelDetails {
+  BasicInfo = 1,
+  Themes = 2,
+  HotelFacilities = 4,
+  ShortDescription = 8,
+  FullDescription = 16,
+  GeographicInformation = 32,
+  Coordinates = 64,
+  Address = 128,
+  Contacts = 256,
+  PaymentOptionsForOnlineBooking = 512,
+  PaymentOptionsAtHotel = 1024,
+  Logo = 2048,
+  HeaderImages = 4096,
+  Gallery = 8192,
+  HotelMatching = 16384,
+  GeographicalInformationAsText = 32768,
+  HotelNavigatorData = 65536,
+  DetailedHotelFacilities = 131072,
+  SalesPoint = 524288,
+  LtsSpecificParameters = 262144
+}
+
+export enum OfferDetails {
+  BasicInfo = 1,
+  RoomCode = 4,
+  RoomTitle = 8,
+  PriceDetails = 16,
+  RoomImages = 32,
+  RoomFacilitiesFilter = 64,
+  RoomDescription = 256,
+  IncludedServices = 1024,
+  AdditionalServices = 4096,
+  PriceImages = 8192,
+  Themes = 16384,
+  RoomFeatures = 32768
+}
+
+export enum PriceListDetails {
+  BaseData = 1,
+  Headlines = 8,
+  Seasons = 4194304
+}
+
+export enum RoomDetails {
+  BasicInfo = 4,
+  Title = 8,
+  RoomImages = 32,
+  RoomFacilitiesFilter = 64,
+  RoomDescription = 256,
+  RoomFacilitiesDetails = 4096,
+  RoomFeatures = 32768,
+  RoomNumbers = 65536
+}
+
+export enum SpecialDetails {
+  BasicInfo = 1,
+  Title = 2,
+  Descriptions = 4,
+  Seasons = 8,
+  Images = 16,
+  Themes = 32,
+  IncludedServices = 64
 }
 
 export interface Order {
