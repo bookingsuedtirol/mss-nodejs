@@ -27,7 +27,7 @@
   "homepage": "https://github.com/HGV/mss-js#readme",
   "dependencies": {
     "@types/node-fetch": "^1.6.9",
-    "cxml": "HGV/cxml#7fad521",
+    "cxml": "git+https://git@github.com/HGV/cxml.git#unknown-elements-fix",
     "cxsd": "^0.1.1",
     "node-fetch": "^2.1.2"
   },
