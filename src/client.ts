@@ -1,11 +1,11 @@
-import { MssRequest, DeepPartial } from "./types";
+import * as Request from "./types/request";
 import fetch from "node-fetch";
 import { Parser } from "cxml";
 import * as xmlbuilder from "xmlbuilder";
 import * as deepExtend from "deep-extend";
 
 const parser = new Parser();
-const defaultRequest: MssRequest = {
+const defaultRequest: Request.Root = {
   version: "1.0",
   header: {
     credentials: {
@@ -22,7 +22,7 @@ const defaultRequest: MssRequest = {
   }
 };
 
-const client = async <T>(request: DeepPartial<MssRequest>) => {
+export const client = async <T>(request: Request.Root) => {
   const newRequest = {
     root: {
       ...deepExtend(defaultRequest, request)
@@ -30,15 +30,13 @@ const client = async <T>(request: DeepPartial<MssRequest>) => {
   };
 
   const body = xmlbuilder.create(newRequest);
-  const { method } = newRequest.root.header;
+  const method = newRequest!.root!.header!.method;
 
-  const xmlns = await import(`../xmlns/${method}`);
+  const response = await import(`./types/response/${method}`);
 
   return fetch("https://www.easymailing.eu/mss/mss_service.php", {
     method: "POST",
     headers: { "Content-Type": "text/xml" },
     body: body.toString()
-  }).then<T>(res => parser.parse(res.body, xmlns.document));
+  }).then<T>(res => parser.parse(res.body, response.document));
 };
-
-export default client;

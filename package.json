@@ -2,13 +2,15 @@
   "name": "mss-nodejs",
   "version": "0.1.0",
   "description": "MSS API wrapper for Node.js projects",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "start": "node dist/index.js",
+    "prepublish": "npm run xsd && npm run build",
     "build": "tsc --pretty",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --legacy-watch",
-    "dev-inspect": "node --inspect --inspect-brk -r ts-node/register index.ts",
     "xsd": "./bin/xsd.sh"
   },
   "repository": {
@@ -36,8 +38,6 @@
     "xmlbuilder": "^10.0.0"
   },
   "devDependencies": {
-    "nodemon": "^1.17.3",
-    "ts-node": "^6.0.2",
     "typescript": "^2.8.3"
   }
 }

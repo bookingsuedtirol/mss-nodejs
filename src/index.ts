@@ -1,22 +1,7 @@
-import * as getHotelList from "../xmlns/getHotelList";
-import mss from "./client";
-import { HotelDetails, MssRequest, DeepPartial } from "./types";
+import { client } from "./client";
+import * as Request from "./types/request";
+import * as Response from "./types/response";
 
-const request: DeepPartial<MssRequest> = {
-  header: {
-    method: "getHotelList",
-    paging: {
-      start: 0,
-      limit: 10
-    }
-  },
-  request: {
-    options: {
-      hotel_details: HotelDetails.BasicInfo
-    }
-  }
-};
+export { Request, Response };
 
-mss<getHotelList.document>(request).then(res => {
-  console.log(res.root.result.hotel);
-});
+export default client;

@@ -19,7 +19,7 @@ Experimential MSS API wrapper for Node.js projects.
 ## Example
 
 ```js
-import * as mss from 'mss-js';
+import mss from 'mss-js';
 
 const request = {
   header: {

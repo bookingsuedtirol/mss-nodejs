@@ -1,14 +1,14 @@
 export type DeepPartial<T> = { [P in keyof T]?: DeepPartial<T[P]> };
 
-export interface MssRequest {
-  version: "1.0";
-  header: Header;
-  request: Request;
+export interface Root {
+  version?: "1.0";
+  header?: Header;
+  request?: Request;
 }
 
 export interface Header {
-  credentials: Credentials;
-  method:
+  credentials?: Credentials;
+  method?:
     | "getHotelList"
     | "getSpecialList"
     | "getRoomList"
@@ -22,18 +22,18 @@ export interface Header {
 }
 
 export interface Credentials {
-  user: string;
-  password: string;
-  source: string;
+  user?: string;
+  password?: string;
+  source?: string;
 }
 
 export interface Paging {
-  start: number;
-  limit: number;
+  start?: number;
+  limit?: number;
 }
 
 export interface Request {
-  search: Search;
+  search?: Search;
   options?: Options;
   order?: Order;
   data?: Data;
@@ -41,7 +41,7 @@ export interface Request {
 }
 
 export interface Search {
-  lang: "de" | "it" | "en";
+  lang?: "de" | "it" | "en";
   result_id?: string;
   agent?: string;
   id?: string[];
@@ -140,22 +140,22 @@ export enum SpecialDetails {
 }
 
 export interface Order {
-  field: string;
-  dir: string;
+  field?: string;
+  dir?: string;
 }
 
 export interface Data {
-  guest: Guest;
-  company: Company;
-  payment: Payment;
-  note: string;
-  details: Details;
-  form: Form;
-  tracking: Tracking;
+  guest?: Guest;
+  company?: Company;
+  payment?: Payment;
+  note?: string;
+  details?: Details;
+  form?: Form;
+  tracking?: Tracking;
 }
 
 export interface Logging {
-  step: string;
+  step?: string;
 }
 
 export interface SearchHotel {
@@ -227,25 +227,25 @@ export enum HotelTheme {
 }
 
 export interface SearchLocation {
-  location: number[];
-  location_lts: string[];
+  location?: number[];
+  location_lts?: string[];
 }
 
 export interface SearchDistance {
-  latitude: number;
-  longitude: number;
-  radius: number;
+  latitude?: number;
+  longitude?: number;
+  radius?: number;
 }
 
 export interface SearchOffer {
-  arrival: Date;
-  departure: Date;
-  service: Board;
-  feature: RoomFeature;
-  channel_id: string[];
-  room: Room[];
-  typ: SearchOfferType;
-  rateplan: Rateplan;
+  arrival?: Date;
+  departure?: Date;
+  service?: Board;
+  feature?: RoomFeature;
+  channel_id?: string[];
+  room?: Room[];
+  typ?: SearchOfferType;
+  rateplan?: Rateplan;
 }
 
 export enum SearchOfferType {
@@ -285,19 +285,19 @@ export enum RoomFeature {
 }
 
 export interface SearchLts {
-  A0Ene: number;
-  A0MTV: number;
-  A0Rep: number;
+  A0Ene?: number;
+  A0MTV?: number;
+  A0Rep?: number;
 }
 
 export interface SearchSpecial {
-  offerId: number[];
-  date_from: Date;
-  date_to: Date;
-  theme: SpecialTheme;
-  validity: Validity;
-  typ: SearchSpecialType;
-  premium: SearchSpecialPremium;
+  offerId?: number[];
+  date_from?: Date;
+  date_to?: Date;
+  theme?: SpecialTheme;
+  validity?: Validity;
+  typ?: SearchSpecialType;
+  premium?: SearchSpecialPremium;
 }
 
 export enum SearchSpecialType {
@@ -355,40 +355,40 @@ export enum SpecialTheme {
 }
 
 export interface SearchAvailability {
-  date_from: Date;
-  date_to: Date;
-  offer_id: number[];
-  room_id: number[];
+  date_from?: Date;
+  date_to?: Date;
+  offer_id?: number[];
+  room_id?: number[];
 }
 
 export interface SearchPriceList {
-  date_from: Date;
-  date_to: Date;
-  service: Board;
-  room_id: number[];
-  typ: SearchSpecialType;
+  date_from?: Date;
+  date_to?: Date;
+  service?: Board;
+  room_id?: number[];
+  typ?: SearchSpecialType;
 }
 
 export interface Guest {
-  gender: string;
-  prefix: string;
-  firstname: string;
-  lastname: string;
-  email: string;
-  phone: string;
-  address: Address;
-  newsletter: 0 | 1;
+  gender?: string;
+  prefix?: string;
+  firstname?: string;
+  lastname?: string;
+  email?: string;
+  phone?: string;
+  address?: Address;
+  newsletter?: 0 | 1;
 }
 
 export interface Company {
-  name: string;
-  taxnumber: string;
-  address: Address;
+  name?: string;
+  taxnumber?: string;
+  address?: Address;
 }
 
 export interface Payment {
-  method: PaymentMethod;
-  invoice: 0 | 1;
+  method?: PaymentMethod;
+  invoice?: 0 | 1;
 }
 
 export enum PaymentMethod {
@@ -401,39 +401,51 @@ export enum PaymentMethod {
 }
 
 export interface Details {
-  extr_price: ExtraPrice[];
+  extr_price?: ExtraPrice[];
 }
 
 export interface ExtraPrice {
-  price_id: number;
-  price_amount: number;
+  price_id?: number;
+  price_amount?: number;
 }
 
 export interface Form {
-  url_success: string;
-  url_failure: string;
+  url_success?: string;
+  url_failure?: string;
 }
 
 export interface Tracking {
-  partner: string;
-  media: string;
-  campaign: string;
-  companyinfo: string;
+  partner?: string;
+  media?: string;
+  campaign?: string;
+  companyinfo?: string;
 }
 
 export interface Stars {
-  min: number;
-  max: number;
+  min?: number;
+  max?: number;
 }
 
 export interface Address {
-  street: string;
-  zipcode: string;
-  city: string;
-  country: string;
+  street?: string;
+  zipcode?: string;
+  city?: string;
+  country?: string;
 }
 
-export interface Room {}
+export interface Room {
+  offer_id?: number;
+  room_id?: number;
+  service?: Board;
+  room_type?: RoomType;
+  room_seq?: number;
+  person?: number[];
+}
+
+export enum RoomType {
+  Room = 1,
+  Apartment = 2
+}
 
 export interface Rateplan {
   code: string;
