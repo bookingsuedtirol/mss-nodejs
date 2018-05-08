@@ -1,5 +1,5 @@
 {
-  "name": "mss-nodejs",
+  "name": "@hgv/mss-nodejs",
   "version": "0.1.0",
   "description": "MSS API wrapper for Node.js projects",
   "main": "dist/index.js",
