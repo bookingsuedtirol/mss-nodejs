@@ -1,20 +1,19 @@
-import mss, { Request, Response } from "../index";
+import { Client, Request } from "../index";
 
-const request: Request.Root = {
-  header: {
-    method: "getHotelList",
-    paging: {
+const client = new Client();
+
+client
+  .request(req => {
+    req.header.paging = {
       start: 0,
       limit: 10
-    }
-  },
-  request: {
-    options: {
+    };
+    req.request.options = {
       hotel_details: Request.HotelDetails.BasicInfo
-    }
-  }
-};
+    };
 
-mss<Response.GetHotelList.document>(request).then(res => {
-  console.log(res.root.result.hotel);
-});
+    return req;
+  })
+  .then(res => {
+    console.log(res.result.hotel);
+  });

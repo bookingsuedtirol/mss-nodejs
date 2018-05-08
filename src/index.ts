@@ -1,7 +1,5 @@
-import { client } from "./client";
+import { Client } from "./client";
 import * as Request from "./types/request";
-import * as Response from "./types/response";
+import { Mss as Response } from "./types/response";
 
-export { Request, Response };
-
-export default client;
+export { Client, Request, Response };

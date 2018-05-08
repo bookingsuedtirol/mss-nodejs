@@ -8,10 +8,10 @@ import * as Primitive from './xml-primitives';
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/contact.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/day.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/days.xsd
+// https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/error.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/feature.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/featuresView.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/geolocation.xsd
-// https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/getHotelList.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/header.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/hotel.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/hotelPayment.xsd
@@ -19,10 +19,12 @@ import * as Primitive from './xml-primitives';
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/locationName.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/ltsData.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/matching.xsd
+// https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/mss.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/occupancy.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/offer.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/offerDescription.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/onlinePayment.xsd
+// https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/paging.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/picture.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/pictures.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/pos.xsd
@@ -34,6 +36,7 @@ import * as Primitive from './xml-primitives';
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/ratings.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/restriction.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/restrictions.xsd
+// https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/result.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/room.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/roomDescription.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/roomDetail.xsd
@@ -41,6 +44,7 @@ import * as Primitive from './xml-primitives';
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/roomNumbers.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/roomPrice.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/roomPrices.xsd
+// https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/root.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/season.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/theme.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/themes.xsd
@@ -111,6 +115,13 @@ interface _Days extends BaseType {
 export interface Days extends _Days { constructor: { new(): Days }; }
 export var Days: { new(): Days };
 
+interface _Error extends BaseType {
+	code: number;
+	message: string;
+}
+export interface Error extends _Error { constructor: { new(): Error }; }
+export var Error: { new(): Error };
+
 interface _Feature extends BaseType {
 	id: number;
 	title: string;
@@ -134,26 +145,14 @@ export interface Geolocation extends _Geolocation { constructor: { new(): Geoloc
 export var Geolocation: { new(): Geolocation };
 
 interface _Header extends BaseType {
-	error: HeaderErrorType;
-	paging: HeaderPagingType;
+	error: Error;
+	paging: Paging;
 	result_id: string;
 	source: string;
 	time: string;
 }
 export interface Header extends _Header { constructor: { new(): Header }; }
 export var Header: { new(): Header };
-
-interface _HeaderErrorType extends BaseType {
-	code: number;
-	message: string;
-}
-interface HeaderErrorType extends _HeaderErrorType { constructor: { new(): HeaderErrorType }; }
-
-interface _HeaderPagingType extends BaseType {
-	count: number;
-	total: number;
-}
-interface HeaderPagingType extends _HeaderPagingType { constructor: { new(): HeaderPagingType }; }
 
 interface _Hotel extends BaseType {
 	address: Address;
@@ -269,6 +268,13 @@ interface _OnlinePayment extends BaseType {
 }
 export interface OnlinePayment extends _OnlinePayment { constructor: { new(): OnlinePayment }; }
 export var OnlinePayment: { new(): OnlinePayment };
+
+interface _Paging extends BaseType {
+	count: number;
+	total: number;
+}
+export interface Paging extends _Paging { constructor: { new(): Paging }; }
+export var Paging: { new(): Paging };
 
 interface _Picture extends BaseType {
 	copyright: string;
@@ -398,6 +404,12 @@ interface _Restrictions extends BaseType {
 export interface Restrictions extends _Restrictions { constructor: { new(): Restrictions }; }
 export var Restrictions: { new(): Restrictions };
 
+interface _Result extends BaseType {
+	hotel: Hotel[];
+}
+export interface Result extends _Result { constructor: { new(): Result }; }
+export var Result: { new(): Result };
+
 interface _Room extends BaseType {
 	days: Days;
 	description: string;
@@ -468,16 +480,12 @@ interface _RoomPrices extends BaseType {
 export interface RoomPrices extends _RoomPrices { constructor: { new(): RoomPrices }; }
 export var RoomPrices: { new(): RoomPrices };
 
-interface _RootType extends BaseType {
+interface _Root extends BaseType {
 	header: Header;
-	result: RootTypeResultType;
+	result: Result;
 }
-interface RootType extends _RootType { constructor: { new(): RootType }; }
-
-interface _RootTypeResultType extends BaseType {
-	hotel: Hotel[];
-}
-interface RootTypeResultType extends _RootTypeResultType { constructor: { new(): RootTypeResultType }; }
+export interface Root extends _Root { constructor: { new(): Root }; }
+export var Root: { new(): Root };
 
 interface _Season extends BaseType {
 	date_end: Date;
@@ -501,6 +509,6 @@ export interface Themes extends _Themes { constructor: { new(): Themes }; }
 export var Themes: { new(): Themes };
 
 export interface document extends BaseType {
-	root: RootType;
+	root: Root;
 }
 export var document: document;

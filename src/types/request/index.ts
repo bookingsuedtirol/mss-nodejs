@@ -1,14 +1,12 @@
-export type DeepPartial<T> = { [P in keyof T]?: DeepPartial<T[P]> };
-
 export interface Root {
-  version?: "1.0";
-  header?: Header;
-  request?: Request;
+  version: "1.0";
+  header: Header;
+  request: Request;
 }
 
 export interface Header {
-  credentials?: Credentials;
-  method?:
+  credentials: Credentials;
+  method:
     | "getHotelList"
     | "getSpecialList"
     | "getRoomList"
@@ -22,18 +20,18 @@ export interface Header {
 }
 
 export interface Credentials {
-  user?: string;
-  password?: string;
-  source?: string;
+  user: string;
+  password: string;
+  source: string;
 }
 
 export interface Paging {
-  start?: number;
-  limit?: number;
+  start: number;
+  limit: number;
 }
 
 export interface Request {
-  search?: Search;
+  search: Search;
   options?: Options;
   order?: Order;
   data?: Data;
@@ -41,7 +39,7 @@ export interface Request {
 }
 
 export interface Search {
-  lang?: "de" | "it" | "en";
+  lang: "de" | "it" | "en";
   result_id?: string;
   agent?: string;
   id?: string[];
@@ -448,15 +446,15 @@ export enum RoomType {
 }
 
 export interface Rateplan {
-  code: string;
-  source: string;
+  code?: string;
+  source?: string;
 }
 
 export interface Validity {
-  valid: 0 | 1;
-  offers: 0 | 1;
-  arrival: Date;
-  departure: Date;
-  service: Board;
-  room: Room[];
+  valid?: 0 | 1;
+  offers?: 0 | 1;
+  arrival?: Date;
+  departure?: Date;
+  service?: Board;
+  room?: Room[];
 }

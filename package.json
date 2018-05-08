@@ -8,10 +8,9 @@
     "dist"
   ],
   "scripts": {
-    "prepublish": "npm run xsd && npm run build",
     "build": "tsc --pretty",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "xsd": "./bin/xsd.sh"
+    "xsd": "cxsd -t src/types/response -j dist/types/response https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/mss.xsd"
   },
   "repository": {
     "type": "git",
@@ -28,12 +27,12 @@
   },
   "homepage": "https://github.com/HGV/mss-nodejs#readme",
   "dependencies": {
-    "@types/deep-extend": "^0.4.31",
+    "@types/clone": "^0.1.30",
     "@types/node-fetch": "^1.6.9",
     "@types/xmlbuilder": "0.0.32",
+    "clone": "^2.1.1",
     "cxml": "git+https://git@github.com/HGV/cxml.git#unknown-elements-fix",
     "cxsd": "^0.1.1",
-    "deep-extend": "^0.5.1",
     "node-fetch": "^2.1.2",
     "xmlbuilder": "^10.0.0"
   },

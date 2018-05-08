@@ -1,3 +1,3 @@
-import * as GetHotelList from "./getHotelList";
+import * as Mss from "./Mss";
 
-export { GetHotelList };
+export { Mss };

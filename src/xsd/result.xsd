@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="hotel.xsd" />
+  <xs:complexType name="Result">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="hotel" type="Hotel" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

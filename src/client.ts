@@ -1,42 +1,62 @@
-import * as Request from "./types/request";
+import { Request, Response } from "./index";
 import fetch from "node-fetch";
 import { Parser } from "cxml";
 import * as xmlbuilder from "xmlbuilder";
-import * as deepExtend from "deep-extend";
+import * as clone from "clone";
 
-const parser = new Parser();
-const defaultRequest: Request.Root = {
-  version: "1.0",
-  header: {
-    credentials: {
+export interface ClientSettings {
+  user: string;
+  password: string;
+  source: string;
+}
+
+export class Client {
+  private parser: Parser;
+  private defaultPayload: Request.Root;
+
+  constructor(
+    settings: ClientSettings = {
       user: process.env.MSS_USER as string,
       password: process.env.MSS_PASSWORD as string,
       source: process.env.MSS_SOURCE as string
-    },
-    method: "getHotelList"
-  },
-  request: {
-    search: {
-      lang: "de"
     }
+  ) {
+    this.parser = new Parser();
+    this.defaultPayload = {
+      version: "1.0",
+      header: {
+        credentials: settings,
+        method: "getHotelList"
+      },
+      request: {
+        search: {
+          lang: "de"
+        }
+      }
+    };
   }
-};
 
-export const client = async <T>(request: Request.Root) => {
-  const newRequest = {
-    root: {
-      ...deepExtend(defaultRequest, request)
-    }
+  request = async (callback: (payload: Request.Root) => Request.Root) => {
+    const newRequest = callback(clone(this.defaultPayload));
+
+    const body = xmlbuilder.create({
+      root: newRequest
+    });
+
+    const { method } = newRequest.header;
+    const response = await import(`./types/response/${method}`);
+
+    return fetch("https://www.easymailing.eu/mss/mss_service.php", {
+      method: "POST",
+      headers: { "Content-Type": "text/xml" },
+      body: body.toString()
+    })
+      .then(
+        res =>
+          (this.parser.parse(res.body, response.document) as any) as Promise<
+            Response.document
+          >
+      )
+      .then(res => res.root);
   };
-
-  const body = xmlbuilder.create(newRequest);
-  const method = newRequest!.root!.header!.method;
-
-  const response = await import(`./types/response/${method}`);
-
-  return fetch("https://www.easymailing.eu/mss/mss_service.php", {
-    method: "POST",
-    headers: { "Content-Type": "text/xml" },
-    body: body.toString()
-  }).then<T>(res => parser.parse(res.body, response.document));
-};
+}
