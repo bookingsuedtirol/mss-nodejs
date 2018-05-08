@@ -19,12 +19,12 @@ Experimential MSS API wrapper for Node.js projects.
 ## Example
 
 ```js
-const { Client } = require('mss-js');
+const { Client, Request } = require("@hgv/mss-nodejs");
 
 const client = new Client({
-  'user' => 'username',
-  'password' => 'password',
-  'source' => 'source'
+  user: "username",
+  password: "password",
+  source: "source"
 });
 
 client
@@ -32,14 +32,15 @@ client
     req.header.method = "getHotelList";
     req.request.search.id = ["11230"];
     req.request.options = {
-      hotel_details: Request.HotelDetails.BasicInfo | HotelDetails.PaymentOptionsForOnlineBooking
+      hotel_details:
+        Request.HotelDetails.BasicInfo |
+        Request.HotelDetails.PaymentOptionsForOnlineBooking
     };
-
     return req;
   })
   .then(res => {
-    const { hotel } = res.result;
-    console.log(hotel.name; // => string(18) "Hotel Lichtenstern"
+    const hotel = res.result.hotel[0];
+    console.log(hotel.name); // => string(18) "Hotel Lichtenstern"
     console.log(hotel.stars); // => float(3)
     console.log(hotel.online_payment.bank.iban); // => string(27) "IT28K0818758740000001021022"
   });
