@@ -12,31 +12,11 @@ const request: DeepPartial<MssRequest> = {
   },
   request: {
     options: {
-      hotel_details:
-        HotelDetails.BasicInfo |
-        HotelDetails.Address |
-        HotelDetails.Contacts |
-        HotelDetails.Coordinates |
-        HotelDetails.DetailedHotelFacilities |
-        HotelDetails.FullDescription |
-        HotelDetails.Gallery |
-        HotelDetails.GeographicalInformationAsText |
-        HotelDetails.GeographicInformation |
-        HotelDetails.HeaderImages |
-        HotelDetails.HotelFacilities |
-        HotelDetails.HotelMatching |
-        HotelDetails.HotelNavigatorData |
-        HotelDetails.Logo |
-        HotelDetails.LtsSpecificParameters |
-        HotelDetails.PaymentOptionsAtHotel |
-        HotelDetails.PaymentOptionsForOnlineBooking |
-        HotelDetails.SalesPoint |
-        HotelDetails.ShortDescription |
-        HotelDetails.Themes
+      hotel_details: HotelDetails.BasicInfo
     }
   }
 };
 
 mss<getHotelList.document>(request).then(res => {
-  res.root.result.hotel.forEach(hotel => console.log(hotel.pictures));
+  console.log(res.root.result.hotel);
 });
