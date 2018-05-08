@@ -24,7 +24,6 @@
       <xs:element name="type" type="xs:integer" />
       <xs:element name="stars" type="xs:double" />
       <xs:element name="address" type="Address" />
-      <xs:element name="type" type="xs:integer" />
       <xs:element name="features" type="xs:integer" />
       <xs:element name="location" type="Location" />
       <xs:element name="location_name" type="LocationName" />
