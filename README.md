@@ -19,30 +19,30 @@ Experimential MSS API wrapper for Node.js projects.
 ## Example
 
 ```js
-import mss from 'mss-js';
+const { Client } = require('mss-js');
 
-const request = {
-  header: {
-    method: "getHotelList"
-  },
-  request: {
-    search: {
-      id: ["11230"]
-    }
-    options: {
-      hotel_details:
-        HotelDetails.BasicInfo |
-        HotelDetails.PaymentOptionsForOnlineBooking
-    }
-  }
-};
-
-mss(request).then(res => {
-  const hotel = res.root.result.hotel[0];
-  console.log(hotel.name; // => string(18) "Hotel Lichtenstern"
-  console.log(hotel.stars); // => float(3)
-  console.log(hotel.online_payment.bank.iban); // => string(27) "IT28K0818758740000001021022"
+const client = new Client({
+  'user' => 'username',
+  'password' => 'password',
+  'source' => 'source'
 });
+
+client
+  .request(req => {
+    req.header.method = "getHotelList";
+    req.request.search.id = ["11230"];
+    req.request.options = {
+      hotel_details: Request.HotelDetails.BasicInfo | HotelDetails.PaymentOptionsForOnlineBooking
+    };
+
+    return req;
+  })
+  .then(res => {
+    const { hotel } = res.result;
+    console.log(hotel.name; // => string(18) "Hotel Lichtenstern"
+    console.log(hotel.stars); // => float(3)
+    console.log(hotel.online_payment.bank.iban); // => string(27) "IT28K0818758740000001021022"
+  });
 ```
 
 ## Exception handling
@@ -50,9 +50,10 @@ mss(request).then(res => {
 If the MSS returns an error response, an exception is thrown.
 
 ```js
-mss(request).then(res => {
-  ...
-}).catch(e => {
-  console.log(e); // "oh, no!"
-});
+client
+  .request(req => { ... })
+  .then(res => { ... })
+  .catch(e => {
+    console.log(e); // "oh, no!"
+  });
 ```
