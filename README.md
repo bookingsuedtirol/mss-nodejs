@@ -38,7 +38,7 @@ const request = {
 };
 
 mss(request).then(res => {
-  const { hotel } = res.root.result.hotel[0];
+  const hotel = res.root.result.hotel[0];
   console.log(hotel.name; // => string(18) "Hotel Lichtenstern"
   console.log(hotel.stars); // => float(3)
   console.log(hotel.online_payment.bank.iban); // => string(27) "IT28K0818758740000001021022"
