@@ -15,6 +15,7 @@ import * as Primitive from './xml-primitives';
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/header.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/hotel.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/hotelPayment.xsd
+// https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/hotels.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/location.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/locationName.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/ltsData.xsd
@@ -46,6 +47,9 @@ import * as Primitive from './xml-primitives';
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/roomPrices.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/root.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/season.xsd
+// https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/seasons.xsd
+// https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/services.xsd
+// https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/special.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/theme.xsd
 // https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/themes.xsd
 
@@ -195,6 +199,12 @@ interface _HotelPayment extends BaseType {
 }
 export interface HotelPayment extends _HotelPayment { constructor: { new(): HotelPayment }; }
 export var HotelPayment: { new(): HotelPayment };
+
+interface _Hotels extends BaseType {
+	hotel: Hotel[];
+}
+export interface Hotels extends _Hotels { constructor: { new(): Hotels }; }
+export var Hotels: { new(): Hotels };
 
 interface _Location extends BaseType {
 	id_area: number;
@@ -406,6 +416,7 @@ export var Restrictions: { new(): Restrictions };
 
 interface _Result extends BaseType {
 	hotel: Hotel[];
+	special: Special[];
 }
 export interface Result extends _Result { constructor: { new(): Result }; }
 export var Result: { new(): Result };
@@ -494,6 +505,49 @@ interface _Season extends BaseType {
 }
 export interface Season extends _Season { constructor: { new(): Season }; }
 export var Season: { new(): Season };
+
+interface _Seasons extends BaseType {
+	season: Season[];
+}
+export interface Seasons extends _Seasons { constructor: { new(): Seasons }; }
+export var Seasons: { new(): Seasons };
+
+interface _Services extends BaseType {
+	service: number[];
+}
+export interface Services extends _Services { constructor: { new(): Services }; }
+export var Services: { new(): Services };
+
+interface _Special extends BaseType {
+	adults_max: number;
+	adults_min: number;
+	children_max: number;
+	children_min: number;
+	days_arrival: number;
+	days_arrival_max: number;
+	days_arrival_min: number;
+	days_departure: number;
+	days_dur_max: number;
+	days_dur_min: number;
+	description: string;
+	hotels: Hotels;
+	inclusive: Prices;
+	offer_id: number;
+	offer_typ: number;
+	pictures: Pictures;
+	seasons: Seasons;
+	services: Services;
+	special_premium: number;
+	special_typ: number;
+	status: number;
+	themes: Themes;
+	title: string;
+	valid: number;
+	valid_end: Date;
+	valid_start: Date;
+}
+export interface Special extends _Special { constructor: { new(): Special }; }
+export var Special: { new(): Special };
 
 interface _Theme extends BaseType {
 	id: number;
