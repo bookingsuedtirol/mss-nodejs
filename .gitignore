@@ -3,4 +3,4 @@ dist
 cache
 xmlns
 .env
-.package-lock.json
+package-lock.json
