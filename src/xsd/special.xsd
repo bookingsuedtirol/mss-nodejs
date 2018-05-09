@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="hotels.xsd" />
+  <xs:include schemaLocation="seasons.xsd" />
+  <xs:include schemaLocation="services.xsd" />
+  <xs:include schemaLocation="prices.xsd" />
+  <xs:include schemaLocation="pictures.xsd" />
+  <xs:include schemaLocation="themes.xsd" />
+  <xs:complexType name="Special">
+    <xs:sequence>
+      <xs:element name="offer_id" type="xs:integer" />
+      <xs:element name="status" type="xs:integer" />
+      <xs:element name="valid" type="xs:integer" />
+      <xs:element name="offer_typ" type="xs:integer" />
+      <xs:element name="special_typ" type="xs:integer" />
+      <xs:element name="special_premium" type="xs:integer" />
+      <xs:element name="days_arrival" type="xs:integer" />
+      <xs:element name="days_departure" type="xs:integer" />
+      <xs:element name="days_dur_min" type="xs:integer" />
+      <xs:element name="days_dur_max" type="xs:integer" />
+      <xs:element name="days_arrival_min" type="xs:integer" />
+      <xs:element name="days_arrival_max" type="xs:integer" />
+      <xs:element name="children_min" type="xs:integer" />
+      <xs:element name="children_max" type="xs:integer" />
+      <xs:element name="adults_min" type="xs:integer" />
+      <xs:element name="adults_max" type="xs:integer" />
+      <xs:element name="valid_start" type="xs:date" />
+      <xs:element name="valid_end" type="xs:date" />
+      <xs:element name="title" type="xs:string" />
+      <xs:element name="description" type="xs:string" />
+      <xs:element name="hotels" type="Hotels" />
+      <xs:element name="seasons" type="Seasons" />
+      <xs:element name="services" type="Services" />
+      <xs:element name="inclusive" type="Prices" />
+      <xs:element name="pictures" type="Pictures" />
+      <xs:element name="themes" type="Themes" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
