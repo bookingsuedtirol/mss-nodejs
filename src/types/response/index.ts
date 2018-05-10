@@ -1,3 +1,3 @@
-import * as Mss from "./Mss";
+import * as Mss from "./xmlns/Mss";
 
 export { Mss };
