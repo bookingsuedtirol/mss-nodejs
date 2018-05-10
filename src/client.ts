@@ -43,9 +43,6 @@ export class Client {
       root: newRequest
     });
 
-    const { method } = newRequest.header;
-    const response = await import(`./types/response/${method}`);
-
     return fetch("https://www.easymailing.eu/mss/mss_service.php", {
       method: "POST",
       headers: { "Content-Type": "text/xml" },
@@ -53,7 +50,7 @@ export class Client {
     })
       .then(
         res =>
-          (this.parser.parse(res.body, response.document) as any) as Promise<
+          (this.parser.parse(res.body, Response.document) as any) as Promise<
             Response.document
           >
       )
