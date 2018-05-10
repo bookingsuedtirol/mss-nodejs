@@ -42,7 +42,7 @@ export interface Search {
   lang: "de" | "it" | "en";
   result_id?: string;
   agent?: string;
-  id?: string[];
+  id?: number[];
   search_hotel?: SearchHotel;
   search_location?: SearchLocation;
   search_distance?: SearchDistance;
