@@ -6,6 +6,8 @@
       <xs:element name="id_exp" type="xs:integer" />
       <xs:element name="id_htl" type="xs:integer" />
       <xs:element name="id_hrs" type="xs:integer" />
+      <xs:element name="id_gog" type="xs:integer" />
+      <xs:element name="id_lau" type="xs:integer" />
     </xs:sequence>
   </xs:complexType>
 </xs:schema>

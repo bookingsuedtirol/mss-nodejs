@@ -64,7 +64,7 @@ export interface Options {
   room_details?: RoomDetails;
   special_details?: SpecialDetails;
   pricelist_details?: PriceListDetails;
-  picture_date?: Date;
+  picture_date?: string;
   lts_bookable?: number;
   get_availability?: 0 | 1;
   get_restrictions?: 0 | 1;
@@ -236,8 +236,8 @@ export interface SearchDistance {
 }
 
 export interface SearchOffer {
-  arrival?: Date;
-  departure?: Date;
+  arrival?: string;
+  departure?: string;
   service?: Board;
   feature?: RoomFeature;
   channel_id?: string[];
@@ -290,8 +290,8 @@ export interface SearchLts {
 
 export interface SearchSpecial {
   offerId?: number[];
-  date_from?: Date;
-  date_to?: Date;
+  date_from?: string;
+  date_to?: string;
   theme?: SpecialTheme;
   validity?: Validity;
   typ?: SearchSpecialType;
@@ -353,15 +353,15 @@ export enum SpecialTheme {
 }
 
 export interface SearchAvailability {
-  date_from?: Date;
-  date_to?: Date;
+  date_from?: string;
+  date_to?: string;
   offer_id?: number[];
   room_id?: number[];
 }
 
 export interface SearchPriceList {
-  date_from?: Date;
-  date_to?: Date;
+  date_from?: string;
+  date_to?: string;
   service?: Board;
   room_id?: number[];
   typ?: SearchSpecialType;
