@@ -8,9 +8,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc --pretty && copyfiles --flat src/types/response/xmlns/* dist/types/response/xmlns",
+    "build": "tsc --pretty",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "xsd": "cxsd -t src/types/response/xmlns -j src/types/response/xmlns https://raw.githubusercontent.com/HGV/mss-js/master/src/xsd/mss.xsd"
+    "dev": "nodemon"
   },
   "repository": {
     "type": "git",
@@ -28,9 +28,9 @@
   "homepage": "https://github.com/HGV/mss-nodejs#readme",
   "dependencies": {
     "clone": "^2.1.2",
-    "cxml": "git+https://git@github.com/HGV/cxml.git#unknown-elements-fix",
-    "cxsd": "^0.1.1",
+    "jsonix": "^2.4.1",
     "node-fetch": "^2.1.2",
+    "omit-deep": "^0.3.0",
     "xmlbuilder": "^10.0.0"
   },
   "devDependencies": {
@@ -38,6 +38,8 @@
     "@types/node-fetch": "^1.6.9",
     "@types/xmlbuilder": "0.0.32",
     "copyfiles": "^2.0.0",
+    "nodemon": "^1.17.4",
+    "ts-node": "^6.0.3",
     "typescript": "^2.8.3"
   }
 }

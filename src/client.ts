@@ -1,8 +1,13 @@
 import { Request, Response } from "./index";
 import fetch from "node-fetch";
-import { Parser } from "cxml";
 import * as xmlbuilder from "xmlbuilder";
 import * as clone from "clone";
+import mappings from "./mappings";
+const omitDeep = require("omit-deep");
+const { Jsonix } = require("jsonix");
+
+const context = new Jsonix.Context([mappings]);
+const unmarshaller = context.createUnmarshaller();
 
 export interface ClientSettings {
   user: string;
@@ -11,7 +16,6 @@ export interface ClientSettings {
 }
 
 export class Client {
-  private parser: Parser;
   private defaultPayload: Request.Root;
 
   constructor(
@@ -21,7 +25,6 @@ export class Client {
       source: process.env.MSS_SOURCE as string
     }
   ) {
-    this.parser = new Parser();
     this.defaultPayload = {
       version: "1.0",
       header: {
@@ -48,12 +51,12 @@ export class Client {
       headers: { "Content-Type": "text/xml" },
       body: body.toString()
     })
-      .then(
-        res =>
-          (this.parser.parse(res.body, Response.document) as any) as Promise<
-            Response.document
-          >
-      )
-      .then(res => res.root);
+      .then(res => res.text())
+      .then(body => {
+        const data = unmarshaller.unmarshalString(body).value;
+        omitDeep(data, "TYPE_NAME");
+        return data as Response.Root;
+      });
+    // .then(res => res.root);
   };
 }
