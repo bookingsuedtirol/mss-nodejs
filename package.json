@@ -37,7 +37,6 @@
     "@types/clone": "^0.1.30",
     "@types/node-fetch": "^1.6.9",
     "@types/xmlbuilder": "0.0.32",
-    "copyfiles": "^2.0.0",
     "nodemon": "^1.17.4",
     "ts-node": "^6.0.3",
     "typescript": "^2.8.3"
