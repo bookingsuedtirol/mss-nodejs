@@ -445,6 +445,7 @@ export interface Room {
 }
 
 export enum RoomType {
+  All = 0,
   Room = 1,
   Apartment = 2
 }

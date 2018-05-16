@@ -249,7 +249,10 @@ export interface Result {
   special: Special[];
 }
 
-export type RoomType = 0 | 1 | 2;
+export enum RoomType {
+  Room = 1,
+  Apartment = 2
+}
 
 export interface Room {
   days: Day[];
