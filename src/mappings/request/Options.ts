@@ -25,7 +25,7 @@ export default {
     {
       type: "element",
       name: "picture_date",
-      typeInfo: "Date"
+      typeInfo: "DateAsDate"
     },
     {
       type: "element",

@@ -5,12 +5,12 @@ export default {
     {
       type: "element",
       name: "arrival",
-      typeInfo: "Date"
+      typeInfo: "DateAsDate"
     },
     {
       type: "element",
       name: "departure",
-      typeInfo: "Date"
+      typeInfo: "DateAsDate"
     },
     {
       type: "element",

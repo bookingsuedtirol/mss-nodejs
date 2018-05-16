@@ -11,12 +11,12 @@ export default {
     {
       type: "element",
       name: "date_from",
-      typeInfo: "Date"
+      typeInfo: "DateAsDate"
     },
     {
       type: "element",
       name: "date_to",
-      typeInfo: "Date"
+      typeInfo: "DateAsDate"
     },
     {
       type: "element",
