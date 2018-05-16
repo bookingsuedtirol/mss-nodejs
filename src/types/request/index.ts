@@ -92,7 +92,9 @@ export enum HotelDetails {
   HotelNavigatorData = 65536,
   DetailedHotelFacilities = 131072,
   SalesPoint = 524288,
-  LtsSpecificParameters = 262144
+  LtsSpecificParameters = 262144,
+  CheckInOut = 1048576,
+  SourceData = 2097152
 }
 
 export enum OfferDetails {
@@ -104,7 +106,8 @@ export enum OfferDetails {
   RoomFacilitiesFilter = 64,
   RoomDescription = 256,
   IncludedServices = 1024,
-  AdditionalServices = 4096,
+  AdditionalServices = 2048,
+  RoomFacilitiesDetails = 4096,
   PriceImages = 8192,
   Themes = 16384,
   RoomFeatures = 32768

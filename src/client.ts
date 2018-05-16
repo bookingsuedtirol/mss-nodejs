@@ -1,8 +1,15 @@
 import { Request, Response } from "./index";
 import fetch from "node-fetch";
-import { Parser } from "cxml";
-import * as xmlbuilder from "xmlbuilder";
 import * as clone from "clone";
+import requestMappings from "./mappings/request";
+import responseMappings from "./mappings/response";
+const omitDeep = require("omit-deep");
+const { Jsonix } = require("jsonix");
+
+const marshaller = new Jsonix.Context([requestMappings]).createMarshaller();
+const unmarshaller = new Jsonix.Context([
+  responseMappings
+]).createUnmarshaller();
 
 export interface ClientSettings {
   user: string;
@@ -11,7 +18,6 @@ export interface ClientSettings {
 }
 
 export class Client {
-  private parser: Parser;
   private defaultPayload: Request.Root;
 
   constructor(
@@ -21,7 +27,6 @@ export class Client {
       source: process.env.MSS_SOURCE as string
     }
   ) {
-    this.parser = new Parser();
     this.defaultPayload = {
       version: "1.0",
       header: {
@@ -39,21 +44,18 @@ export class Client {
   request = async (callback: (payload: Request.Root) => Request.Root) => {
     const newRequest = callback(clone(this.defaultPayload));
 
-    const body = xmlbuilder.create({
-      root: newRequest
-    });
+    const body = marshaller.marshalString({ root: newRequest });
 
-    return fetch("https://www.easymailing.eu/mss/mss_service.php", {
+    return fetch("https://www.bookingsuedtirol.com/mss/mss_service.php", {
       method: "POST",
       headers: { "Content-Type": "text/xml" },
-      body: body.toString()
+      body
     })
-      .then(
-        res =>
-          (this.parser.parse(res.body, Response.document) as any) as Promise<
-            Response.document
-          >
-      )
-      .then(res => res.root);
+      .then(res => res.text())
+      .then(body => {
+        const data = unmarshaller.unmarshalString(body).value;
+        omitDeep(data, "TYPE_NAME");
+        return data as Response.Root;
+      });
   };
 }

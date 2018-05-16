@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:include schemaLocation="roomDetail.xsd" />
-  <xs:complexType name="RoomDetails">
-    <xs:sequence>
-      <xs:element maxOccurs="unbounded" name="room_detail" type="RoomDetail" />
-    </xs:sequence>
-  </xs:complexType>
-</xs:schema>
