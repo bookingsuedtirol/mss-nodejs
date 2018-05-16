@@ -1,3 +1,6 @@
+import BsDomain from "../types/BsDomain";
+import NlToBr from "../types/NlToBr";
+
 import Root from "./Root";
 import Header from "./Header";
 import Error from "./Error";
@@ -35,6 +38,8 @@ import Special from "./Special";
 export default {
   name: "Mss",
   typeInfos: [
+    new BsDomain(),
+    new NlToBr(),
     Root,
     Header,
     Error,

@@ -29,6 +29,7 @@
   "dependencies": {
     "clone": "^2.1.2",
     "jsonix": "^2.4.1",
+    "nl2br": "0.0.3",
     "node-fetch": "^2.1.2",
     "omit-deep": "^0.3.0"
   },
