@@ -30,13 +30,13 @@
     "clone": "^2.1.2",
     "jsonix": "^2.4.1",
     "node-fetch": "^2.1.2",
-    "omit-deep": "^0.3.0",
-    "xmlbuilder": "^10.0.0"
+    "omit-deep": "^0.3.0"
   },
   "devDependencies": {
     "@types/clone": "^0.1.30",
+    "@types/dotenv": "^4.0.3",
     "@types/node-fetch": "^1.6.9",
-    "@types/xmlbuilder": "0.0.32",
+    "dotenv": "^5.0.1",
     "nodemon": "^1.17.4",
     "ts-node": "^6.0.3",
     "typescript": "^2.8.3"

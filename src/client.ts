@@ -1,13 +1,15 @@
 import { Request, Response } from "./index";
 import fetch from "node-fetch";
-import * as xmlbuilder from "xmlbuilder";
 import * as clone from "clone";
-import mappings from "./mappings";
+import requestMappings from "./mappings/request";
+import responseMappings from "./mappings/response";
 const omitDeep = require("omit-deep");
 const { Jsonix } = require("jsonix");
 
-const context = new Jsonix.Context([mappings]);
-const unmarshaller = context.createUnmarshaller();
+const marshaller = new Jsonix.Context([requestMappings]).createMarshaller();
+const unmarshaller = new Jsonix.Context([
+  responseMappings
+]).createUnmarshaller();
 
 export interface ClientSettings {
   user: string;
@@ -42,14 +44,12 @@ export class Client {
   request = async (callback: (payload: Request.Root) => Request.Root) => {
     const newRequest = callback(clone(this.defaultPayload));
 
-    const body = xmlbuilder.create({
-      root: newRequest
-    });
+    const body = marshaller.marshalString({ root: newRequest });
 
-    return fetch("https://www.easymailing.eu/mss/mss_service.php", {
+    return fetch("https://www.bookingsuedtirol.com/mss/mss_service.php", {
       method: "POST",
       headers: { "Content-Type": "text/xml" },
-      body: body.toString()
+      body
     })
       .then(res => res.text())
       .then(body => {
@@ -57,6 +57,5 @@ export class Client {
         omitDeep(data, "TYPE_NAME");
         return data as Response.Root;
       });
-    // .then(res => res.root);
   };
 }
