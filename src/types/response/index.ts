@@ -249,6 +249,8 @@ export interface Result {
   special: Special[];
 }
 
+export type RoomType = 0 | 1 | 2;
+
 export interface Room {
   days: Day[];
   description: string;
@@ -270,7 +272,7 @@ export interface Room {
   room_price: Price[];
   room_title: string;
   room_total: number;
-  room_type: number;
+  room_type: RoomType;
   service: number;
   title: string;
 }
