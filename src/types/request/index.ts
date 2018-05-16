@@ -12,6 +12,7 @@ export interface Header {
     | "getRoomList"
     | "getPriceList"
     | "getRoomAvailability"
+    | "getHotelPictures"
     | "prepareBooking"
     | "getBooking"
     | "createInquiry"
