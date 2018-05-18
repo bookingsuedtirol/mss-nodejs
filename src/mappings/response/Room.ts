@@ -127,7 +127,7 @@ export default {
       type: "element",
       name: "pricelist",
       collection: true,
-      typeInfo: "Mss.RoomDetail"
+      typeInfo: "Mss.PriceList"
     }
   ]
 };
