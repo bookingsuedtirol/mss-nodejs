@@ -76,7 +76,7 @@ export interface Hotel {
   description: string;
   features: number;
   features_view: Feature[];
-  gallery: Picture[];
+  gallery?: Picture[];
   geolocation: Geolocation;
   headline: string;
   hotel_payment: Payment;
@@ -85,17 +85,17 @@ export interface Hotel {
   language: string;
   location: Location;
   location_name: LocationName;
-  logo: Picture[];
+  logo?: Picture[];
   lts_data: LtsData;
   matching: Matching;
   name: string;
   online_payment: Payment;
   pers_age_min: number;
-  pictures: Picture[];
+  pictures?: Picture[];
   pos: string[];
   price_engine: number;
   price_from: number;
-  ratings: Rating[];
+  ratings?: Rating[];
   stars: number;
   type: number;
 }
@@ -141,7 +141,7 @@ export interface Offer {
   offer_show: number;
   offer_title: string;
   offer_typ: number;
-  pictures: Picture[];
+  pictures?: Picture[];
   themes: Theme[];
   title: string;
 }
@@ -167,7 +167,7 @@ export interface Picture {
 
 export interface Price {
   description: string;
-  pictures: Picture[];
+  pictures?: Picture[];
   price_ai: number;
   price_amount: number;
   price_bb: number;
@@ -260,7 +260,7 @@ export interface Room {
   features: number;
   features_view: Feature[];
   occupancy: Occupancy;
-  pictures: Picture[];
+  pictures?: Picture[];
   price_from: number;
   pricelist: PriceList[];
   properties: Properties;
@@ -318,10 +318,10 @@ export interface Special {
   days_dur_min: number;
   description: string;
   hotels: Hotel[];
-  inclusive: Price[];
+  inclusive?: Price[];
   offer_id: number;
   offer_typ: number;
-  pictures: Picture[];
+  pictures?: Picture[];
   seasons: Season[];
   services: number[];
   special_premium: number;
