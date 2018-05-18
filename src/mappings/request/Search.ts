@@ -60,7 +60,7 @@ export default {
     },
     {
       type: "element",
-      name: "search_availability",
+      name: "search_pricelist",
       typeInfo: "Mss.SearchPriceList"
     },
     {
