@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "prepublishOnly": "npm run build",
-    "build": "tsc --pretty",
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon"
   },
@@ -37,10 +37,10 @@
   "devDependencies": {
     "@types/clone": "^0.1.30",
     "@types/dotenv": "^4.0.3",
-    "@types/node-fetch": "^1.6.9",
-    "dotenv": "^5.0.1",
-    "nodemon": "^1.17.4",
-    "ts-node": "^6.0.3",
-    "typescript": "^2.8.3"
+    "@types/node-fetch": "^2.1.1",
+    "dotenv": "^6.0.0",
+    "nodemon": "^1.17.5",
+    "ts-node": "^6.1.0",
+    "typescript": "^2.9.1"
   }
 }
