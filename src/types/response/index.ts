@@ -262,7 +262,7 @@ export interface Room {
   occupancy: Occupancy;
   pictures?: Picture[];
   price_from: number;
-  pricelist: PriceList[];
+  pricelist?: PriceList[];
   properties: Properties;
   room_code: string;
   room_description: string;
