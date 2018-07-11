@@ -90,6 +90,7 @@ export default {
     {
       type: "element",
       name: "season",
+      collection: true,
       typeInfo: "Mss.Season"
     }
   ]
