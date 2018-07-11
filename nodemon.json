@@ -2,5 +2,5 @@
   "watch": ["src"],
   "ext": "js ts tsx json",
   "ignore": ["src/**/*.spec.ts"],
-  "exec": "node -r ts-node/register --inspect=0.0.0.0 ./src/examples/simple.ts"
+  "exec": "node -r ts-node/register --inspect ./src/examples/simple.ts"
 }
