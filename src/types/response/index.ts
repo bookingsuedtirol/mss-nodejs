@@ -202,7 +202,7 @@ export interface PriceList {
   offer_typ: number;
   prl_mode: number;
   prl_unit: number;
-  season: Season;
+  season: Season[];
   special_typ: number;
   title: string;
 }
