@@ -25,7 +25,7 @@ export default {
     {
       type: "element",
       name: "date",
-      typeInfo: "CustomTypes.Date"
+      typeInfo: "DateAsDate"
     }
   ]
 };

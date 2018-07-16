@@ -5,12 +5,12 @@ export default {
     {
       type: "element",
       name: "date_start",
-      typeInfo: "CustomTypes.Date"
+      typeInfo: "DateAsDate"
     },
     {
       type: "element",
       name: "date_end",
-      typeInfo: "CustomTypes.Date"
+      typeInfo: "DateAsDate"
     },
     {
       type: "element",
