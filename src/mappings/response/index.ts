@@ -1,5 +1,6 @@
 import BsDomain from "../types/BsDomain";
 import NlToBr from "../types/NlToBr";
+import Date from "../types/Date";
 
 import Root from "./Root";
 import Header from "./Header";
@@ -40,6 +41,7 @@ export default {
   typeInfos: [
     new BsDomain(),
     new NlToBr(),
+    new Date(),
     Root,
     Header,
     Error,
