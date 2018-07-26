@@ -66,6 +66,15 @@ export interface Header {
   time: string;
 }
 
+export enum Boards {
+  NotDefined = 0,
+  Without = 1,
+  Breakfast = 2,
+  HalfBoard = 4,
+  FullBoard = 8,
+  AllInclusive = 16
+}
+
 export interface Hotel {
   address: Address;
   bookable: number;
@@ -90,6 +99,7 @@ export interface Hotel {
   matching: Matching;
   name: string;
   online_payment: Payment;
+  board: Boards;
   pers_age_min: number;
   pictures?: Picture[];
   pos: string[];

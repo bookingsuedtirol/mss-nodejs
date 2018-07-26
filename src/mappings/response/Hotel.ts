@@ -159,6 +159,11 @@ export default {
     },
     {
       type: "element",
+      name: "board",
+      typeInfo: "Integer"
+    },
+    {
+      type: "element",
       name: "pers_age_min",
       typeInfo: "Integer"
     },
