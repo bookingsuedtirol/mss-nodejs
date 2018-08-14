@@ -84,7 +84,7 @@ export interface Hotel {
   contact: Contact;
   description: string;
   features: number;
-  features_view: Feature[];
+  features_view?: Feature[];
   gallery?: Picture[];
   geolocation: Geolocation;
   headline: string;
