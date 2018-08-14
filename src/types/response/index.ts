@@ -24,8 +24,8 @@ export interface Channel {
 }
 
 export interface CheckInOut {
-  from: string;
-  to: string;
+  from: string | null;
+  to: string | null;
 }
 
 export interface Contact {
@@ -90,7 +90,7 @@ export interface Hotel {
   headline: string;
   hotel_payment: Payment;
   id: number;
-  id_lts: string;
+  id_lts: string | null;
   language: string;
   location: Location;
   location_name: LocationName;

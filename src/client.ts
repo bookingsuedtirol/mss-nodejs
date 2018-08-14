@@ -3,7 +3,6 @@ import fetch from "node-fetch";
 import * as clone from "clone";
 import requestMappings from "./mappings/request";
 import responseMappings from "./mappings/response";
-const omitDeep = require("omit-deep");
 const { Jsonix } = require("jsonix");
 
 const marshaller = new Jsonix.Context([requestMappings]).createMarshaller();
@@ -54,8 +53,28 @@ export class Client {
       .then(res => res.text())
       .then(body => {
         const data = unmarshaller.unmarshalString(body).value;
-        omitDeep(data, "TYPE_NAME");
+        modifyOutput(data);
         return data as Response.Root;
       });
   };
 }
+
+const modifyOutput = (object: any): void => {
+  for (const key in object) {
+    if (object.hasOwnProperty(key)) {
+      // Remove TYPE_NAME property
+      if (key === "TYPE_NAME") {
+        delete object[key];
+      }
+
+      // Convert empty strings to null (happens with empty tags <example />)
+      if (object[key] === "") {
+        object[key] = null;
+      }
+
+      if (typeof object[key] === "object") {
+        modifyOutput(object[key]);
+      }
+    }
+  }
+};
