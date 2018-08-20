@@ -85,12 +85,12 @@ export default {
     {
       type: "element",
       name: "valid_start",
-      typeInfo: "DateAsDate"
+      typeInfo: "CustomTypes.Date"
     },
     {
       type: "element",
       name: "valid_end",
-      typeInfo: "DateAsDate"
+      typeInfo: "CustomTypes.Date"
     },
     {
       type: "element",

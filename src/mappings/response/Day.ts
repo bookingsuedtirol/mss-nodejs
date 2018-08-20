@@ -5,7 +5,7 @@ export default {
     {
       type: "element",
       name: "date",
-      typeInfo: "DateAsDate"
+      typeInfo: "CustomTypes.Date"
     },
     {
       type: "element",
