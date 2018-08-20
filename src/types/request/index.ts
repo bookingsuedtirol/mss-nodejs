@@ -1,5 +1,5 @@
 export interface Root {
-  version: "1.0";
+  version: "2.0";
   header: Header;
   request: Request;
 }
@@ -111,7 +111,9 @@ export enum OfferDetails {
   RoomFacilitiesDetails = 4096,
   PriceImages = 8192,
   Themes = 16384,
-  RoomFeatures = 32768
+  RoomFeatures = 32768,
+  CancelPolicies = 262144,
+  PaymentTerms = 1048576
 }
 
 export enum PriceListDetails {

@@ -46,6 +46,20 @@ export default {
       wrapperElementName: "base_price",
       collection: true,
       typeInfo: "Mss.Price"
+    },
+    {
+      type: "element",
+      name: "cancel_policies",
+      wrapperElementName: "cancel_policies",
+      collection: true,
+      typeInfo: "Mss.CancelPolicy"
+    },
+    {
+      type: "element",
+      name: "payment_terms",
+      wrapperElementName: "payment_terms",
+      collection: true,
+      typeInfo: "Mss.PaymentTerm"
     }
   ]
 };

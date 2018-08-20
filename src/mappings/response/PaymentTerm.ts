@@ -1,7 +1,17 @@
 export default {
   type: "classInfo",
-  localName: "Payment",
+  localName: "PaymentTerm",
   propertyInfos: [
+    {
+      type: "element",
+      name: "id",
+      typeInfo: "Integer"
+    },
+    {
+      type: "element",
+      name: "owner_id",
+      typeInfo: "Integer"
+    },
     {
       type: "element",
       name: "methods",
@@ -19,8 +29,18 @@ export default {
     },
     {
       type: "element",
+      name: "priority",
+      typeInfo: "Integer"
+    },
+    {
+      type: "element",
       name: "bank",
       typeInfo: "Mss.Bank"
+    },
+    {
+      type: "element",
+      name: "description",
+      typeInfo: "String"
     }
   ]
 };

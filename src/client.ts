@@ -27,7 +27,7 @@ export class Client {
     }
   ) {
     this.defaultPayload = {
-      version: "1.0",
+      version: "2.0",
       header: {
         credentials: settings,
         method: "getHotelList"

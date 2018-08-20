@@ -74,13 +74,8 @@ export default {
     },
     {
       type: "element",
-      name: "online_payment",
-      typeInfo: "Mss.Payment"
-    },
-    {
-      type: "element",
       name: "hotel_payment",
-      typeInfo: "Mss.Payment"
+      typeInfo: "Mss.HotelPayment"
     },
     {
       type: "element",

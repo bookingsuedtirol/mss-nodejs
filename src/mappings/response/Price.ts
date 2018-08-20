@@ -93,6 +93,16 @@ export default {
       wrapperElementName: "pictures",
       collection: true,
       typeInfo: "Mss.Picture"
+    },
+    {
+      type: "element",
+      name: "cancel_policy_id",
+      typeInfo: "Integer"
+    },
+    {
+      type: "element",
+      name: "payment_term_id",
+      typeInfo: "Integer"
     }
   ]
 };

@@ -5,17 +5,23 @@ export default {
     {
       type: "element",
       name: "arrival",
-      typeInfo: "DateAsDate"
+      typeInfo: "CustomTypes.Date"
     },
     {
       type: "element",
       name: "departure",
-      typeInfo: "DateAsDate"
+      typeInfo: "CustomTypes.Date"
     },
     {
       type: "element",
       name: "service",
       typeInfo: "Integer"
+    },
+    {
+      type: "element",
+      name: "room",
+      collection: true,
+      typeInfo: "Mss.Room"
     },
     {
       type: "element",

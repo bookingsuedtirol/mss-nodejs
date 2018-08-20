@@ -1,37 +1,33 @@
 export default {
   type: "classInfo",
-  localName: "Validity",
+  localName: "CancelPolicy",
   propertyInfos: [
     {
       type: "element",
-      name: "valid",
+      name: "id",
       typeInfo: "Integer"
     },
     {
       type: "element",
-      name: "offers",
+      name: "refundable",
       typeInfo: "Integer"
     },
     {
       type: "element",
-      name: "arrival",
+      name: "refundable_until",
       typeInfo: "CustomTypes.Date"
     },
     {
       type: "element",
-      name: "departure",
-      typeInfo: "CustomTypes.Date"
-    },
-    {
-      type: "element",
-      name: "service",
-      typeInfo: "Integer"
-    },
-    {
-      type: "element",
-      name: "room",
+      name: "penalties",
+      wrapperElementName: "penalties",
       collection: true,
-      typeInfo: "Mss.Room"
+      typeInfo: "Mss.Penalty"
+    },
+    {
+      type: "element",
+      name: "description",
+      typeInfo: "String"
     }
   ]
 };

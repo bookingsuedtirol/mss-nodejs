@@ -3,19 +3,20 @@
 Experimential MSS API wrapper for Node.js projects.
 
 > Warning! Do not use this in production yet!
+> Supports only v2.0!
 
 ## Available services
 
-* [x] getHotelList
-* [x] getSpecialList
-* [x] getRoomList
-* [x] getPriceList
-* [x] getRoomAvailability
-* [x] getHotelPictures
-* [ ] prepareBooking
-* [ ] getBooking
-* [ ] createInquiry
-* [ ] getUserSources
+- [x] getHotelList
+- [x] getSpecialList
+- [x] getRoomList
+- [x] getPriceList
+- [x] getRoomAvailability
+- [x] getHotelPictures
+- [ ] prepareBooking
+- [ ] getBooking
+- [ ] createInquiry
+- [ ] getUserSources
 
 ## Example
 
@@ -43,7 +44,6 @@ client
     const hotel = res.result.hotel[0];
     console.log(hotel.name); // => string(18) "Hotel Lichtenstern"
     console.log(hotel.stars); // => float(3)
-    console.log(hotel.online_payment.bank.iban); // => string(27) "IT28K0818758740000001021022"
   });
 ```
 

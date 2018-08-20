@@ -21,6 +21,33 @@ export interface Channel {
   room_description: Room[];
   room_price: RoomPrice[];
   service_price: Price[];
+  cancel_policies: CancelPolicy[];
+  payment_terms: PaymentTerm[];
+}
+
+export interface CancelPolicy {
+  id: number;
+  refundable: number;
+  refundable_until: Date;
+  penalties: Penalty[];
+  description: string;
+}
+
+export interface Penalty {
+  percent: number;
+  datefrom: Date;
+  daysarrival: number;
+}
+
+export interface PaymentTerm {
+  id: number;
+  owner_id: number;
+  methods: number;
+  prepayment: number;
+  ccards: number;
+  priority: number;
+  bank: Bank;
+  description: number;
 }
 
 export interface CheckInOut {
@@ -88,7 +115,7 @@ export interface Hotel {
   gallery?: Picture[];
   geolocation: Geolocation;
   headline: string;
-  hotel_payment: Payment;
+  hotel_payment: HotelPayment;
   id: number;
   id_lts: string | null;
   language: string;
@@ -98,7 +125,6 @@ export interface Hotel {
   lts_data: LtsData;
   matching: Matching;
   name: string;
-  online_payment: Payment;
   board: Boards;
   pers_age_min: number;
   pictures?: Picture[];
@@ -156,11 +182,8 @@ export interface Offer {
   title: string;
 }
 
-export interface Payment {
-  bank: Bank;
-  ccards: number;
+export interface HotelPayment {
   methods: number;
-  prepayment: number;
 }
 
 export interface Paging {
@@ -194,6 +217,8 @@ export interface Price {
   supplement: number;
   title: string;
   unit: number;
+  cancel_policy_id: number;
+  payment_term_id: number;
 }
 
 export interface PriceList {

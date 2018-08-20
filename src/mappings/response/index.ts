@@ -13,7 +13,10 @@ import Location from "./Location";
 import LocationName from "./LocationName";
 import Geolocation from "./Geolocation";
 import Contact from "./Contact";
-import Payment from "./Payment";
+import HotelPayment from "./HotelPayment";
+import CancelPolicy from "./CancelPolicy";
+import Penalty from "./Penalty";
+import PaymentTerm from "./PaymentTerm";
 import Bank from "./Bank";
 import Matching from "./Matching";
 import Picture from "./Picture";
@@ -53,7 +56,10 @@ export default {
     LocationName,
     Geolocation,
     Contact,
-    Payment,
+    HotelPayment,
+    CancelPolicy,
+    Penalty,
+    PaymentTerm,
     Bank,
     Matching,
     Picture,

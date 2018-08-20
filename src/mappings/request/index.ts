@@ -1,3 +1,5 @@
+import Date from "../types/Date";
+
 import Address from "./Address";
 import Company from "./Company";
 import Credentials from "./Credentials";
@@ -31,6 +33,7 @@ import Validitiy from "./Validitiy";
 export default {
   name: "Mss",
   typeInfos: [
+    new Date(),
     Address,
     Company,
     Credentials,
