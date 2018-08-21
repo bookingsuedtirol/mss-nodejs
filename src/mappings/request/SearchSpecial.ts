@@ -32,13 +32,11 @@ export default {
     {
       type: "element",
       name: "typ",
-      collection: true,
       typeInfo: "Integer"
     },
     {
       type: "element",
       name: "premium",
-      collection: true,
       typeInfo: "Integer"
     }
   ]
