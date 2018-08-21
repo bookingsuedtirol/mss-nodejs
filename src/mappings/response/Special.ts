@@ -99,7 +99,7 @@ export default {
     },
     {
       type: "element",
-      name: "Description",
+      name: "description",
       typeInfo: "String"
     },
     {
