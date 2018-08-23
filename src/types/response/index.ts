@@ -31,6 +31,7 @@ export interface CancelPolicy {
   refundable_until: Date;
   penalties: Penalty[];
   description: string;
+  priority: string;
 }
 
 export interface Penalty {

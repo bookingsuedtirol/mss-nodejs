@@ -28,6 +28,11 @@ export default {
       type: "element",
       name: "description",
       typeInfo: "String"
+    },
+    {
+      type: "element",
+      name: "priority",
+      typeInfo: "String"
     }
   ]
 };
