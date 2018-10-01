@@ -38,8 +38,8 @@
     "@types/dotenv": "^4.0.3",
     "@types/node-fetch": "^2.1.2",
     "dotenv": "^6.0.0",
-    "nodemon": "^1.18.3",
+    "nodemon": "^1.18.4",
     "ts-node": "^6.2.0",
-    "typescript": "^3.0.1"
+    "typescript": "^3.1.1"
   }
 }
