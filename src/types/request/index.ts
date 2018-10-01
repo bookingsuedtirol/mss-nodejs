@@ -305,8 +305,10 @@ export interface SearchSpecial {
 }
 
 export enum SearchSpecialType {
-  packages = 1,
-  specials = 2
+  PriceLists = 0,
+  Packages = 1,
+  Specials = 2,
+  ShortLongStays = 4
 }
 
 export enum SearchSpecialPremium {
