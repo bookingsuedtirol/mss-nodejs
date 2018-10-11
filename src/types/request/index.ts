@@ -40,7 +40,7 @@ export interface Request {
 }
 
 export interface Search {
-  lang: "de" | "it" | "en";
+  lang: "de" | "it" | "en" | "es" | "fr" | "ru" | "da";
   result_id?: string;
   agent?: string;
   id?: number[];

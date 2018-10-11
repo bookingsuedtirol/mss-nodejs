@@ -119,7 +119,7 @@ export interface Hotel {
   hotel_payment: HotelPayment;
   id: number;
   id_lts: string | null;
-  language: string;
+  language: "de" | "it" | "en";
   location: Location;
   location_name: LocationName;
   logo?: Picture[];
