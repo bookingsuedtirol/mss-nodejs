@@ -9,7 +9,11 @@
     "noImplicitReturns": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "baseUrl": ".",
+    "paths": {
+      "nl2br": ["@types/nl2br"]
+    }
   },
   "exclude": ["node_modules", "dist"]
 }
