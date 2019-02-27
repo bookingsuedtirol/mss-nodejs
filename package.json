@@ -11,7 +11,7 @@
     "prepublishOnly": "npm run build",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node --inspect=0.0.0.0 ./src/examples/simple.ts"
+    "dev": "ts-node ./src/examples/simple.ts"
   },
   "repository": {
     "type": "git",
@@ -36,9 +36,9 @@
   "devDependencies": {
     "@types/clone": "^0.1.30",
     "@types/dotenv": "^6.1.0",
-    "@types/node-fetch": "^2.1.4",
+    "@types/node-fetch": "^2.1.6",
     "dotenv": "^6.2.0",
-    "ts-node": "^7.0.1",
-    "typescript": "^3.2.2"
+    "ts-node": "^8.0.2",
+    "typescript": "^3.3.3333"
   }
 }
