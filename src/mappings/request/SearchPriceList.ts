@@ -22,6 +22,11 @@ export default {
       type: "element",
       name: "typ",
       typeInfo: "Integer"
+    },
+    {
+      type: "element",
+      name: "service",
+      typeInfo: "Integer"
     }
   ]
 };
