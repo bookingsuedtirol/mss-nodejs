@@ -36,9 +36,9 @@
   "devDependencies": {
     "@types/clone": "^0.1.30",
     "@types/dotenv": "^6.1.1",
-    "@types/node-fetch": "^2.5.0",
+    "@types/node-fetch": "^2.5.2",
     "dotenv": "^8.1.0",
     "ts-node": "^8.4.1",
-    "typescript": "^3.6.3"
+    "typescript": "^3.6.4"
   }
 }
