@@ -16,6 +16,11 @@ export default {
       type: "element",
       name: "std",
       typeInfo: "Integer"
+    },
+    {
+      type: "element",
+      name: "mfp",
+      typeInfo: "Integer"
     }
   ]
 };

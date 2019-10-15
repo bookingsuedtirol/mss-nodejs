@@ -166,6 +166,7 @@ export interface Matching {
 
 export interface Occupancy {
   max: number;
+  mfp: number;
   min: number;
   std: number;
 }
@@ -250,6 +251,7 @@ export interface Properties {
   dining_rooms: number;
   living_rooms: number;
   max: number;
+  mfp: number;
   min: number;
   std: number;
 }
