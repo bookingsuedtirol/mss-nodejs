@@ -346,8 +346,11 @@ export interface Season {
 export interface Special {
   adults_max: number;
   adults_min: number;
+  adult_age_min: number;
   children_max: number;
   children_min: number;
+  child_age_max: number;
+  child_age_min: number;
   days_arrival: number;
   days_arrival_max: number;
   days_arrival_min: number;
@@ -359,6 +362,7 @@ export interface Special {
   inclusive?: Price[];
   offer_id: number;
   offer_typ: number;
+  pers_age_min: number;
   pictures?: Picture[];
   seasons: Season[];
   services: number[];

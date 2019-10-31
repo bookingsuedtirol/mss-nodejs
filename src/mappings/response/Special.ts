@@ -84,6 +84,26 @@ export default {
     },
     {
       type: "element",
+      name: "pers_age_min",
+      typeInfo: "Integer"
+    },
+    {
+      type: "element",
+      name: "child_age_min",
+      typeInfo: "Integer"
+    },
+    {
+      type: "element",
+      name: "child_age_max",
+      typeInfo: "Integer"
+    },
+    {
+      type: "element",
+      name: "adult_age_min",
+      typeInfo: "Integer"
+    },
+    {
+      type: "element",
       name: "valid_start",
       typeInfo: "CustomTypes.Date"
     },
