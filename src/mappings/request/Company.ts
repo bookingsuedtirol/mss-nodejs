@@ -14,6 +14,11 @@ export default {
     },
     {
       type: "element",
+      name: "recipient_code",
+      typeInfo: "String"
+    },
+    {
+      type: "element",
       name: "address",
       typeInfo: "Mss.Address"
     }

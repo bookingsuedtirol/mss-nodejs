@@ -389,6 +389,7 @@ export interface Guest {
 export interface Company {
   name?: string;
   taxnumber?: string;
+  recipient_code?: string;
   address?: Address;
 }
 
