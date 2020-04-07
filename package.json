@@ -1,6 +1,6 @@
 {
   "name": "@hgv/mss-nodejs",
-  "version": "0.6.10",
+  "version": "0.7.0",
   "description": "MSS API wrapper for Node.js projects",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
