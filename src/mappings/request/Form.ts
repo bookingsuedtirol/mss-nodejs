@@ -5,12 +5,12 @@ export default {
     {
       type: "element",
       name: "url_success",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "url_failure",
-      typeInfo: "String"
-    }
-  ]
+      typeInfo: "String",
+    },
+  ],
 };

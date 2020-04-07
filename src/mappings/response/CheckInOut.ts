@@ -5,12 +5,12 @@ export default {
     {
       type: "element",
       name: "from",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "to",
-      typeInfo: "String"
-    }
-  ]
+      typeInfo: "String",
+    },
+  ],
 };

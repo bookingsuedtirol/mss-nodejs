@@ -5,27 +5,27 @@ export default {
     {
       type: "element",
       name: "error",
-      typeInfo: "Mss.Error"
+      typeInfo: "Mss.Error",
     },
     {
       type: "element",
       name: "result_id",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "source",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "paging",
-      typeInfo: "Mss.Paging"
+      typeInfo: "Mss.Paging",
     },
     {
       type: "element",
       name: "time",
-      typeInfo: "String"
-    }
-  ]
+      typeInfo: "String",
+    },
+  ],
 };

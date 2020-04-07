@@ -5,12 +5,12 @@ export default {
     {
       type: "element",
       name: "count",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "total",
-      typeInfo: "Integer"
-    }
-  ]
+      typeInfo: "Integer",
+    },
+  ],
 };

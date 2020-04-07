@@ -5,7 +5,7 @@ export default {
     {
       type: "element",
       name: "step",
-      typeInfo: "String"
-    }
-  ]
+      typeInfo: "String",
+    },
+  ],
 };

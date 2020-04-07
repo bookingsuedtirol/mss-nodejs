@@ -5,77 +5,77 @@ export default {
     {
       type: "element",
       name: "obj_id",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "service",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "arrival",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "departure",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "min",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "min_arrival",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "max",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "max_arrival",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "close",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "children_min",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "children_max",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "holes",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "days_arrival_min",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "days_arrival_max",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "pers_age_min",
-      typeInfo: "Integer"
-    }
-  ]
+      typeInfo: "Integer",
+    },
+  ],
 };

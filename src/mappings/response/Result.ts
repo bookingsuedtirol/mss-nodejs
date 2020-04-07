@@ -6,13 +6,13 @@ export default {
       type: "element",
       name: "hotel",
       collection: true,
-      typeInfo: "Mss.Hotel"
+      typeInfo: "Mss.Hotel",
     },
     {
       type: "element",
       name: "special",
       collection: true,
-      typeInfo: "Mss.Special"
-    }
-  ]
+      typeInfo: "Mss.Special",
+    },
+  ],
 };

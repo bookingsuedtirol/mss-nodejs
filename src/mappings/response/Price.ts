@@ -5,104 +5,104 @@ export default {
     {
       type: "element",
       name: "price_id",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "price_typ",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "title",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "price_title",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "description",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "price_description",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "supplement",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "price_supplement",
-      typeInfo: "Decimal"
+      typeInfo: "Decimal",
     },
     {
       type: "element",
       name: "price_ws",
-      typeInfo: "Decimal"
+      typeInfo: "Decimal",
     },
     {
       type: "element",
       name: "price_bb",
-      typeInfo: "Decimal"
+      typeInfo: "Decimal",
     },
     {
       type: "element",
       name: "price_hb",
-      typeInfo: "Decimal"
+      typeInfo: "Decimal",
     },
     {
       type: "element",
       name: "price_fb",
-      typeInfo: "Decimal"
+      typeInfo: "Decimal",
     },
     {
       type: "element",
       name: "price_ai",
-      typeInfo: "Decimal"
+      typeInfo: "Decimal",
     },
     {
       type: "element",
       name: "price_amount",
-      typeInfo: "Decimal"
+      typeInfo: "Decimal",
     },
     {
       type: "element",
       name: "price_value",
-      typeInfo: "Decimal"
+      typeInfo: "Decimal",
     },
     {
       type: "element",
       name: "price_total",
-      typeInfo: "Decimal"
+      typeInfo: "Decimal",
     },
     {
       type: "element",
       name: "unit",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "pictures",
       wrapperElementName: "pictures",
       collection: true,
-      typeInfo: "Mss.Picture"
+      typeInfo: "Mss.Picture",
     },
     {
       type: "element",
       name: "cancel_policy_id",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "payment_term_id",
-      typeInfo: "Integer"
-    }
-  ]
+      typeInfo: "Integer",
+    },
+  ],
 };

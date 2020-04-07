@@ -5,27 +5,27 @@ export default {
     {
       type: "element",
       name: "id",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "provider",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "value",
-      typeInfo: "Double"
+      typeInfo: "Double",
     },
     {
       type: "element",
       name: "count",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "date",
-      typeInfo: "CustomTypes.Date"
-    }
-  ]
+      typeInfo: "CustomTypes.Date",
+    },
+  ],
 };

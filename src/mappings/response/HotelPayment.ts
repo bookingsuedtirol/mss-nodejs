@@ -5,7 +5,7 @@ export default {
     {
       type: "element",
       name: "methods",
-      typeInfo: "Integer"
-    }
-  ]
+      typeInfo: "Integer",
+    },
+  ],
 };

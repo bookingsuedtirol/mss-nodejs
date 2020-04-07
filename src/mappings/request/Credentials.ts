@@ -5,17 +5,17 @@ export default {
     {
       type: "element",
       name: "user",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "password",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "source",
-      typeInfo: "String"
-    }
-  ]
+      typeInfo: "String",
+    },
+  ],
 };

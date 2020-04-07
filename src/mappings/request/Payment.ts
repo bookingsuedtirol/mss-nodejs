@@ -5,12 +5,12 @@ export default {
     {
       type: "element",
       name: "method",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "invoice",
-      typeInfo: "Integer"
-    }
-  ]
+      typeInfo: "Integer",
+    },
+  ],
 };

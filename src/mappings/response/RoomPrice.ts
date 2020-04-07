@@ -5,34 +5,34 @@ export default {
     {
       type: "element",
       name: "room_id",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "room_seq",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "offer_id",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "price_details",
       wrapperElementName: "price_details",
       collection: true,
-      typeInfo: "Mss.Price"
+      typeInfo: "Mss.Price",
     },
     {
       type: "element",
       name: "price_total",
-      typeInfo: "Mss.Price"
+      typeInfo: "Mss.Price",
     },
     {
       type: "element",
       name: "price_inclusive",
-      typeInfo: "Mss.Price"
-    }
-  ]
+      typeInfo: "Mss.Price",
+    },
+  ],
 };

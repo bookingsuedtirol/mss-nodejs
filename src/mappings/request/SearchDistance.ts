@@ -5,17 +5,17 @@ export default {
     {
       type: "element",
       name: "latitude",
-      typeInfo: "Double"
+      typeInfo: "Double",
     },
     {
       type: "element",
       name: "longitude",
-      typeInfo: "Double"
+      typeInfo: "Double",
     },
     {
       type: "element",
       name: "radius",
-      typeInfo: "Integer"
-    }
-  ]
+      typeInfo: "Integer",
+    },
+  ],
 };

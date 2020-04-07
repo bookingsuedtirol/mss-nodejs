@@ -5,12 +5,12 @@ export default {
     {
       type: "element",
       name: "price_id",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "price_amount",
-      typeInfo: "Decimal"
-    }
-  ]
+      typeInfo: "Decimal",
+    },
+  ],
 };

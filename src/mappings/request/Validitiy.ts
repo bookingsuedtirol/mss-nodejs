@@ -5,33 +5,33 @@ export default {
     {
       type: "element",
       name: "valid",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "offers",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "arrival",
-      typeInfo: "CustomTypes.Date"
+      typeInfo: "CustomTypes.Date",
     },
     {
       type: "element",
       name: "departure",
-      typeInfo: "CustomTypes.Date"
+      typeInfo: "CustomTypes.Date",
     },
     {
       type: "element",
       name: "service",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "room",
       collection: true,
-      typeInfo: "Mss.Room"
-    }
-  ]
+      typeInfo: "Mss.Room",
+    },
+  ],
 };

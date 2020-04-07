@@ -5,42 +5,42 @@ export default {
     {
       type: "element",
       name: "gender",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "prefix",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "firstname",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "lastname",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "email",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "phone",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "address",
-      typeInfo: "Mss.Address"
+      typeInfo: "Mss.Address",
     },
     {
       type: "element",
       name: "newsletter",
-      typeInfo: "Integer"
-    }
-  ]
+      typeInfo: "Integer",
+    },
+  ],
 };

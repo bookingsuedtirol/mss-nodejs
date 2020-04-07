@@ -5,17 +5,17 @@ export default {
     {
       type: "element",
       name: "credentials",
-      typeInfo: "Mss.Credentials"
+      typeInfo: "Mss.Credentials",
     },
     {
       type: "element",
       name: "method",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "paging",
-      typeInfo: "Mss.Paging"
-    }
-  ]
+      typeInfo: "Mss.Paging",
+    },
+  ],
 };

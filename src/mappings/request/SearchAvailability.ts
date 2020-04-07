@@ -5,24 +5,24 @@ export default {
     {
       type: "element",
       name: "date_from",
-      typeInfo: "CustomTypes.Date"
+      typeInfo: "CustomTypes.Date",
     },
     {
       type: "element",
       name: "date_to",
-      typeInfo: "CustomTypes.Date"
+      typeInfo: "CustomTypes.Date",
     },
     {
       type: "element",
       name: "offer_id",
       collection: true,
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "room_id",
       collection: true,
-      typeInfo: "Integer"
-    }
-  ]
+      typeInfo: "Integer",
+    },
+  ],
 };

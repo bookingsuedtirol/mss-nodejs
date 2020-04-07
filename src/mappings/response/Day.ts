@@ -5,19 +5,19 @@ export default {
     {
       type: "element",
       name: "date",
-      typeInfo: "CustomTypes.Date"
+      typeInfo: "CustomTypes.Date",
     },
     {
       type: "element",
       name: "free",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "restrictions",
       wrapperElementName: "restrictions",
       collection: true,
-      typeInfo: "Mss.Restriction"
-    }
-  ]
+      typeInfo: "Mss.Restriction",
+    },
+  ],
 };

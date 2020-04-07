@@ -5,12 +5,12 @@ export default {
     {
       type: "element",
       name: "number",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "availability",
-      typeInfo: "String"
-    }
-  ]
+      typeInfo: "String",
+    },
+  ],
 };

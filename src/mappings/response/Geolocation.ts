@@ -5,22 +5,22 @@ export default {
     {
       type: "element",
       name: "latitude",
-      typeInfo: "Double"
+      typeInfo: "Double",
     },
     {
       type: "element",
       name: "longitude",
-      typeInfo: "Double"
+      typeInfo: "Double",
     },
     {
       type: "element",
       name: "altitude",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "distance",
-      typeInfo: "Integer"
-    }
-  ]
+      typeInfo: "Integer",
+    },
+  ],
 };

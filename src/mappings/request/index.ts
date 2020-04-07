@@ -62,12 +62,12 @@ export default {
     SearchSpecial,
     Stars,
     Tracking,
-    Validitiy
+    Validitiy,
   ],
   elementInfos: [
     {
       elementName: "root",
-      typeInfo: "Mss.Root"
-    }
-  ]
+      typeInfo: "Mss.Root",
+    },
+  ],
 };

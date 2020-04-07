@@ -5,61 +5,61 @@ export default {
     {
       type: "element",
       name: "offer_id",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "offer_gid",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "offer_base_id",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "offer_typ",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "offer_show",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "offer_title",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "title",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "offer_description",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "description",
-      typeInfo: "CustomTypes.NlToBr"
+      typeInfo: "CustomTypes.NlToBr",
     },
     {
       type: "element",
       name: "pictures",
       wrapperElementName: "pictures",
       collection: true,
-      typeInfo: "Mss.Picture"
+      typeInfo: "Mss.Picture",
     },
     {
       type: "element",
       name: "themes",
       wrapperElementName: "themes",
       collection: true,
-      typeInfo: "Mss.Theme"
-    }
-  ]
+      typeInfo: "Mss.Theme",
+    },
+  ],
 };

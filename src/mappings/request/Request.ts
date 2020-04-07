@@ -5,27 +5,27 @@ export default {
     {
       type: "element",
       name: "search",
-      typeInfo: "Mss.Search"
+      typeInfo: "Mss.Search",
     },
     {
       type: "element",
       name: "options",
-      typeInfo: "Mss.Options"
+      typeInfo: "Mss.Options",
     },
     {
       type: "element",
       name: "order",
-      typeInfo: "Mss.Order"
+      typeInfo: "Mss.Order",
     },
     {
       type: "element",
       name: "data",
-      typeInfo: "Mss.Data"
+      typeInfo: "Mss.Data",
     },
     {
       type: "element",
       name: "logging",
-      typeInfo: "Mss.Logging"
-    }
-  ]
+      typeInfo: "Mss.Logging",
+    },
+  ],
 };

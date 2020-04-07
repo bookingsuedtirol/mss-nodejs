@@ -5,17 +5,17 @@ export default {
     {
       type: "element",
       name: "percent",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "datefrom",
-      typeInfo: "CustomTypes.Date"
+      typeInfo: "CustomTypes.Date",
     },
     {
       type: "element",
       name: "daysarrival",
-      typeInfo: "Integer"
-    }
-  ]
+      typeInfo: "Integer",
+    },
+  ],
 };

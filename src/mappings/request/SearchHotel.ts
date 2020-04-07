@@ -5,27 +5,27 @@ export default {
     {
       type: "element",
       name: "name",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "type",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "stars",
-      typeInfo: "Mss.Stars"
+      typeInfo: "Mss.Stars",
     },
     {
       type: "element",
       name: "feature",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "theme",
-      typeInfo: "Integer"
-    }
-  ]
+      typeInfo: "Integer",
+    },
+  ],
 };

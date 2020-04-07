@@ -5,12 +5,12 @@ export default {
     {
       type: "element",
       name: "min",
-      typeInfo: "Double"
+      typeInfo: "Double",
     },
     {
       type: "element",
       name: "max",
-      typeInfo: "Double"
-    }
-  ]
+      typeInfo: "Double",
+    },
+  ],
 };

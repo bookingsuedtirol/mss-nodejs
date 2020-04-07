@@ -7,18 +7,18 @@ const client = new Client();
 const { HotelDetails: HD } = Request;
 
 client
-  .request(req => {
+  .request((req) => {
     req.header.paging = {
       start: 0,
-      limit: 2
+      limit: 2,
     };
     req.request.search.id = [9002];
     req.request.options = {
-      hotel_details: HD.BasicInfo | HD.FullDescription
+      hotel_details: HD.BasicInfo | HD.FullDescription,
     };
 
     return req;
   })
-  .then(res => {
+  .then((res) => {
     console.log(res.result.hotel[0]);
   });

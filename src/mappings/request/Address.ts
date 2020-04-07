@@ -5,22 +5,22 @@ export default {
     {
       type: "element",
       name: "street",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "zipcode",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "city",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "country",
-      typeInfo: "String"
-    }
-  ]
+      typeInfo: "String",
+    },
+  ],
 };

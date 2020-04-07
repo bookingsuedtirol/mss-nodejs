@@ -5,17 +5,17 @@ export default {
     {
       type: "element",
       name: "date_start",
-      typeInfo: "CustomTypes.Date"
+      typeInfo: "CustomTypes.Date",
     },
     {
       type: "element",
       name: "date_end",
-      typeInfo: "CustomTypes.Date"
+      typeInfo: "CustomTypes.Date",
     },
     {
       type: "element",
       name: "price",
-      typeInfo: "Mss.Price"
-    }
-  ]
+      typeInfo: "Mss.Price",
+    },
+  ],
 };

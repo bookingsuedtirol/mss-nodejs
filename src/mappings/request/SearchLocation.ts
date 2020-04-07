@@ -6,13 +6,13 @@ export default {
       type: "element",
       name: "location",
       collection: true,
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "location_lts",
       collection: true,
-      typeInfo: "String"
-    }
-  ]
+      typeInfo: "String",
+    },
+  ],
 };

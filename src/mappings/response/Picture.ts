@@ -5,22 +5,22 @@ export default {
     {
       type: "element",
       name: "url",
-      typeInfo: "CustomTypes.BsDomain"
+      typeInfo: "CustomTypes.BsDomain",
     },
     {
       type: "element",
       name: "time",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "title",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "copyright",
-      typeInfo: "String"
-    }
-  ]
+      typeInfo: "String",
+    },
+  ],
 };

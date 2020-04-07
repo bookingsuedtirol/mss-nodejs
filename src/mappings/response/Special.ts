@@ -5,164 +5,164 @@ export default {
     {
       type: "element",
       name: "offer_id",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "status",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "valid",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "offer_typ",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "special_typ",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "special_premium",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "days_arrival",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "days_departure",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "days_dur_min",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "days_dur_max",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "days_arrival_min",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "days_arrival_max",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "children_min",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "children_max",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "adults_min",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "adults_max",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "pers_age_min",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "child_age_min",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "child_age_max",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "adult_age_min",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "valid_start",
-      typeInfo: "CustomTypes.Date"
+      typeInfo: "CustomTypes.Date",
     },
     {
       type: "element",
       name: "valid_end",
-      typeInfo: "CustomTypes.Date"
+      typeInfo: "CustomTypes.Date",
     },
     {
       type: "element",
       name: "title",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "description",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "hotels",
       wrapperElementName: "hotels",
       collection: true,
-      typeInfo: "Mss.Hotel"
+      typeInfo: "Mss.Hotel",
     },
     {
       type: "element",
       name: "seasons",
       wrapperElementName: "seasons",
       collection: true,
-      typeInfo: "Mss.Season"
+      typeInfo: "Mss.Season",
     },
     {
       type: "element",
       name: "services",
       wrapperElementName: "services",
       collection: true,
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "inclusive",
       wrapperElementName: "inclusive",
       collection: true,
-      typeInfo: "Mss.Price"
+      typeInfo: "Mss.Price",
     },
     {
       type: "element",
       name: "pictures",
       wrapperElementName: "pictures",
       collection: true,
-      typeInfo: "Mss.Picture"
+      typeInfo: "Mss.Picture",
     },
     {
       type: "element",
       name: "themes",
       wrapperElementName: "themes",
       collection: true,
-      typeInfo: "Mss.Theme"
-    }
-  ]
+      typeInfo: "Mss.Theme",
+    },
+  ],
 };

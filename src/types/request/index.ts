@@ -95,7 +95,7 @@ export enum HotelDetails {
   SalesPoint = 524288,
   LtsSpecificParameters = 262144,
   CheckInOut = 1048576,
-  SourceData = 2097152
+  SourceData = 2097152,
 }
 
 export enum OfferDetails {
@@ -113,13 +113,13 @@ export enum OfferDetails {
   Themes = 16384,
   RoomFeatures = 32768,
   CancelPolicies = 262144,
-  PaymentTerms = 1048576
+  PaymentTerms = 1048576,
 }
 
 export enum PriceListDetails {
   BaseData = 1,
   Headlines = 8,
-  Seasons = 4194304
+  Seasons = 4194304,
 }
 
 export enum RoomDetails {
@@ -130,7 +130,7 @@ export enum RoomDetails {
   RoomDescription = 256,
   RoomFacilitiesDetails = 4096,
   RoomFeatures = 32768,
-  RoomNumbers = 65536
+  RoomNumbers = 65536,
 }
 
 export enum SpecialDetails {
@@ -140,7 +140,7 @@ export enum SpecialDetails {
   Seasons = 8,
   Images = 16,
   Themes = 32,
-  IncludedServices = 64
+  IncludedServices = 64,
 }
 
 export interface Order {
@@ -183,7 +183,7 @@ export enum HotelType {
   Guesthouse = 1024,
   Refuge = 2048,
   Garni = 4096,
-  Inn = 8192
+  Inn = 8192,
 }
 
 export enum HotelFeature {
@@ -211,7 +211,7 @@ export enum HotelFeature {
   Sauna = 4194304,
   SteamBath = 8388608,
   PublicBar = 16777216,
-  DogsAllowed = 33554432
+  DogsAllowed = 33554432,
 }
 
 export enum HotelTheme {
@@ -227,7 +227,7 @@ export enum HotelTheme {
   Meeting = 512,
   CrossCountrySkiing = 1024,
   Culture = 2048,
-  Snowshoeing = 4096
+  Snowshoeing = 4096,
 }
 
 export interface SearchLocation {
@@ -265,7 +265,7 @@ export enum SearchOfferType {
   SpecialStaying = 52,
   SpecialBookingDate = 53,
   SpecialWeekday = 54,
-  SpecialNoReference = 55
+  SpecialNoReference = 55,
 }
 
 export enum Board {
@@ -273,7 +273,7 @@ export enum Board {
   Breakfast = 2,
   HalfBoard = 3,
   FullBoard = 4,
-  AllInclusive = 5
+  AllInclusive = 5,
 }
 
 export enum RoomFeature {
@@ -285,7 +285,7 @@ export enum RoomFeature {
   Satellite = 32,
   Wlan = 64,
   Internet = 128,
-  BarrierFree = 512
+  BarrierFree = 512,
 }
 
 export interface SearchLts {
@@ -308,7 +308,7 @@ export enum SearchSpecialType {
   PriceLists = 0,
   Packages = 1,
   Specials = 2,
-  ShortLongStays = 4
+  ShortLongStays = 4,
 }
 
 export enum SearchSpecialPremium {
@@ -328,7 +328,7 @@ export enum SearchSpecialPremium {
   VinumHotels = 16384,
   FamilyHotels = 32768,
   FamilyHotelsNatureDetective = 65536,
-  FamilyHotelsNatureDetectiveWinter = 131072
+  FamilyHotelsNatureDetectiveWinter = 131072,
 }
 
 export enum SpecialTheme {
@@ -357,7 +357,7 @@ export enum SpecialTheme {
   FamilyHotelsNatureDetective = 8388608,
   FamilyHotel = 33554432,
   FamilyHotelsNatureDetectiveSummer = 67108864,
-  FamilyHotelsNatureDetectiveWinter = 134217728
+  FamilyHotelsNatureDetectiveWinter = 134217728,
 }
 
 export interface SearchAvailability {
@@ -404,7 +404,7 @@ export enum PaymentMethod {
   CreditCardPayment = 8,
   BankTransferDeposit = 4,
   BankTransferPayment = 16,
-  AccommodationPayment = 32
+  AccommodationPayment = 32,
 }
 
 export interface Details {
@@ -452,7 +452,7 @@ export interface Room {
 export enum RoomType {
   All = 0,
   Room = 1,
-  Apartment = 2
+  Apartment = 2,
 }
 
 export interface Rateplan {

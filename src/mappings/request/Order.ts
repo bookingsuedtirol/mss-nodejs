@@ -5,12 +5,12 @@ export default {
     {
       type: "element",
       name: "field",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "dir",
-      typeInfo: "String"
-    }
-  ]
+      typeInfo: "String",
+    },
+  ],
 };

@@ -5,22 +5,22 @@ export default {
     {
       type: "element",
       name: "email",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "phone",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "fax",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "web",
-      typeInfo: "String"
-    }
-  ]
+      typeInfo: "String",
+    },
+  ],
 };

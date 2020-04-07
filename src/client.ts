@@ -7,7 +7,7 @@ const { Jsonix } = require("jsonix");
 
 const marshaller = new Jsonix.Context([requestMappings]).createMarshaller();
 const unmarshaller = new Jsonix.Context([
-  responseMappings
+  responseMappings,
 ]).createUnmarshaller();
 
 export interface ClientSettings {
@@ -23,20 +23,20 @@ export class Client {
     settings: ClientSettings = {
       user: process.env.MSS_USER as string,
       password: process.env.MSS_PASSWORD as string,
-      source: process.env.MSS_SOURCE as string
+      source: process.env.MSS_SOURCE as string,
     }
   ) {
     this.defaultPayload = {
       version: "2.0",
       header: {
         credentials: settings,
-        method: "getHotelList"
+        method: "getHotelList",
       },
       request: {
         search: {
-          lang: "de"
-        }
-      }
+          lang: "de",
+        },
+      },
     };
   }
 
@@ -48,10 +48,10 @@ export class Client {
     return fetch("https://www.bookingsuedtirol.com/mss/mss_service.php", {
       method: "POST",
       headers: { "Content-Type": "text/xml" },
-      body
+      body,
     })
-      .then(res => res.text())
-      .then(body => {
+      .then((res) => res.text())
+      .then((body) => {
         const data = unmarshaller.unmarshalString(body).value;
         modifyOutput(data);
         return data as Response.Root;

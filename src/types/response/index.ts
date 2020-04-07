@@ -100,7 +100,7 @@ export enum Boards {
   Breakfast = 2,
   HalfBoard = 4,
   FullBoard = 8,
-  AllInclusive = 16
+  AllInclusive = 16,
 }
 
 export interface Hotel {
@@ -289,7 +289,7 @@ export interface Result {
 
 export enum RoomType {
   Room = 1,
-  Apartment = 2
+  Apartment = 2,
 }
 
 export interface Room {

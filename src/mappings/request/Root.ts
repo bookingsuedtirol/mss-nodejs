@@ -5,17 +5,17 @@ export default {
     {
       type: "element",
       name: "version",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "header",
-      typeInfo: "Mss.Header"
+      typeInfo: "Mss.Header",
     },
     {
       type: "element",
       name: "request",
-      typeInfo: "Mss.Request"
-    }
-  ]
+      typeInfo: "Mss.Request",
+    },
+  ],
 };

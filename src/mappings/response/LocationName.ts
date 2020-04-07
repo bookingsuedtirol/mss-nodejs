@@ -5,22 +5,22 @@ export default {
     {
       type: "element",
       name: "name_city",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "name_community",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "name_region",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "name_area",
-      typeInfo: "String"
-    }
-  ]
+      typeInfo: "String",
+    },
+  ],
 };

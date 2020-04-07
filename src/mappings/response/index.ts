@@ -80,12 +80,12 @@ export default {
     Restriction,
     PriceList,
     Season,
-    Special
+    Special,
   ],
   elementInfos: [
     {
       elementName: "root",
-      typeInfo: "Mss.Root"
-    }
-  ]
+      typeInfo: "Mss.Root",
+    },
+  ],
 };

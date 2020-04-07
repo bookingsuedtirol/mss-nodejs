@@ -5,22 +5,22 @@ export default {
     {
       type: "element",
       name: "partner",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "media",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "campaign",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "companyinfo",
-      typeInfo: "String"
-    }
-  ]
+      typeInfo: "String",
+    },
+  ],
 };

@@ -5,129 +5,129 @@ export default {
     {
       type: "element",
       name: "room_id",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "room_lts_id",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "service",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "room_type",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "room_code",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "room_title",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "room_description",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "title",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "description",
-      typeInfo: "CustomTypes.NlToBr"
+      typeInfo: "CustomTypes.NlToBr",
     },
     {
       type: "element",
       name: "room_persons",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "room_free",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "features",
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "features_view",
       wrapperElementName: "features_view",
       collection: true,
-      typeInfo: "Mss.Feature"
+      typeInfo: "Mss.Feature",
     },
     {
       type: "element",
       name: "room_free",
-      typeInfo: "Decimal"
+      typeInfo: "Decimal",
     },
     {
       type: "element",
       name: "pictures",
       wrapperElementName: "pictures",
       collection: true,
-      typeInfo: "Mss.Picture"
+      typeInfo: "Mss.Picture",
     },
     {
       type: "element",
       name: "room_price",
       collection: true,
-      typeInfo: "Mss.Price"
+      typeInfo: "Mss.Price",
     },
     {
       type: "element",
       name: "properties",
-      typeInfo: "Mss.Properties"
+      typeInfo: "Mss.Properties",
     },
     {
       type: "element",
       name: "occupancy",
-      typeInfo: "Mss.Occupancy"
+      typeInfo: "Mss.Occupancy",
     },
     {
       type: "element",
       name: "room_numbers",
       wrapperElementName: "room_numbers",
       collection: true,
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "room_details",
       wrapperElementName: "room_details",
       collection: true,
-      typeInfo: "Mss.RoomDetail"
+      typeInfo: "Mss.RoomDetail",
     },
     {
       type: "element",
       name: "days",
       wrapperElementName: "days",
       collection: true,
-      typeInfo: "Mss.Day"
+      typeInfo: "Mss.Day",
     },
     {
       type: "element",
       name: "price_from",
-      typeInfo: "Decimal"
+      typeInfo: "Decimal",
     },
     {
       type: "element",
       name: "pricelist",
       collection: true,
-      typeInfo: "Mss.PriceList"
-    }
-  ]
+      typeInfo: "Mss.PriceList",
+    },
+  ],
 };

@@ -5,17 +5,17 @@ export default {
     {
       type: "element",
       name: "name",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "iban",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "swift",
-      typeInfo: "String"
-    }
-  ]
+      typeInfo: "String",
+    },
+  ],
 };

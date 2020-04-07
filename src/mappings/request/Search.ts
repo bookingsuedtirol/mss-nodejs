@@ -5,84 +5,84 @@ export default {
     {
       type: "element",
       name: "lang",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "result_id",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "agent",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "id",
       collection: true,
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "search_hotel",
-      typeInfo: "Mss.SearchHotel"
+      typeInfo: "Mss.SearchHotel",
     },
     {
       type: "element",
       name: "search_location",
-      typeInfo: "Mss.SearchLocation"
+      typeInfo: "Mss.SearchLocation",
     },
     {
       type: "element",
       name: "search_distance",
-      typeInfo: "Mss.SearchDistance"
+      typeInfo: "Mss.SearchDistance",
     },
     {
       type: "element",
       name: "search_offer",
-      typeInfo: "Mss.SearchOffer"
+      typeInfo: "Mss.SearchOffer",
     },
     {
       type: "element",
       name: "search_lts",
-      typeInfo: "Mss.SearchLts"
+      typeInfo: "Mss.SearchLts",
     },
     {
       type: "element",
       name: "search_special",
-      typeInfo: "Mss.SearchSpecial"
+      typeInfo: "Mss.SearchSpecial",
     },
     {
       type: "element",
       name: "search_availability",
-      typeInfo: "Mss.SearchAvailability"
+      typeInfo: "Mss.SearchAvailability",
     },
     {
       type: "element",
       name: "search_pricelist",
-      typeInfo: "Mss.SearchPriceList"
+      typeInfo: "Mss.SearchPriceList",
     },
     {
       type: "element",
       name: "in",
       collection: true,
-      typeInfo: "Integer"
+      typeInfo: "Integer",
     },
     {
       type: "element",
       name: "transaction_id",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "booking_id",
-      typeInfo: "String"
+      typeInfo: "String",
     },
     {
       type: "element",
       name: "guest_email",
-      typeInfo: "String"
-    }
-  ]
+      typeInfo: "String",
+    },
+  ],
 };
