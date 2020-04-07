@@ -13,6 +13,7 @@ Experimential MSS API wrapper for Node.js projects.
 - [x] getPriceList
 - [x] getRoomAvailability
 - [x] getHotelPictures
+- [x] getHotelPictureGroups
 - [ ] prepareBooking
 - [ ] getBooking
 - [ ] createInquiry

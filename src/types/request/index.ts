@@ -13,6 +13,7 @@ export interface Header {
     | "getPriceList"
     | "getRoomAvailability"
     | "getHotelPictures"
+    | "getHotelPictureGroups"
     | "prepareBooking"
     | "getBooking"
     | "createInquiry"
@@ -57,6 +58,7 @@ export interface Search {
   transaction_id?: string;
   booking_id?: string;
   guest_email?: string;
+  pic_group_id?: number;
 }
 
 export interface Options {

@@ -20,6 +20,7 @@ import PaymentTerm from "./PaymentTerm";
 import Bank from "./Bank";
 import Matching from "./Matching";
 import Picture from "./Picture";
+import PictureGroup from "./PictureGroup";
 import Feature from "./Feature";
 import LtsData from "./LtsData";
 import CheckInOut from "./CheckInOut";
@@ -63,6 +64,7 @@ export default {
     Bank,
     Matching,
     Picture,
+    PictureGroup,
     Feature,
     LtsData,
     CheckInOut,

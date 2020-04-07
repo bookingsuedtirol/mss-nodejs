@@ -129,6 +129,7 @@ export interface Hotel {
   board: Boards;
   pers_age_min: number;
   pictures?: Picture[];
+  picture_groups?: PictureGroup[];
   pos: string[];
   price_engine: number;
   price_from: number;
@@ -198,6 +199,11 @@ export interface Picture {
   time: number;
   title: string;
   url: string;
+}
+
+export interface PictureGroup {
+  id: number;
+  name: string;
 }
 
 export interface Price {

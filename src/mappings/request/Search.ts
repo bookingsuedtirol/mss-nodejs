@@ -84,5 +84,10 @@ export default {
       name: "guest_email",
       typeInfo: "String",
     },
+    {
+      type: "element",
+      name: "pic_group_id",
+      typeInfo: "Integer",
+    },
   ],
 };

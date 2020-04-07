@@ -98,6 +98,13 @@ export default {
     },
     {
       type: "element",
+      name: "picture_groups",
+      wrapperElementName: "picture_groups",
+      collection: true,
+      typeInfo: "Mss.PictureGroup"
+    },
+    {
+      type: "element",
       name: "gallery",
       wrapperElementName: "gallery",
       collection: true,
