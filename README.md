@@ -1,5 +1,7 @@
 # mss-nodejs
 
+[![npm version](https://img.shields.io/npm/v/@hgv/mss-nodejs.svg?style=flat)](https://www.npmjs.com/package/@hgv/mss-nodejs)
+
 Experimential MSS API wrapper for Node.js projects.
 
 > Warning! Do not use this in production yet!
