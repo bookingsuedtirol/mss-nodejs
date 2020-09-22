@@ -181,7 +181,7 @@ export interface Offer {
   offer_title: string;
   offer_typ: number;
   pictures?: Picture[];
-  themes: Theme[];
+  themes?: Theme[];
   title: string;
 }
 
@@ -375,7 +375,7 @@ export interface Special {
   special_premium: number;
   special_typ: number;
   status: number;
-  themes: Theme[];
+  themes?: Theme[];
   title: string;
   valid: number;
   valid_end: Date;
