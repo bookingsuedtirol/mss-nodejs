@@ -1,4 +1,3 @@
-import BsDomain from "../types/BsDomain";
 import NlToBr from "../types/NlToBr";
 import Date from "../types/Date";
 
@@ -43,7 +42,6 @@ import Special from "./Special";
 export default {
   name: "Mss",
   typeInfos: [
-    new BsDomain(),
     new NlToBr(),
     new Date(),
     Root,

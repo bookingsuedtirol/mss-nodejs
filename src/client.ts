@@ -45,7 +45,7 @@ export class Client {
 
     const body = marshaller.marshalString({ root: newRequest });
 
-    return fetch("https://www.bookingsuedtirol.com/mss/mss_service.php", {
+    return fetch("https://easychannel.it/mss/mss_service.php", {
       method: "POST",
       headers: { "Content-Type": "text/xml" },
       body,

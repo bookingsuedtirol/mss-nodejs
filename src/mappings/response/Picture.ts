@@ -5,7 +5,7 @@ export default {
     {
       type: "element",
       name: "url",
-      typeInfo: "CustomTypes.BsDomain",
+      typeInfo: "String",
     },
     {
       type: "element",
