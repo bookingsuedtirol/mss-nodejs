@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.9.0] - 2021-08-04
+
+### Security
+
+- Bump [xmldom](https://www.npmjs.com/package/xmldom) to v0.6.0
+
+### Changed
+
+- Update package-lock.json to v2
+- Update dependencies
+
 ## [0.8.0] - 2021-05-13
 
 ### Changed
