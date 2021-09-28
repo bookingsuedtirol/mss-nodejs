@@ -31,7 +31,8 @@
     "clone": "^2.1.2",
     "jsonix": "^3.0.0",
     "nl2br": "0.0.3",
-    "node-fetch": "^2.6.5"
+    "node-fetch": "^2.6.5",
+    "xmldom": "npm:@xmldom/xmldom@^0.7.5"
   },
   "devDependencies": {
     "@types/clone": "^2.1.1",
