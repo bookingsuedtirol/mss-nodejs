@@ -1,4 +1,4 @@
-const { Jsonix } = require("jsonix");
+import { Jsonix } from "jsonix";
 import nl2br from "nl2br";
 
 export default Jsonix.Class(Jsonix.Schema.XSD.AnySimpleType, {

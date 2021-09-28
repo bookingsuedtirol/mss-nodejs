@@ -4,7 +4,8 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "paths": {
-      "nl2br": ["./@types/nl2br"]
+      "nl2br": ["./@types/nl2br"],
+      "jsonix": ["./@types/jsonix"]
     },
     "declaration": true,
     "outDir": "dist",

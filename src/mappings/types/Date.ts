@@ -1,4 +1,4 @@
-const { Jsonix } = require("jsonix");
+import { Jsonix } from "jsonix";
 
 export default Jsonix.Class(Jsonix.Schema.XSD.AnySimpleType, {
   name: "CustomTypes.Date",

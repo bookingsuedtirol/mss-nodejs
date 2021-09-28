@@ -3,7 +3,7 @@ import fetch from "node-fetch";
 import clone from "clone";
 import requestMappings from "./mappings/request";
 import responseMappings from "./mappings/response";
-const { Jsonix } = require("jsonix");
+import { Jsonix } from "jsonix";
 
 const marshaller = new Jsonix.Context([requestMappings]).createMarshaller();
 const unmarshaller = new Jsonix.Context([
