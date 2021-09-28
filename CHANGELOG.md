@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.10.0] - 2021-09-28
+
+### Changed
+
+- Update dependencies
+- Stricter TS configuration settings
+
+### Security
+
+- Add an alias to @xmldom/xmldom. The old xmldom package has been deprecated and contains security vulnerabilities, see https://www.npmjs.com/package/@xmldom/xmldom
+
 ## [0.9.0] - 2021-08-04
 
 ### Security
