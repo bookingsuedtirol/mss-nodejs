@@ -1,5 +1,5 @@
 const { Jsonix } = require("jsonix");
-import * as nl2br from "nl2br";
+import nl2br from "nl2br";
 
 export default Jsonix.Class(Jsonix.Schema.XSD.AnySimpleType, {
   name: "CustomTypes.NlToBr",

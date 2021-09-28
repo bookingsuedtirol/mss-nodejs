@@ -1,6 +1,6 @@
 import { Request, Response } from "./index";
 import fetch from "node-fetch";
-import * as clone from "clone";
+import clone from "clone";
 import requestMappings from "./mappings/request";
 import responseMappings from "./mappings/response";
 const { Jsonix } = require("jsonix");
@@ -21,9 +21,9 @@ export class Client {
 
   constructor(
     settings: ClientSettings = {
-      user: process.env.MSS_USER as string,
-      password: process.env.MSS_PASSWORD as string,
-      source: process.env.MSS_SOURCE as string,
+      user: process.env["MSS_USER"] as string,
+      password: process.env["MSS_PASSWORD"] as string,
+      source: process.env["MSS_SOURCE"] as string,
     }
   ) {
     this.defaultPayload = {
