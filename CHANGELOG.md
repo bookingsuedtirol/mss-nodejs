@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.11.0] - 2021-10-20
+
+### Changed
+
+- Update dependencies
+- Remove _node-fetch_ dependency
+- Throw an error if MSS returns an error or responds with status codes >= 400
+
 ## [0.10.0] - 2021-09-28
 
 ### Changed
