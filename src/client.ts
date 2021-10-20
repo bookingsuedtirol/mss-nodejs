@@ -1,9 +1,40 @@
 import { Request, Response } from "./index";
-import fetch from "node-fetch";
+import https from "https";
 import clone from "clone";
 import requestMappings from "./mappings/request";
 import responseMappings from "./mappings/response";
 import { Jsonix } from "jsonix";
+
+const makeMssRequest = (body: string): Promise<string> =>
+  new Promise((resolve, reject) => {
+    let data = "";
+
+    const req = https.request(
+      "https://easychannel.it/mss/mss_service.php",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "text/xml",
+          "Content-Length": Buffer.byteLength(body),
+        },
+      },
+      (res) => {
+        res.statusCode &&
+          res.statusCode >= 400 &&
+          reject(
+            Error("Request to MSS failed with status code " + res.statusCode)
+          );
+
+        res.setEncoding("utf8");
+        res.on("data", (chunk) => (data += chunk));
+        res.on("end", () => resolve(data));
+        res.on("error", reject);
+      }
+    );
+
+    req.write(body);
+    req.end();
+  });
 
 const marshaller = new Jsonix.Context([requestMappings]).createMarshaller();
 const unmarshaller = new Jsonix.Context([
@@ -43,19 +74,20 @@ export class Client {
   request = async (callback: (payload: Request.Root) => Request.Root) => {
     const newRequest = callback(clone(this.defaultPayload));
 
-    const body = marshaller.marshalString({ root: newRequest });
+    const requestBody = marshaller.marshalString({ root: newRequest });
+    const responseBody = await makeMssRequest(requestBody);
+    const data: Response.Root =
+      unmarshaller.unmarshalString(responseBody).value;
+    modifyOutput(data);
 
-    return fetch("https://easychannel.it/mss/mss_service.php", {
-      method: "POST",
-      headers: { "Content-Type": "text/xml" },
-      body,
-    })
-      .then((res) => res.text())
-      .then((body) => {
-        const data = unmarshaller.unmarshalString(body).value;
-        modifyOutput(data);
-        return data as Response.Root;
-      });
+    const { error } = data.header;
+    if (error.code > 0) {
+      throw Error(
+        `MSS returned an error: code ${error.code}, message: "${error.message}"`
+      );
+    }
+
+    return data;
   };
 }
 
