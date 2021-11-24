@@ -199,6 +199,8 @@ export interface Picture {
   time: number;
   title: string;
   url: string;
+  width: number;
+  height: number;
 }
 
 export interface PictureGroup {

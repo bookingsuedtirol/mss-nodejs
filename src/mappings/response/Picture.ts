@@ -22,5 +22,15 @@ export default {
       name: "copyright",
       typeInfo: "String",
     },
+    {
+      type: "element",
+      name: "width",
+      typeInfo: "Integer",
+    },
+    {
+      type: "element",
+      name: "height",
+      typeInfo: "Integer",
+    },
   ],
 };
