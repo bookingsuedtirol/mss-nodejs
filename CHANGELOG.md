@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.15.0] - 2022-01-12
+
+### Changed
+
+- Update dependencies
+- Update example and code in README.md to async/await
+
+### Added
+
+- Set the MSS request timeout to 20 seconds
+
 ## [0.14.0] - 2021-12-27
 
 ### Changed
