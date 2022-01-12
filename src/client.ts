@@ -19,11 +19,13 @@ const makeMssRequest = (body: string): Promise<string> =>
         },
       },
       (res) => {
-        res.statusCode &&
-          res.statusCode >= 400 &&
+        const isErrorRes = Boolean(res.statusCode && res.statusCode >= 400);
+        if (isErrorRes) {
+          res.destroy();
           reject(
-            Error("Request to MSS failed with status code " + res.statusCode)
+            Error(`Request to MSS failed with status code ${res.statusCode}`)
           );
+        }
 
         res.setEncoding("utf8");
         res.on("data", (chunk) => (data += chunk));
@@ -31,6 +33,12 @@ const makeMssRequest = (body: string): Promise<string> =>
         res.on("error", reject);
       }
     );
+
+    // Set a request timeout of 20 seconds.
+    req.setTimeout(20e3, () => {
+      req.end();
+      reject(Error("Request to MSS request timed out"));
+    });
 
     req.write(body);
     req.end();
