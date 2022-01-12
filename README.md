@@ -29,36 +29,36 @@ const { Client, Request } = require("@hgv/mss-nodejs");
 const client = new Client({
   user: "username",
   password: "password",
-  source: "source"
+  source: "source",
 });
 
-client
-  .request(req => {
-    req.header.method = "getHotelList";
-    req.request.search.id = ["11230"];
-    req.request.options = {
-      hotel_details:
-        Request.HotelDetails.BasicInfo |
-        Request.HotelDetails.PaymentOptionsForOnlineBooking
-    };
-    return req;
-  })
-  .then(res => {
-    const hotel = res.result.hotel[0];
-    console.log(hotel.name); // => string(18) "Hotel Lichtenstern"
-    console.log(hotel.stars); // => float(3)
-  });
+const res = await client.request((req) => {
+  req.header.method = "getHotelList";
+  req.request.search.id = ["11230"];
+  req.request.options = {
+    hotel_details:
+      Request.HotelDetails.BasicInfo |
+      Request.HotelDetails.PaymentOptionsForOnlineBooking,
+  };
+  return req;
+});
+
+const hotel = res.result.hotel[0];
+console.log(hotel.name); // => "Hotel Lichtenstern"
+console.log(hotel.stars); // => 3
 ```
 
-## Exception handling
+## Error handling
 
-If the MSS returns an error response, an exception is thrown.
+If MSS returns an error response or the request times out, the Promise is rejected:
 
 ```js
-client
-  .request(req => { ... })
-  .then(res => { ... })
-  .catch(e => {
-    console.log(e); // "oh, no!"
+try {
+  const res = await client.request((req) => {
+    // …
   });
+  // do something with res
+} catch (err) {
+  console.error(err);
+}
 ```
