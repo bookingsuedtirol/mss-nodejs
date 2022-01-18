@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Update dependencies
+- MSS only returns zero or one logos per hotel. Change `hotel.logo?: Picture[]` to `hotel.logo?: Picture` because of this.
 
 ## [0.15.0] - 2022-01-12
 

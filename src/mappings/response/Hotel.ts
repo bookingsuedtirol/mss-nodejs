@@ -86,7 +86,6 @@ export default {
       type: "element",
       name: "logo",
       wrapperElementName: "logo",
-      collection: true,
       typeInfo: "Mss.Picture",
     },
     {
@@ -101,7 +100,7 @@ export default {
       name: "picture_groups",
       wrapperElementName: "picture_groups",
       collection: true,
-      typeInfo: "Mss.PictureGroup"
+      typeInfo: "Mss.PictureGroup",
     },
     {
       type: "element",

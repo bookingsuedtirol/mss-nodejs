@@ -122,7 +122,7 @@ export interface Hotel {
   language: "de" | "it" | "en";
   location: Location;
   location_name: LocationName;
-  logo?: Picture[];
+  logo?: Picture;
   lts_data: LtsData;
   matching: Matching;
   name: string;
