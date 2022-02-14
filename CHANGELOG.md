@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Make TSConfig stricter
+- Update dependencies
+
 ## [0.16.0] - 2022-01-18
 
 ### Changed
