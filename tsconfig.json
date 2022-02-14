@@ -20,7 +20,9 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false
   },
   "exclude": ["node_modules", "dist"]
 }
