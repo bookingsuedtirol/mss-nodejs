@@ -31,12 +31,12 @@
     "clone": "^2.1.2",
     "jsonix": "^3.0.0",
     "nl2br": "0.0.3",
-    "xmldom": "npm:@xmldom/xmldom@^0.8.1"
+    "xmldom": "npm:@xmldom/xmldom@^0.8.2"
   },
   "devDependencies": {
     "@types/clone": "^2.1.1",
-    "dotenv": "^16.0.0",
-    "ts-node": "^10.5.0",
-    "typescript": "^4.5.5"
+    "dotenv": "^16.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.3"
   }
 }
