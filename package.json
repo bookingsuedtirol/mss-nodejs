@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HGV/mss-nodejs.git"
+    "url": "https://github.com/HGV/mss-nodejs.git"
   },
   "keywords": [
     "node-js",
