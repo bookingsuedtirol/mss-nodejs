@@ -21,6 +21,10 @@ Experimential MSS API wrapper for Node.js projects.
 - [ ] createInquiry
 - [ ] getUserSources
 
+## Runnable example
+
+`npm run dev`
+
 ## Example
 
 ```js
