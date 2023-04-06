@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Use SWC with ts-node for development
+- Update dependencies
 
 ## [0.20.0] - 2023-03-17
 
