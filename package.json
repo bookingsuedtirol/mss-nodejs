@@ -1,5 +1,5 @@
 {
-  "name": "@hgv/mss-nodejs",
+  "name": "@bookingsuedtirol/mss-nodejs",
   "version": "0.22.0",
   "type": "module",
   "description": "MSS API wrapper for Node.js projects",
