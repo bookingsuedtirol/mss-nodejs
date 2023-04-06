@@ -7,6 +7,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.22.0] - 2023-04-06
+
+### Changed
+
+- Update example in README.md to ESM
+
+### Fixed
+
+- Fix exports of request/response types
+
 ## [0.21.0] - 2023-04-06
 
 ### Changed
