@@ -3,7 +3,10 @@
   "version": "0.21.0",
   "type": "module",
   "description": "MSS API wrapper for Node.js projects",
-  "exports": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./dist/types/*": "./dist/types/*"
+  },
   "types": "./dist/index.d.ts",
   "files": [
     "dist"
