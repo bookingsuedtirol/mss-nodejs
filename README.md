@@ -1,6 +1,6 @@
 # mss-nodejs
 
-[![npm version](https://img.shields.io/npm/v/@hgv/mss-nodejs.svg?style=flat)](https://www.npmjs.com/package/@hgv/mss-nodejs)
+[![npm version](https://img.shields.io/npm/v/@bookingsuedtirol/mss-nodejs.svg?style=flat)](https://www.npmjs.com/package/@bookingsuedtirol/mss-nodejs)
 
 Experimential MSS API wrapper for Node.js projects.
 
@@ -28,7 +28,7 @@ Experimential MSS API wrapper for Node.js projects.
 ## Example
 
 ```js
-import { Client, Request } from "@hgv/mss-nodejs";
+import { Client, Request } from "@bookingsuedtirol/mss-nodejs";
 
 const client = new Client({
   user: "username",
