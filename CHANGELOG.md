@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
+- Convert package to ESM (**breaking change**)
 - Use SWC with ts-node for development
 - Update dependencies
 

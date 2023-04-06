@@ -1,4 +1,4 @@
-import { Client, Request } from "../index";
+import { Client, Request } from "../index.js";
 import dotenv from "dotenv";
 dotenv.config();
 

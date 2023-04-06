@@ -1,4 +1,5 @@
-import { Jsonix } from "jsonix";
+import jsonix from "jsonix";
+const { Jsonix } = jsonix;
 
 export default Jsonix.Class(Jsonix.Schema.XSD.AnySimpleType, {
   name: "CustomTypes.Date",

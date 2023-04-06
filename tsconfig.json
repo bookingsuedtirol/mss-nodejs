@@ -1,12 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es2021",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "paths": {
-      "nl2br": ["./@types/nl2br"],
-      "jsonix": ["./@types/jsonix"]
-    },
+    "target": "es2022",
+    "module": "esnext",
+    "moduleResolution": "node16",
     "declaration": true,
     "outDir": "dist",
     "esModuleInterop": true,
@@ -24,8 +20,9 @@
     "allowUnreachableCode": false,
     "allowUnusedLabels": false
   },
-  "exclude": ["node_modules", "dist"],
+  "include": ["src"],
   "ts-node": {
+    "esm": true,
     "swc": true
   }
 }

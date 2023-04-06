@@ -1,9 +1,10 @@
-import { Request, Response } from "./index";
-import https from "https";
+import { Request, Response } from "./index.js";
+import https from "node:https";
 import clone from "clone";
-import requestMappings from "./mappings/request";
-import responseMappings from "./mappings/response";
-import { Jsonix } from "jsonix";
+import requestMappings from "./mappings/request/index.js";
+import responseMappings from "./mappings/response/index.js";
+import jsonix from "jsonix";
+const { Jsonix } = jsonix;
 
 const makeMssRequest = (body: string): Promise<string> =>
   new Promise((resolve, reject) => {
