@@ -28,7 +28,7 @@ Experimential MSS API wrapper for Node.js projects.
 ## Example
 
 ```js
-const { Client, Request } = require("@hgv/mss-nodejs");
+import { Client, Request } from "@hgv/mss-nodejs";
 
 const client = new Client({
   user: "username",
