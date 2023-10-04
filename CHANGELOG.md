@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.27.0] - 2023-10-04
+
+### Changed
+
+- Bump to package-lock.json version 3
+
 ## [0.26.0] - 2023-10-04
 
 ### Changed
