@@ -20,9 +20,5 @@
     "allowUnreachableCode": false,
     "allowUnusedLabels": false
   },
-  "include": ["src"],
-  "ts-node": {
-    "esm": true,
-    "swc": true
-  }
+  "include": ["src"]
 }
