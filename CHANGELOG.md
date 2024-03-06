@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.30.0] - 2024-03-06
+
+### Changed
+
+- Remove warning about this library being experimental
+- Update dependencies
+- Remove unnecessary .prettierignore file
+
 ## [0.29.0] - 2024-01-04
 
 ### Changed
