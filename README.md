@@ -2,10 +2,7 @@
 
 [![npm version](https://img.shields.io/npm/v/@bookingsuedtirol/mss-nodejs.svg?style=flat)](https://www.npmjs.com/package/@bookingsuedtirol/mss-nodejs)
 
-Experimential MSS API wrapper for Node.js projects.
-
-> Warning! Do not use this in production yet!
-> Supports only v2.0!
+MSS API v2.0 wrapper for Node.js projects.
 
 ## Available services
 
