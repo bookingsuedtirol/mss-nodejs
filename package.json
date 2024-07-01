@@ -39,10 +39,10 @@
   },
   "devDependencies": {
     "@types/clone": "^2.1.4",
-    "@types/node": "^20.12.11",
+    "@types/node": "^20.14.9",
     "dotenv": "^16.4.5",
-    "tsx": "^4.9.3",
-    "typescript": "^5.4.5"
+    "tsx": "^4.16.0",
+    "typescript": "^5.5.2"
   },
   "engines": {
     "node": ">=20.0.0"
