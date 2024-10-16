@@ -24,6 +24,11 @@ export default {
     },
     {
       type: "element",
+      name: "cin",
+      typeInfo: "String",
+    },
+    {
+      type: "element",
       name: "type",
       typeInfo: "Integer",
     },
