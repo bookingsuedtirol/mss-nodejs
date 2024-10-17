@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.33.0] - 2024-10-17
+
+### Changed
+
+- Add CIN (Codice Identificativo Nazionale) which MSS now returns
+- Update dependencies
+
 ## [0.32.0] - 2024-07-01
 
 ### Changed
