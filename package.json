@@ -35,14 +35,14 @@
     "clone": "^2.1.2",
     "jsonix": "^3.0.0",
     "nl2br": "0.0.3",
-    "xmldom": "npm:@xmldom/xmldom@^0.8.10"
+    "xmldom": "npm:@xmldom/xmldom@^0.9.4"
   },
   "devDependencies": {
     "@types/clone": "^2.1.4",
     "@types/node": "^20.14.9",
     "dotenv": "^16.4.5",
-    "tsx": "^4.16.0",
-    "typescript": "^5.5.2"
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
   },
   "engines": {
     "node": ">=20.0.0"
