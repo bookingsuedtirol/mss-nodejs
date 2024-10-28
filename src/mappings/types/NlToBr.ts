@@ -1,6 +1,6 @@
 import jsonix from "jsonix";
-const { Jsonix } = jsonix;
 import nl2br from "nl2br";
+const { Jsonix } = jsonix;
 
 export default Jsonix.Class(Jsonix.Schema.XSD.AnySimpleType, {
   name: "CustomTypes.NlToBr",

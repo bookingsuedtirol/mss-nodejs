@@ -1,5 +1,5 @@
-import { Client, Request } from "../index.js";
 import dotenv from "dotenv";
+import { Client, Request } from "../index.js";
 dotenv.config();
 
 const client = new Client();

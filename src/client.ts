@@ -1,9 +1,9 @@
-import { Request, Response } from "./index.js";
-import https from "node:https";
 import clone from "clone";
+import jsonix from "jsonix";
+import https from "node:https";
+import { Request, Response } from "./index.js";
 import requestMappings from "./mappings/request/index.js";
 import responseMappings from "./mappings/response/index.js";
-import jsonix from "jsonix";
 const { Jsonix } = jsonix;
 
 const makeMssRequest = (body: string): Promise<string> =>
@@ -24,7 +24,7 @@ const makeMssRequest = (body: string): Promise<string> =>
         if (isErrorRes) {
           res.destroy();
           reject(
-            Error(`Request to MSS failed with status code ${res.statusCode}`)
+            Error(`Request to MSS failed with status code ${res.statusCode}`),
           );
         }
 
@@ -32,7 +32,7 @@ const makeMssRequest = (body: string): Promise<string> =>
         res.on("data", (chunk) => (data += chunk));
         res.on("end", () => resolve(data));
         res.on("error", reject);
-      }
+      },
     );
 
     // Set a request timeout of 20 seconds.
@@ -64,7 +64,7 @@ export class Client {
       user: process.env["MSS_USER"] as string,
       password: process.env["MSS_PASSWORD"] as string,
       source: process.env["MSS_SOURCE"] as string,
-    }
+    },
   ) {
     this.defaultPayload = {
       version: "2.0",
@@ -92,7 +92,7 @@ export class Client {
     const { error } = data.header;
     if (error.code > 0) {
       throw Error(
-        `MSS returned an error: code ${error.code}, message: "${error.message}"`
+        `MSS returned an error: code ${error.code}, message: "${error.message}"`,
       );
     }
 
