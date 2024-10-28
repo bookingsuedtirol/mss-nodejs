@@ -5,7 +5,7 @@ export default {
     {
       type: "element",
       name: "url",
-      typeInfo: "String",
+      typeInfo: "CustomTypes.PictureURL",
     },
     {
       type: "element",

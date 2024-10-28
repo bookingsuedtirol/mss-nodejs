@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Change Picture.url type from string to URL
+- Rewrite picture URLs to https://cdn.easychannel.it/…
+
 ## [0.33.0] - 2024-10-17
 
 ### Changed

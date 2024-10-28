@@ -1,5 +1,6 @@
 import NlToBr from "../types/NlToBr.js";
 import Date from "../types/Date.js";
+import PictureURL from '../types/PictureUrl.js'
 
 import Root from "./Root.js";
 import Header from "./Header.js";
@@ -44,6 +45,7 @@ export default {
   typeInfos: [
     new NlToBr(),
     new Date(),
+    new PictureURL(),
     Root,
     Header,
     Error,
