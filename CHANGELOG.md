@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.35.0] - 2024-10-29
+
 ### Changed
 
 - Revert type of Picture.url to `string` string again. Type `URL` causes compatiblity issues.
