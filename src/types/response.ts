@@ -199,7 +199,7 @@ export interface Picture {
   copyright: string;
   time: number;
   title: string;
-  url: URL;
+  url: string;
   width: number;
   height: number;
 }

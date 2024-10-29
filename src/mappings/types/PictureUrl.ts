@@ -3,14 +3,14 @@ const { Jsonix } = jsonix;
 
 export default Jsonix.Class(Jsonix.Schema.XSD.AnySimpleType, {
   name: "CustomTypes.PictureURL",
-  print: function (url: URL) {
-    return url.toJSON();
+  print: function (url: string) {
+    return url;
   },
   parse: function (text: string) {
     Jsonix.Util.Ensure.ensureString(text);
-    const u = new URL(text);
-    u.host = "cdn.easychannel.it";
-    return u;
+    const url = new URL(text);
+    url.host = "cdn.easychannel.it";
+    return url.toString();
   },
   CLASS_NAME: "CustomTypes.PictureURL",
 });
