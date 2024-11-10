@@ -6,25 +6,23 @@ const client = new Client();
 
 const { HotelDetails: HD } = Request;
 
-const main = async () => {
-  try {
-    const res = await client.request((req) => {
-      req.header.paging = {
-        start: 0,
-        limit: 2,
-      };
-      req.request.search.id = [9002];
-      req.request.options = {
-        hotel_details: HD.BasicInfo | HD.FullDescription,
-      };
+try {
+  const res = await client.request((req) => {
+    req.header.paging = {
+      start: 0,
+      limit: 2,
+    };
+    req.request.search.id = [9002];
+    req.request.options = {
+      hotel_details: HD.BasicInfo | HD.FullDescription,
+    };
 
-      return req;
-    });
+    return req;
+  });
 
-    console.log(res.result.hotel[0]);
-  } catch (err) {
-    console.error(err);
-  }
-};
+  console.log(res.result.hotel[0]);
+} catch (err) {
+  console.error(err);
+}
 
-main();
+process.exit(0);
