@@ -11,20 +11,38 @@ const api = wretch("https://easychannel.it/mss/mss_service.php")
   .addon(AbortAddon())
   .headers({ "Content-Type": "text/xml" });
 
-const makeMssRequest = async (body: string): Promise<string> => {
+/**
+ * @throws {MSSError}
+ */
+const makeMssRequest = async (
+  body: string,
+): Promise<{ body: string; httpStatusCode: number }> => {
   try {
-    return await api
+    const response = await api
       .headers({ "Content-Length": String(Buffer.byteLength(body)) })
       .post(body)
       .setTimeout(20_000)
-      .text();
+      .res();
+
+    return {
+      body: await response.text(),
+      httpStatusCode: response.status,
+    };
   } catch (error) {
     if (error instanceof wretch.WretchError) {
-      throw Error(`Request to MSS failed with status code ${error.status}`);
+      throw new MSSError({
+        httpStatusCode: error.status,
+        message: "request failed",
+        code: undefined,
+      });
     }
 
     if (error instanceof DOMException && error.name === "AbortError") {
-      throw Error("Request to MSS request timed out");
+      throw new MSSError({
+        httpStatusCode: undefined,
+        message: "request timed out",
+        code: undefined,
+      });
     }
 
     throw error;
@@ -66,20 +84,24 @@ export class Client {
     };
   }
 
+  /**
+   * @throws {MSSError}
+   */
   request = async (callback: (payload: Request.Root) => Request.Root) => {
     const newRequest = callback(clone(this.defaultPayload));
 
     const requestBody = marshaller.marshalString({ root: newRequest });
-    const responseBody = await makeMssRequest(requestBody);
-    const data: Response.Root =
-      unmarshaller.unmarshalString(responseBody).value;
+    const { body, httpStatusCode } = await makeMssRequest(requestBody);
+    const data: Response.Root = unmarshaller.unmarshalString(body).value;
     modifyOutput(data);
 
     const { error } = data.header;
     if (error.code > 0) {
-      throw Error(
-        `MSS returned an error: code ${error.code}, message: "${error.message}"`,
-      );
+      throw new MSSError({
+        httpStatusCode,
+        message: error.message,
+        code: error.code,
+      });
     }
 
     return data;
@@ -105,3 +127,24 @@ const modifyOutput = (object: any): void => {
     }
   }
 };
+
+export class MSSError extends Error {
+  readonly code: number | undefined;
+  readonly httpStatusCode: number | undefined;
+
+  constructor({
+    message,
+    code,
+    httpStatusCode,
+  }: {
+    message: string;
+    code: number | undefined;
+    httpStatusCode: number | undefined;
+  }) {
+    super(message);
+    this.name = "MSSError";
+    this.code = code;
+    this.httpStatusCode = httpStatusCode;
+    Object.setPrototypeOf(this, new.target.prototype);
+  }
+}
