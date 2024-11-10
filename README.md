@@ -25,7 +25,7 @@ MSS API v2.0 wrapper for Node.js projects.
 ## Example
 
 ```js
-import { Client, Request } from "@bookingsuedtirol/mss-nodejs";
+import { Client, Request, MSSError } from "@bookingsuedtirol/mss-nodejs";
 
 const client = new Client({
   user: "username",
@@ -51,7 +51,7 @@ console.log(hotel.stars); // => 3
 
 ## Error handling
 
-If MSS returns an error response or the request times out, the Promise is rejected:
+If MSS returns an error response or the request times out, the promise is rejected with a MSSError:
 
 ```js
 try {
@@ -60,6 +60,13 @@ try {
   });
   // do something with res
 } catch (err) {
-  console.error(err);
+  if (err instanceof MSSError) {
+    // handle the error
+    console.error(err);
+    return;
+  }
+
+  // handle generic errors
+  throw error;
 }
 ```
