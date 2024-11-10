@@ -1,49 +1,35 @@
 import clone from "clone";
 import jsonix from "jsonix";
-import https from "node:https";
+import wretch from "wretch";
+import AbortAddon from "wretch/addons/abort";
 import { Request, Response } from "./index.js";
 import requestMappings from "./mappings/request/index.js";
 import responseMappings from "./mappings/response/index.js";
 const { Jsonix } = jsonix;
 
-const makeMssRequest = (body: string): Promise<string> =>
-  new Promise((resolve, reject) => {
-    let data = "";
+const api = wretch("https://easychannel.it/mss/mss_service.php")
+  .addon(AbortAddon())
+  .headers({ "Content-Type": "text/xml" });
 
-    const req = https.request(
-      "https://easychannel.it/mss/mss_service.php",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "text/xml",
-          "Content-Length": Buffer.byteLength(body),
-        },
-      },
-      (res) => {
-        const isErrorRes = Boolean(res.statusCode && res.statusCode >= 400);
-        if (isErrorRes) {
-          res.destroy();
-          reject(
-            Error(`Request to MSS failed with status code ${res.statusCode}`),
-          );
-        }
+const makeMssRequest = async (body: string): Promise<string> => {
+  try {
+    return await api
+      .headers({ "Content-Length": String(Buffer.byteLength(body)) })
+      .post(body)
+      .setTimeout(20_000)
+      .text();
+  } catch (error) {
+    if (error instanceof wretch.WretchError) {
+      throw Error(`Request to MSS failed with status code ${error.status}`);
+    }
 
-        res.setEncoding("utf8");
-        res.on("data", (chunk) => (data += chunk));
-        res.on("end", () => resolve(data));
-        res.on("error", reject);
-      },
-    );
+    if (error instanceof DOMException && error.name === "AbortError") {
+      throw Error("Request to MSS request timed out");
+    }
 
-    // Set a request timeout of 20 seconds.
-    req.setTimeout(20e3, () => {
-      req.end();
-      reject(Error("Request to MSS request timed out"));
-    });
-
-    req.write(body);
-    req.end();
-  });
+    throw error;
+  }
+};
 
 const marshaller = new Jsonix.Context([requestMappings]).createMarshaller();
 const unmarshaller = new Jsonix.Context([

@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Require Node.js v22
 - Use top level await in example
+- Use wretch (based on fetch) for requests
 
 ## [0.35.0] - 2024-10-29
 
