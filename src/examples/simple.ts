@@ -20,7 +20,7 @@ try {
     return req;
   });
 
-  console.log(res.result.hotel[0]);
+  console.log(res.result.hotel?.[0]);
 } catch (err) {
   console.error(err);
 }

@@ -292,8 +292,8 @@ export interface Restriction {
 }
 
 export interface Result {
-  hotel: Hotel[];
-  special: Special[];
+  hotel?: Hotel[];
+  special?: Special[];
 }
 
 export enum RoomType {
