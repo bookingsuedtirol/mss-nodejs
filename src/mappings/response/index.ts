@@ -41,7 +41,7 @@ import Special from "./Special.js";
 import Theme from "./Theme.js";
 
 export default {
-  name: "Mss",
+  name: "MSS",
   typeInfos: [
     new NlToBr(),
     new Date(),
@@ -87,7 +87,7 @@ export default {
   elementInfos: [
     {
       elementName: "root",
-      typeInfo: "Mss.Root",
+      typeInfo: "MSS.Root",
     },
   ],
 };

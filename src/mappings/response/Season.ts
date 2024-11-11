@@ -15,7 +15,7 @@ export default {
     {
       type: "element",
       name: "price",
-      typeInfo: "Mss.Price",
+      typeInfo: "MSS.Price",
     },
   ],
 };

@@ -40,7 +40,7 @@ export default {
     {
       type: "element",
       name: "address",
-      typeInfo: "Mss.Address",
+      typeInfo: "MSS.Address",
     },
     {
       type: "element",
@@ -50,22 +50,22 @@ export default {
     {
       type: "element",
       name: "location",
-      typeInfo: "Mss.Location",
+      typeInfo: "MSS.Location",
     },
     {
       type: "element",
       name: "location_name",
-      typeInfo: "Mss.LocationName",
+      typeInfo: "MSS.LocationName",
     },
     {
       type: "element",
       name: "geolocation",
-      typeInfo: "Mss.Geolocation",
+      typeInfo: "MSS.Geolocation",
     },
     {
       type: "element",
       name: "contact",
-      typeInfo: "Mss.Contact",
+      typeInfo: "MSS.Contact",
     },
     {
       type: "element",
@@ -80,56 +80,56 @@ export default {
     {
       type: "element",
       name: "hotel_payment",
-      typeInfo: "Mss.HotelPayment",
+      typeInfo: "MSS.HotelPayment",
     },
     {
       type: "element",
       name: "matching",
-      typeInfo: "Mss.Matching",
+      typeInfo: "MSS.Matching",
     },
     {
       type: "element",
       name: "logo",
       wrapperElementName: "logo",
-      typeInfo: "Mss.Picture",
+      typeInfo: "MSS.Picture",
     },
     {
       type: "element",
       name: "pictures",
       wrapperElementName: "pictures",
       collection: true,
-      typeInfo: "Mss.Picture",
+      typeInfo: "MSS.Picture",
     },
     {
       type: "element",
       name: "picture_groups",
       wrapperElementName: "picture_groups",
       collection: true,
-      typeInfo: "Mss.PictureGroup",
+      typeInfo: "MSS.PictureGroup",
     },
     {
       type: "element",
       name: "gallery",
       wrapperElementName: "gallery",
       collection: true,
-      typeInfo: "Mss.Picture",
+      typeInfo: "MSS.Picture",
     },
     {
       type: "element",
       name: "channel",
-      typeInfo: "Mss.Channel",
+      typeInfo: "MSS.Channel",
     },
     {
       type: "element",
       name: "features_view",
       wrapperElementName: "features_view",
       collection: true,
-      typeInfo: "Mss.Feature",
+      typeInfo: "MSS.Feature",
     },
     {
       type: "element",
       name: "lts_data",
-      typeInfo: "Mss.LtsData",
+      typeInfo: "MSS.LtsData",
     },
     {
       type: "element",
@@ -151,12 +151,12 @@ export default {
     {
       type: "element",
       name: "check_in",
-      typeInfo: "Mss.CheckInOut",
+      typeInfo: "MSS.CheckInOut",
     },
     {
       type: "element",
       name: "check_out",
-      typeInfo: "Mss.CheckInOut",
+      typeInfo: "MSS.CheckInOut",
     },
     {
       type: "element",
@@ -178,7 +178,7 @@ export default {
       name: "ratings",
       wrapperElementName: "ratings",
       collection: true,
-      typeInfo: "Mss.Rating",
+      typeInfo: "MSS.Rating",
     },
   ],
 };

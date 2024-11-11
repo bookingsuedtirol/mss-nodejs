@@ -5,17 +5,17 @@ export default {
     {
       type: "element",
       name: "guest",
-      typeInfo: "Mss.Guest",
+      typeInfo: "MSS.Guest",
     },
     {
       type: "element",
       name: "company",
-      typeInfo: "Mss.Company",
+      typeInfo: "MSS.Company",
     },
     {
       type: "element",
       name: "payment",
-      typeInfo: "Mss.Payment",
+      typeInfo: "MSS.Payment",
     },
     {
       type: "element",
@@ -25,17 +25,17 @@ export default {
     {
       type: "element",
       name: "details",
-      typeInfo: "Mss.Details",
+      typeInfo: "MSS.Details",
     },
     {
       type: "element",
       name: "details",
-      typeInfo: "Mss.Form",
+      typeInfo: "MSS.Form",
     },
     {
       type: "element",
       name: "tracking",
-      typeInfo: "Mss.Tracking",
+      typeInfo: "MSS.Tracking",
     },
   ],
 };

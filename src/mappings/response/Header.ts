@@ -5,7 +5,7 @@ export default {
     {
       type: "element",
       name: "error",
-      typeInfo: "Mss.Error",
+      typeInfo: "MSS.Error",
     },
     {
       type: "element",
@@ -20,7 +20,7 @@ export default {
     {
       type: "element",
       name: "paging",
-      typeInfo: "Mss.Paging",
+      typeInfo: "MSS.Paging",
     },
     {
       type: "element",

@@ -5,12 +5,12 @@ export default {
     {
       type: "element",
       name: "header",
-      typeInfo: "Mss.Header",
+      typeInfo: "MSS.Header",
     },
     {
       type: "element",
       name: "result",
-      typeInfo: "Mss.Result",
+      typeInfo: "MSS.Result",
     },
   ],
 };

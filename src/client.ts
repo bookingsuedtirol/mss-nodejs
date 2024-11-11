@@ -14,7 +14,7 @@ const api = wretch("https://easychannel.it/mss/mss_service.php")
 /**
  * @throws {MSSError}
  */
-const makeMssRequest = async (
+const makeMSSRequest = async (
   body: string,
 ): Promise<{ body: string; httpStatusCode: number }> => {
   try {
@@ -91,7 +91,7 @@ export class Client {
     const newRequest = callback(clone(this.defaultPayload));
 
     const requestBody = marshaller.marshalString({ root: newRequest });
-    const { body, httpStatusCode } = await makeMssRequest(requestBody);
+    const { body, httpStatusCode } = await makeMSSRequest(requestBody);
     const data: Response.Root = unmarshaller.unmarshalString(body).value;
     modifyOutput(data);
 

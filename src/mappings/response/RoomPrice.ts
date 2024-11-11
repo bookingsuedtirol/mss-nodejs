@@ -22,17 +22,17 @@ export default {
       name: "price_details",
       wrapperElementName: "price_details",
       collection: true,
-      typeInfo: "Mss.Price",
+      typeInfo: "MSS.Price",
     },
     {
       type: "element",
       name: "price_total",
-      typeInfo: "Mss.Price",
+      typeInfo: "MSS.Price",
     },
     {
       type: "element",
       name: "price_inclusive",
-      typeInfo: "Mss.Price",
+      typeInfo: "MSS.Price",
     },
   ],
 };

@@ -52,14 +52,14 @@ export default {
       name: "pictures",
       wrapperElementName: "pictures",
       collection: true,
-      typeInfo: "Mss.Picture",
+      typeInfo: "MSS.Picture",
     },
     {
       type: "element",
       name: "themes",
       wrapperElementName: "themes",
       collection: true,
-      typeInfo: "Mss.Theme",
+      typeInfo: "MSS.Theme",
     },
   ],
 };

@@ -10,12 +10,12 @@ export default {
     {
       type: "element",
       name: "header",
-      typeInfo: "Mss.Header",
+      typeInfo: "MSS.Header",
     },
     {
       type: "element",
       name: "request",
-      typeInfo: "Mss.Request",
+      typeInfo: "MSS.Request",
     },
   ],
 };

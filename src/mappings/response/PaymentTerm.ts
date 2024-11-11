@@ -35,7 +35,7 @@ export default {
     {
       type: "element",
       name: "bank",
-      typeInfo: "Mss.Bank",
+      typeInfo: "MSS.Bank",
     },
     {
       type: "element",

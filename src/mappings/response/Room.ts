@@ -67,7 +67,7 @@ export default {
       name: "features_view",
       wrapperElementName: "features_view",
       collection: true,
-      typeInfo: "Mss.Feature",
+      typeInfo: "MSS.Feature",
     },
     {
       type: "element",
@@ -79,23 +79,23 @@ export default {
       name: "pictures",
       wrapperElementName: "pictures",
       collection: true,
-      typeInfo: "Mss.Picture",
+      typeInfo: "MSS.Picture",
     },
     {
       type: "element",
       name: "room_price",
       collection: true,
-      typeInfo: "Mss.Price",
+      typeInfo: "MSS.Price",
     },
     {
       type: "element",
       name: "properties",
-      typeInfo: "Mss.Properties",
+      typeInfo: "MSS.Properties",
     },
     {
       type: "element",
       name: "occupancy",
-      typeInfo: "Mss.Occupancy",
+      typeInfo: "MSS.Occupancy",
     },
     {
       type: "element",
@@ -109,14 +109,14 @@ export default {
       name: "room_details",
       wrapperElementName: "room_details",
       collection: true,
-      typeInfo: "Mss.RoomDetail",
+      typeInfo: "MSS.RoomDetail",
     },
     {
       type: "element",
       name: "days",
       wrapperElementName: "days",
       collection: true,
-      typeInfo: "Mss.Day",
+      typeInfo: "MSS.Day",
     },
     {
       type: "element",
@@ -127,7 +127,7 @@ export default {
       type: "element",
       name: "pricelist",
       collection: true,
-      typeInfo: "Mss.PriceList",
+      typeInfo: "MSS.PriceList",
     },
   ],
 };

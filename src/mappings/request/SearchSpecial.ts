@@ -27,7 +27,7 @@ export default {
     {
       type: "element",
       name: "validity",
-      typeInfo: "Mss.Validity",
+      typeInfo: "MSS.Validity",
     },
     {
       type: "element",

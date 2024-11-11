@@ -22,7 +22,7 @@ export default {
       name: "penalties",
       wrapperElementName: "penalties",
       collection: true,
-      typeInfo: "Mss.Penalty",
+      typeInfo: "MSS.Penalty",
     },
     {
       type: "element",

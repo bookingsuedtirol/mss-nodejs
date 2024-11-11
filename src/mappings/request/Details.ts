@@ -6,7 +6,7 @@ export default {
       type: "element",
       name: "extra_price",
       collection: true,
-      typeInfo: "Mss.ExtraPrice",
+      typeInfo: "MSS.ExtraPrice",
     },
   ],
 };

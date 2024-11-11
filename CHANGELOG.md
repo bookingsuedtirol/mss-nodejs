@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Refactoring: capitalize MSS in the code
+
 ## [0.37.0] - 2024-11-11
 
 ### Changed

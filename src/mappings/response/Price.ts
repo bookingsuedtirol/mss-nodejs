@@ -92,7 +92,7 @@ export default {
       name: "pictures",
       wrapperElementName: "pictures",
       collection: true,
-      typeInfo: "Mss.Picture",
+      typeInfo: "MSS.Picture",
     },
     {
       type: "element",

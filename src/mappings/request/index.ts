@@ -31,7 +31,7 @@ import Tracking from "./Tracking.js";
 import Validitiy from "./Validitiy.js";
 
 export default {
-  name: "Mss",
+  name: "MSS",
   typeInfos: [
     new Date(),
     Address,
@@ -67,7 +67,7 @@ export default {
   elementInfos: [
     {
       elementName: "root",
-      typeInfo: "Mss.Root",
+      typeInfo: "MSS.Root",
     },
   ],
 };

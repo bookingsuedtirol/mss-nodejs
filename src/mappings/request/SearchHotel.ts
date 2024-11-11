@@ -15,7 +15,7 @@ export default {
     {
       type: "element",
       name: "stars",
-      typeInfo: "Mss.Stars",
+      typeInfo: "MSS.Stars",
     },
     {
       type: "element",

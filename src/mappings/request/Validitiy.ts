@@ -31,7 +31,7 @@ export default {
       type: "element",
       name: "room",
       collection: true,
-      typeInfo: "Mss.Room",
+      typeInfo: "MSS.Room",
     },
   ],
 };

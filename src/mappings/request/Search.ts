@@ -26,42 +26,42 @@ export default {
     {
       type: "element",
       name: "search_hotel",
-      typeInfo: "Mss.SearchHotel",
+      typeInfo: "MSS.SearchHotel",
     },
     {
       type: "element",
       name: "search_location",
-      typeInfo: "Mss.SearchLocation",
+      typeInfo: "MSS.SearchLocation",
     },
     {
       type: "element",
       name: "search_distance",
-      typeInfo: "Mss.SearchDistance",
+      typeInfo: "MSS.SearchDistance",
     },
     {
       type: "element",
       name: "search_offer",
-      typeInfo: "Mss.SearchOffer",
+      typeInfo: "MSS.SearchOffer",
     },
     {
       type: "element",
       name: "search_lts",
-      typeInfo: "Mss.SearchLts",
+      typeInfo: "MSS.SearchLts",
     },
     {
       type: "element",
       name: "search_special",
-      typeInfo: "Mss.SearchSpecial",
+      typeInfo: "MSS.SearchSpecial",
     },
     {
       type: "element",
       name: "search_availability",
-      typeInfo: "Mss.SearchAvailability",
+      typeInfo: "MSS.SearchAvailability",
     },
     {
       type: "element",
       name: "search_pricelist",
-      typeInfo: "Mss.SearchPriceList",
+      typeInfo: "MSS.SearchPriceList",
     },
     {
       type: "element",

@@ -17,7 +17,7 @@ export default {
       name: "restrictions",
       wrapperElementName: "restrictions",
       collection: true,
-      typeInfo: "Mss.Restriction",
+      typeInfo: "MSS.Restriction",
     },
   ],
 };

@@ -35,7 +35,7 @@ export default {
     {
       type: "element",
       name: "address",
-      typeInfo: "Mss.Address",
+      typeInfo: "MSS.Address",
     },
     {
       type: "element",

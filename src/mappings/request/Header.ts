@@ -5,7 +5,7 @@ export default {
     {
       type: "element",
       name: "credentials",
-      typeInfo: "Mss.Credentials",
+      typeInfo: "MSS.Credentials",
     },
     {
       type: "element",
@@ -15,7 +15,7 @@ export default {
     {
       type: "element",
       name: "paging",
-      typeInfo: "Mss.Paging",
+      typeInfo: "MSS.Paging",
     },
   ],
 };
