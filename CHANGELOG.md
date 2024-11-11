@@ -39,7 +39,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Revert type of Picture.url to `string` string again. Type `URL` causes compatiblity issues.
+- Revert type of Picture.url to `string` string again. Type `URL` causes compatibility issues.
 
 ## [0.34.0] - 2024-10-28
 
