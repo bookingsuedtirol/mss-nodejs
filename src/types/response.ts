@@ -123,7 +123,7 @@ export interface Hotel {
   location: Location;
   location_name: LocationName;
   logo?: Picture;
-  lts_data: LtsData;
+  lts_data: LTSData;
   matching: Matching;
   name: string;
   cin: string;
@@ -153,7 +153,7 @@ export interface LocationName {
   name_region: string;
 }
 
-export interface LtsData {
+export interface LTSData {
   A0Ene: number;
   A0MTV: number;
   A0Rep: number;
