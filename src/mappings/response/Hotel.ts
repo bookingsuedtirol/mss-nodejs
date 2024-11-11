@@ -25,7 +25,7 @@ export default {
     {
       type: "element",
       name: "cin",
-      typeInfo: "String",
+      typeInfo: "CustomTypes.CommaSeparatedList",
     },
     {
       type: "element",

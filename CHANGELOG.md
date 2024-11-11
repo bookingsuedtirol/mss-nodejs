@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Set type of `Hotel.cin` to `string[]`
+
 ### Fixed
 
 - Fix capitalization of the LTSData interface

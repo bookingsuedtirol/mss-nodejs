@@ -1,3 +1,4 @@
+import CommaSeparatedList from "../types/CommaSeparatedList.js";
 import Date from "../types/Date.js";
 import NlToBr from "../types/NlToBr.js";
 import PictureURL from "../types/PictureUrl.js";
@@ -43,6 +44,7 @@ import Theme from "./Theme.js";
 export default {
   name: "MSS",
   typeInfos: [
+    new CommaSeparatedList(),
     new NlToBr(),
     new Date(),
     new PictureURL(),

@@ -126,7 +126,7 @@ export interface Hotel {
   lts_data: LTSData;
   matching: Matching;
   name: string;
-  cin: string;
+  cin?: string[];
   board: Boards;
   pers_age_min: number;
   pictures?: Picture[];
