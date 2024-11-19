@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Refactor private `Client.defaultPayload` field.
+
 ## [0.39.0] - 2024-11-11
 
 ### Changed

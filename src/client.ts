@@ -61,7 +61,7 @@ export interface ClientSettings {
 }
 
 export class Client {
-  private defaultPayload: Request.Root;
+  readonly #defaultPayload: Request.Root;
 
   constructor(
     settings: ClientSettings = {
@@ -70,7 +70,7 @@ export class Client {
       source: process.env["MSS_SOURCE"] as string,
     },
   ) {
-    this.defaultPayload = {
+    this.#defaultPayload = {
       version: "2.0",
       header: {
         credentials: settings,
@@ -88,7 +88,7 @@ export class Client {
    * @throws {MSSError}
    */
   request = async (callback: (payload: Request.Root) => Request.Root) => {
-    const newRequest = callback(clone(this.defaultPayload));
+    const newRequest = callback(clone(this.#defaultPayload));
 
     const requestBody = marshaller.marshalString({ root: newRequest });
     const { body, httpStatusCode } = await makeMSSRequest(requestBody);
