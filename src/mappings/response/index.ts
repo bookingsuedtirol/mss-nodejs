@@ -1,6 +1,7 @@
 import CommaSeparatedList from "../types/CommaSeparatedList.js";
 import Date from "../types/Date.js";
 import NlToBr from "../types/NlToBr.js";
+import NormalizedHTMLString from "../types/NormalizedHTMLString.js";
 import PictureURL from "../types/PictureUrl.js";
 
 import Address from "./Address.js";
@@ -46,6 +47,7 @@ export default {
   typeInfos: [
     new CommaSeparatedList(),
     new NlToBr(),
+    new NormalizedHTMLString(),
     new Date(),
     new PictureURL(),
     Root,

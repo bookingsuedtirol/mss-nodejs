@@ -35,12 +35,14 @@
     "clone": "^2.1.2",
     "jsonix": "^3.0.0",
     "nl2br": "0.0.3",
+    "sanitize-html": "^2.13.1",
     "wretch": "^2.11.0",
     "xmldom": "npm:@xmldom/xmldom@^0.9.5"
   },
   "devDependencies": {
     "@types/clone": "^2.1.4",
     "@types/node": "^22.9.0",
+    "@types/sanitize-html": "^2.13.0",
     "dotenv": "^16.4.5",
     "prettier": "3.3.3",
     "tsx": "^4.19.2",

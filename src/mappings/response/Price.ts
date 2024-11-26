@@ -25,7 +25,7 @@ export default {
     {
       type: "element",
       name: "description",
-      typeInfo: "String",
+      typeInfo: "CustomTypes.NormalizedHTMLString",
     },
     {
       type: "element",

@@ -45,7 +45,7 @@ export default {
     {
       type: "element",
       name: "description",
-      typeInfo: "CustomTypes.NlToBr",
+      typeInfo: "CustomTypes.NormalizedHTMLString",
     },
     {
       type: "element",

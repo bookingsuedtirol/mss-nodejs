@@ -70,12 +70,12 @@ export default {
     {
       type: "element",
       name: "headline",
-      typeInfo: "String",
+      typeInfo: "CustomTypes.NormalizedHTMLString",
     },
     {
       type: "element",
       name: "description",
-      typeInfo: "CustomTypes.NlToBr",
+      typeInfo: "CustomTypes.NormalizedHTMLString",
     },
     {
       type: "element",
