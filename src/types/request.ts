@@ -69,9 +69,9 @@ export interface Options {
   pricelist_details?: PriceListDetails;
   picture_date?: string;
   lts_bookable?: number;
-  get_availability?: 0 | 1;
-  get_restrictions?: 0 | 1;
-  get_roomdetails?: 0 | 1;
+  get_availability?: boolean;
+  get_restrictions?: boolean;
+  get_roomdetails?: boolean;
   base_price?: number;
 }
 
@@ -385,7 +385,7 @@ export interface Guest {
   email?: string;
   phone?: string;
   address?: Address;
-  newsletter?: 0 | 1;
+  newsletter?: boolean;
 }
 
 export interface Company {
@@ -397,7 +397,7 @@ export interface Company {
 
 export interface Payment {
   method?: PaymentMethod;
-  invoice?: 0 | 1;
+  invoice?: boolean;
 }
 
 export enum PaymentMethod {
@@ -463,8 +463,8 @@ export interface Rateplan {
 }
 
 export interface Validity {
-  valid?: 0 | 1;
-  offers?: 0 | 1;
+  valid?: boolean;
+  offers?: boolean;
   arrival?: Date;
   departure?: Date;
   service?: Board;

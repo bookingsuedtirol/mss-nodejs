@@ -27,7 +27,7 @@ export interface Channel {
 
 export interface CancelPolicy {
   id: number;
-  refundable: number;
+  refundable: boolean;
   refundable_until: Date;
   penalties: Penalty[];
   description: string;
@@ -105,7 +105,7 @@ export enum Boards {
 
 export interface Hotel {
   address: Address;
-  bookable: number;
+  bookable: boolean;
   channel: Channel;
   check_in: CheckInOut;
   check_out: CheckInOut;
@@ -381,7 +381,7 @@ export interface Special {
   status: number;
   themes?: Theme[];
   title: string;
-  valid: number;
+  valid: boolean;
   valid_end: Date;
   valid_start: Date;
 }

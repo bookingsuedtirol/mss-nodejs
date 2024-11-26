@@ -5,12 +5,12 @@ export default {
     {
       type: "element",
       name: "valid",
-      typeInfo: "Integer",
+      typeInfo: "CustomTypes.Boolean",
     },
     {
       type: "element",
       name: "offers",
-      typeInfo: "Integer",
+      typeInfo: "CustomTypes.Boolean",
     },
     {
       type: "element",

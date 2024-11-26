@@ -10,7 +10,7 @@ export default {
     {
       type: "element",
       name: "invoice",
-      typeInfo: "Integer",
+      typeInfo: "CustomTypes.Boolean",
     },
   ],
 };

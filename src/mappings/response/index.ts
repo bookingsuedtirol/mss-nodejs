@@ -1,3 +1,4 @@
+import Boolean from "../types/Boolean.js";
 import CommaSeparatedList from "../types/CommaSeparatedList.js";
 import Date from "../types/Date.js";
 import NlToBr from "../types/NlToBr.js";
@@ -46,6 +47,7 @@ export default {
   name: "MSS",
   typeInfos: [
     new CommaSeparatedList(),
+    new Boolean(),
     new NlToBr(),
     new NormalizedHTMLString(),
     new Date(),

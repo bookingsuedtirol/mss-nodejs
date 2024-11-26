@@ -10,7 +10,7 @@ export default {
     {
       type: "element",
       name: "refundable",
-      typeInfo: "Integer",
+      typeInfo: "CustomTypes.Boolean",
     },
     {
       type: "element",

@@ -1,3 +1,4 @@
+import Boolean from "../types/Boolean.js";
 import Date from "../types/Date.js";
 
 import Address from "./Address.js";
@@ -34,6 +35,7 @@ export default {
   name: "MSS",
   typeInfos: [
     new Date(),
+    new Boolean(),
     Address,
     Company,
     Credentials,

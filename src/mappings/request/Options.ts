@@ -35,17 +35,17 @@ export default {
     {
       type: "element",
       name: "get_availability",
-      typeInfo: "Integer",
+      typeInfo: "CustomTypes.Boolean",
     },
     {
       type: "element",
       name: "get_restrictions",
-      typeInfo: "Integer",
+      typeInfo: "CustomTypes.Boolean",
     },
     {
       type: "element",
       name: "get_roomdetails",
-      typeInfo: "Integer",
+      typeInfo: "CustomTypes.Boolean",
     },
     {
       type: "element",

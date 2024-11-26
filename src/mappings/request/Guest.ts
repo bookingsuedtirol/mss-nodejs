@@ -40,7 +40,7 @@ export default {
     {
       type: "element",
       name: "newsletter",
-      typeInfo: "Integer",
+      typeInfo: "CustomTypes.Boolean",
     },
   ],
 };

@@ -15,7 +15,7 @@ export default {
     {
       type: "element",
       name: "bookable",
-      typeInfo: "Integer",
+      typeInfo: "CustomTypes.Boolean",
     },
     {
       type: "element",
