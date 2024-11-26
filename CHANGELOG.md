@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Refactor private `Client.defaultPayload` field.
+- Refactor private `Client.defaultPayload` field
 - Introduce HTML sanitization (`NormalizedHTMLString` type)
 - Remove `NlToBr` from most properties
 
@@ -55,7 +55,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- Revert type of Picture.url to `string` string again. Type `URL` causes compatibility issues.
+- Revert type of Picture.url to `string` string again. Type `URL` causes compatibility issues
 
 ## [0.34.0] - 2024-10-28
 
@@ -199,7 +199,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Update dependencies
-- MSS only returns zero or one logos per hotel. Change `hotel.logo?: Picture[]` to `hotel.logo?: Picture` because of this.
+- MSS only returns zero or one logos per hotel. Change `hotel.logo?: Picture[]` to `hotel.logo?: Picture` because of this
 
 ## [0.15.0] - 2022-01-12
 
