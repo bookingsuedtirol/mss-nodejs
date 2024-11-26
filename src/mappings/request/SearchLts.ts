@@ -1,6 +1,6 @@
 export default {
   type: "classInfo",
-  localName: "SearchLts",
+  localName: "SearchLTS",
   propertyInfos: [
     {
       type: "element",

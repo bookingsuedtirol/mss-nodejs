@@ -129,7 +129,7 @@ export default {
     {
       type: "element",
       name: "lts_data",
-      typeInfo: "MSS.LtsData",
+      typeInfo: "MSS.LTSData",
     },
     {
       type: "element",

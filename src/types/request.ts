@@ -49,7 +49,7 @@ export interface Search {
   search_location?: SearchLocation;
   search_distance?: SearchDistance;
   search_offer?: SearchOffer;
-  search_lts?: SearchLts;
+  search_lts?: SearchLTS;
   search_special?: SearchSpecial;
   search_availability?: SearchAvailability;
   search_pricelist?: SearchPriceList;
@@ -95,7 +95,7 @@ export enum HotelDetails {
   HotelNavigatorData = 65536,
   DetailedHotelFacilities = 131072,
   SalesPoint = 524288,
-  LtsSpecificParameters = 262144,
+  LTSSpecificParameters = 262144,
   CheckInOut = 1048576,
   SourceData = 2097152,
 }
@@ -290,7 +290,7 @@ export enum RoomFeature {
   BarrierFree = 512,
 }
 
-export interface SearchLts {
+export interface SearchLTS {
   A0Ene?: number;
   A0MTV?: number;
   A0Rep?: number;

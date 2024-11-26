@@ -1,6 +1,6 @@
 export default {
   type: "classInfo",
-  localName: "LtsData",
+  localName: "LTSData",
   propertyInfos: [
     {
       type: "element",

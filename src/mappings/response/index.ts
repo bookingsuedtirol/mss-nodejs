@@ -20,7 +20,7 @@ import Hotel from "./Hotel.js";
 import HotelPayment from "./HotelPayment.js";
 import Location from "./Location.js";
 import LocationName from "./LocationName.js";
-import LtsData from "./LtsData.js";
+import LTSData from "./LtsData.js";
 import Matching from "./Matching.js";
 import Occupancy from "./Occupancy.js";
 import Offer from "./Offer.js";
@@ -72,7 +72,7 @@ export default {
     Picture,
     PictureGroup,
     Feature,
-    LtsData,
+    LTSData,
     CheckInOut,
     Rating,
     Channel,

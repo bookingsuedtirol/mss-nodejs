@@ -46,7 +46,7 @@ export default {
     {
       type: "element",
       name: "search_lts",
-      typeInfo: "MSS.SearchLts",
+      typeInfo: "MSS.SearchLTS",
     },
     {
       type: "element",

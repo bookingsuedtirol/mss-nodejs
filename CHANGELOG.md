@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Fix typo
+- Fix typos and capitalization
 
 ## [0.39.0] - 2024-11-11
 

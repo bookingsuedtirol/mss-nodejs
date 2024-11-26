@@ -23,7 +23,7 @@ import SearchAvailability from "./SearchAvailability.js";
 import SearchDistance from "./SearchDistance.js";
 import SearchHotel from "./SearchHotel.js";
 import SearchLocation from "./SearchLocation.js";
-import SearchLts from "./SearchLts.js";
+import SearchLTS from "./SearchLts.js";
 import SearchOffer from "./SearchOffer.js";
 import SearchPriceList from "./SearchPriceList.js";
 import SearchSpecial from "./SearchSpecial.js";
@@ -58,7 +58,7 @@ export default {
     SearchDistance,
     SearchHotel,
     SearchLocation,
-    SearchLts,
+    SearchLTS,
     SearchOffer,
     SearchPriceList,
     SearchSpecial,
