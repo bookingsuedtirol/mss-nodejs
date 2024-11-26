@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Introduce HTML sanitization (`NormalizedHTMLString` type)
 - Remove `NlToBr` from most properties
 - Replace pseudo-boolean types (`0 | 1`) with actual booleans
+- Update dependencies
 
 ## [0.39.0] - 2024-11-11
 
