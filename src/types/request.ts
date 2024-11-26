@@ -176,7 +176,7 @@ export enum HotelType {
   Hotel = 1,
   SkiSchool = 2,
   Residence = 4,
-  Appartment = 16,
+  Apartment = 16,
   FarmVacation = 32,
   MountainInn = 64,
   CampingSite = 128,
