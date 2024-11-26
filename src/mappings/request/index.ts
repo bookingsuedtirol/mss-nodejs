@@ -29,7 +29,7 @@ import SearchPriceList from "./SearchPriceList.js";
 import SearchSpecial from "./SearchSpecial.js";
 import Stars from "./Stars.js";
 import Tracking from "./Tracking.js";
-import Validitiy from "./Validitiy.js";
+import Validity from "./Validity.js";
 
 export default {
   name: "MSS",
@@ -64,7 +64,7 @@ export default {
     SearchSpecial,
     Stars,
     Tracking,
-    Validitiy,
+    Validity,
   ],
   elementInfos: [
     {

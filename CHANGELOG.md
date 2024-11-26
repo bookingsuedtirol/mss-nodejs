@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Replace pseudo-boolean types (`0 | 1`) with actual booleans
 - Update dependencies
 
+### Fixed
+
+- Fix typo
+
 ## [0.39.0] - 2024-11-11
 
 ### Changed
