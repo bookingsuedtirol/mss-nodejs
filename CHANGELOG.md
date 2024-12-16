@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update dependencies
 
+### Fixed
+
+- Fix `Picture.title` type
+
 ## [0.40.0] - 2024-11-26
 
 ### Changed

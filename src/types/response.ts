@@ -199,7 +199,7 @@ export interface Paging {
 export interface Picture {
   copyright: string;
   time: number;
-  title: string;
+  title: string | null;
   url: string;
   width: number;
   height: number;
