@@ -1,9 +1,9 @@
 export interface Address {
-  city: string;
+  city: string | null;
   country: string;
-  street: string;
-  url_streetview: string;
-  zip: string;
+  street: string | null;
+  url_streetview: string | null;
+  zip: string | null;
   zipcode: string;
 }
 
@@ -57,10 +57,10 @@ export interface CheckInOut {
 }
 
 export interface Contact {
-  email: string;
-  fax: string;
-  phone: string;
-  web: string;
+  email: string | null;
+  fax: string | null;
+  phone: string | null;
+  web: string | null;
 }
 
 export interface Day {
