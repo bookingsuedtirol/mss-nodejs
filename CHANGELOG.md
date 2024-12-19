@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
-- Add `| null` to field types which are actually nullable in MSS.
+- Add `| null` to field types which are actually nullable in MSS
 
 ## [0.41.0] - 2024-12-16
 
