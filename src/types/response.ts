@@ -110,12 +110,12 @@ export interface Hotel {
   check_in: CheckInOut;
   check_out: CheckInOut;
   contact: Contact;
-  description: NormalizedHTMLString;
+  description?: NormalizedHTMLString;
   features: number;
   features_view?: Feature[];
   gallery?: Picture[];
   geolocation: Geolocation;
-  headline: NormalizedHTMLString;
+  headline?: NormalizedHTMLString;
   hotel_payment: HotelPayment;
   id: number;
   id_lts: string | null;
@@ -185,7 +185,7 @@ export interface Offer {
   pictures?: Picture[];
   themes?: Theme[];
   title: string;
-  description: NormalizedHTMLString;
+  description?: NormalizedHTMLString;
 }
 
 export interface HotelPayment {
@@ -212,7 +212,7 @@ export interface PictureGroup {
 }
 
 export interface Price {
-  description: NormalizedHTMLString;
+  description?: NormalizedHTMLString;
   pictures?: Picture[];
   price_ai: number;
   price_amount: number;
@@ -368,7 +368,7 @@ export interface Special {
   days_departure: number;
   days_dur_max: number;
   days_dur_min: number;
-  description: NormalizedHTMLString;
+  description?: NormalizedHTMLString;
   hotels: Hotel[];
   inclusive?: Price[];
   offer_id: number;
