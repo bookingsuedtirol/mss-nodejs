@@ -180,5 +180,10 @@ export default {
       collection: true,
       typeInfo: "MSS.Rating",
     },
+    {
+      type: "element",
+      name: "informal_mail",
+      typeInfo: "CustomTypes.Boolean",
+    },
   ],
 };

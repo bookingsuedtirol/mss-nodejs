@@ -137,6 +137,7 @@ export interface Hotel {
   ratings?: Rating[];
   stars: number;
   type: number;
+  informal_mail: boolean;
 }
 
 export interface Location {

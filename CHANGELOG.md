@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Add `informal_mail` field to `Hotel` response type
+
 ## [0.42.0] - 2024-12-18
 
 ### Fixed
