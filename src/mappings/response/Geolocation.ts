@@ -15,12 +15,12 @@ export default {
     {
       type: "element",
       name: "altitude",
-      typeInfo: "Integer",
+      typeInfo: "Double",
     },
     {
       type: "element",
       name: "distance",
-      typeInfo: "Integer",
+      typeInfo: "Double",
     },
   ],
 };

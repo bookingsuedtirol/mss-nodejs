@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.45.0] - 2025-01-15
+
+### Fixed
+
+- Type `Geolocation.altitude` and `Geolocation.distance` correctly
+
 ## [0.44.0] - 2025-01-11
 
 ### Changed
