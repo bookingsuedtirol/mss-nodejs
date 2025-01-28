@@ -4,11 +4,11 @@ const { Jsonix } = jsonix;
 
 export default Jsonix.Class(Jsonix.Schema.XSD.AnySimpleType, {
   name: "CustomTypes.NlToBr",
-  print: function (text: string) {
+  print(text: string) {
     Jsonix.Util.Ensure.ensureString(text);
     return text;
   },
-  parse: function (text: string) {
+  parse(text: string) {
     Jsonix.Util.Ensure.ensureString(text);
     return nl2br(text, true);
   },

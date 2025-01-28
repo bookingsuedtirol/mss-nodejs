@@ -2,7 +2,7 @@ import clone from "clone";
 import jsonix from "jsonix";
 import wretch from "wretch";
 import AbortAddon from "wretch/addons/abort";
-import { Request, Response } from "./index.js";
+import type { Request, Response } from "./index.js";
 import requestMappings from "./mappings/request/index.js";
 import responseMappings from "./mappings/response/index.js";
 const { Jsonix } = jsonix;
@@ -65,9 +65,9 @@ export class Client {
 
   constructor(
     settings: ClientSettings = {
-      user: process.env["MSS_USER"] as string,
-      password: process.env["MSS_PASSWORD"] as string,
-      source: process.env["MSS_SOURCE"] as string,
+      user: process.env["MSS_USER"]!,
+      password: process.env["MSS_PASSWORD"]!,
+      source: process.env["MSS_SOURCE"]!,
     },
   ) {
     this.#defaultPayload = {

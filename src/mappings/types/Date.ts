@@ -3,10 +3,10 @@ const { Jsonix } = jsonix;
 
 export default Jsonix.Class(Jsonix.Schema.XSD.AnySimpleType, {
   name: "CustomTypes.Date",
-  print: function (date: Date) {
+  print(date: Date) {
     return date.toJSON();
   },
-  parse: function (text: string) {
+  parse(text: string) {
     Jsonix.Util.Ensure.ensureString(text);
     return new Date(text);
   },

@@ -5,11 +5,11 @@ const { Jsonix } = jsonix;
 
 export default Jsonix.Class(Jsonix.Schema.XSD.AnySimpleType, {
   name: "CustomTypes.NormalizedHTMLString",
-  print: function (text: string) {
+  print(text: string) {
     Jsonix.Util.Ensure.ensureString(text);
     return text;
   },
-  parse: function (text: string) {
+  parse(text: string) {
     Jsonix.Util.Ensure.ensureString(text);
     return sanitizeHTML(text.replaceAll("\r\n", "\n"), {
       allowedTags: ["b", "br", "em", "i", "li", "ol", "p", "strong", "u", "ul"],
