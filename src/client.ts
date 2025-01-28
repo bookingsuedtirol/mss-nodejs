@@ -110,7 +110,7 @@ export class Client {
 
 const modifyOutput = (object: any): void => {
   for (const key in object) {
-    if (object.hasOwnProperty(key)) {
+    if (Object.hasOwn(object, key)) {
       // Remove TYPE_NAME property
       if (key === "TYPE_NAME") {
         delete object[key];
