@@ -1,6 +1,6 @@
 {
   "name": "@bookingsuedtirol/mss-nodejs",
-  "version": "0.47.0",
+  "version": "0.48.0",
   "type": "module",
   "description": "MSS API wrapper for Node.js projects",
   "exports": {
