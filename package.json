@@ -40,18 +40,18 @@
     "xmldom": "npm:@xmldom/xmldom@^0.9.8"
   },
   "devDependencies": {
-    "@eslint/js": "^9.31.0",
+    "@eslint/js": "^9.35.0",
     "@types/clone": "^2.1.4",
-    "@types/node": "^22.16.5",
+    "@types/node": "^22.18.1",
     "@types/sanitize-html": "^2.16.0",
-    "dotenv": "^17.2.0",
-    "eslint": "^9.31.0",
+    "dotenv": "^17.2.2",
+    "eslint": "^9.35.0",
     "globals": "^16.3.0",
-    "jiti": "^2.5.0",
+    "jiti": "^2.5.1",
     "prettier": "3.6.2",
-    "tsx": "^4.20.3",
-    "typescript": "^5.8.3",
-    "typescript-eslint": "^8.38.0"
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.43.0"
   },
   "engines": {
     "node": ">=22.0.0"
