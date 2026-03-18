@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Replace `clone` and `nl2br` dependencies with native alternatives (`structuredClone`, inline regex)
+- Update `module` and `moduleResolution` to `nodenext` in tsconfig
 
 ## [0.53.0] - 2026-03-18
 
