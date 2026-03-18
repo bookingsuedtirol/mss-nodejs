@@ -1,5 +1,4 @@
 import jsonix from "jsonix";
-import nl2br from "nl2br";
 const { Jsonix } = jsonix;
 
 export default Jsonix.Class(Jsonix.Schema.XSD.AnySimpleType, {
@@ -10,7 +9,7 @@ export default Jsonix.Class(Jsonix.Schema.XSD.AnySimpleType, {
   },
   parse(text: string) {
     Jsonix.Util.Ensure.ensureString(text);
-    return nl2br(text, true);
+    return text.replace(/(\r\n|\r|\n)/g, "<br />");
   },
   CLASS_NAME: "CustomTypes.NlToBr",
 });

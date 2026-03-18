@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+
+- Replace `clone` and `nl2br` dependencies with native alternatives (`structuredClone`, inline regex)
+
 ## [0.53.0] - 2026-03-18
 
 ### Changed

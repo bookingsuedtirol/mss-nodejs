@@ -1,4 +1,3 @@
-import clone from "clone";
 import jsonix from "jsonix";
 import wretch from "wretch";
 import AbortAddon from "wretch/addons/abort";
@@ -88,7 +87,7 @@ export class Client {
    * @throws {MSSError}
    */
   request = async (callback: (payload: Request.Root) => Request.Root) => {
-    const newRequest = callback(clone(this.#defaultPayload));
+    const newRequest = callback(structuredClone(this.#defaultPayload));
 
     const requestBody = marshaller.marshalString({ root: newRequest });
     const { body, httpStatusCode } = await makeMSSRequest(requestBody);
