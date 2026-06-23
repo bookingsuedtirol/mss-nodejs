@@ -33,22 +33,22 @@
   "homepage": "https://github.com/bookingsuedtirol/mss-nodejs#readme",
   "dependencies": {
     "jsonix": "^3.0.0",
-    "sanitize-html": "^2.17.4",
-    "wretch": "^3.0.7",
+    "sanitize-html": "^2.17.5",
+    "wretch": "^3.0.9",
     "xmldom": "npm:@xmldom/xmldom@^0.9.10"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@types/node": "^24.12.4",
+    "@types/node": "^24.13.2",
     "@types/sanitize-html": "^2.16.1",
     "dotenv": "^17.4.2",
-    "eslint": "^10.3.0",
+    "eslint": "^10.5.0",
     "globals": "^17.6.0",
     "jiti": "^2.7.0",
-    "prettier": "3.8.3",
-    "tsx": "^4.22.0",
+    "prettier": "3.8.4",
+    "tsx": "^4.22.4",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.59.3"
+    "typescript-eslint": "^8.61.1"
   },
   "engines": {
     "node": ">=22.0.0"
