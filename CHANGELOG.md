@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 - Remove picture URL rewrite to https://cdn.easychannel.it/…
+- Update dependencies
 
 ## [0.59.0] - 2026-09-09
 
