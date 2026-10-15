@@ -3,7 +3,6 @@ import CommaSeparatedList from "../types/CommaSeparatedList.js";
 import Date from "../types/Date.js";
 import NlToBr from "../types/NlToBr.js";
 import NormalizedHTMLString from "../types/NormalizedHTMLString.js";
-import PictureURL from "../types/PictureUrl.js";
 
 import Address from "./Address.js";
 import Bank from "./Bank.js";
@@ -51,7 +50,6 @@ export default {
     new NlToBr(),
     new NormalizedHTMLString(),
     new Date(),
-    new PictureURL(),
     Root,
     Header,
     Error,
